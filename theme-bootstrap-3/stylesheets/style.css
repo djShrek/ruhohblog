@@ -1,3 +1,9 @@
+/* Multi-line comment blocks (CSS, SCSS, JavaScript)
+*= require foo
+*= require style
+*= require bootstrap.min
+ */
+
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url('../media/glyphicons-halflings-regular.eot');
