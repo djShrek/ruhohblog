@@ -2,7 +2,7 @@
   "use" : "theme"
 
 asset_pipeline:
-  enable: true
+  enable: false
 
 posts :
   stop_at_header: false # default is false
