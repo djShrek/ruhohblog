@@ -1,7 +1,5 @@
 /* Multi-line comment blocks (CSS, SCSS, JavaScript)
-*= require foo
-*= require style
-*= require bootstrap.min
+*= require .
  */
 
 @font-face {
