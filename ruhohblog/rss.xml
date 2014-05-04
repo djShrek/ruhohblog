@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>Shrek Code Blog</title>
+    <description>Shrek Code Blog</description>
+    <link/>
+    <pubDate>May 04, 2014</pubDate>
+    <item>
+      <title>Creating a Messaging System From Scratch Part 1</title>
+      <link>/ruhohblog/posts/creating-a-messaging-system-part-1</link>
+      <pubDate>March 25, 2014</pubDate>
+      <description>&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;In this series of posts, I&amp;#39;m going to share my experience of how I created a private messaging system between two users. The reason I picked this topic is because I noticed that many other developers had
+&lt;a href="http://stackoverflow.com/questions/5102832/rails-private-message-system"&gt;faced similar questions&lt;/a&gt; and
+&lt;a href="http://stackoverflow.com/questions/18952216/rails-3-set-a-conversation-id-for-private-messaging"&gt;problems&lt;/a&gt;
+while I was browsing the StackOverFlow threads on the same topic. There was not a consensus among the community on how to develop a private messaging system, only that doing it from scratch would be most convenient for (we) the developers without having to implement an entire gem (i.e. mailboxer) for overkill. &lt;/p&gt;
+
+&lt;p&gt;I first started with the logic:&lt;br&gt;
+&amp;nbsp; &amp;nbsp; 1.  A user can send many messages and therefore has many messages.&lt;br&gt;
+&amp;nbsp; &amp;nbsp; 2.  A message can have a sender and a recipient and therefore belongs to a sender and a recipient.&lt;br&gt;
+So the two models I start out with are these:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class User &amp;lt; ActiveRecord::Base
+    has_many :messages, 
+       foreign_key: &amp;quot;messenger_id&amp;quot;
+    has_many :received_messages, 
+       class_name: &amp;quot;Message&amp;quot;,
+       foreign_key: &amp;quot;recipient_id&amp;quot;
+end    
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class Message &amp;lt; ActiveRecord::Base
+    attr_accessible :content, :messenger_id, :recipient_id
+
+    belongs_to :messenger, 
+               class_name: &amp;quot;User&amp;quot;,
+               foreign_key: &amp;quot;messenger_id&amp;quot;
+
+
+    belongs_to :recipient, 
+                class_name: &amp;quot;User&amp;quot;, 
+                foreign_key: &amp;quot;recipient_id&amp;quot;
+end
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    <item>
+      <title>How Relations Work In Rails</title>
+      <link>/ruhohblog/posts/hello-moto</link>
+      <pubDate>March 07, 2014</pubDate>
+      <description>How relations work in Active Record and Rails</description>
+    </item>
+    <item>
+      <title>How to Make A Sticky Header</title>
+      <link>/ruhohblog/posts/dna-testing</link>
+      <pubDate>March 07, 2014</pubDate>
+      <description>How to make a Sticky Header :D</description>
+    </item>
+    <item>
+      <title>Sleep deprived</title>
+      <link>/ruhohblog/posts/sleep-deprived</link>
+      <pubDate>March 07, 2014</pubDate>
+      <description>&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>hello world</title>
+      <link>/ruhohblog/posts/hello-world</link>
+      <pubDate>March 06, 2014</pubDate>
+      <description>Test</description>
+    </item>
+    <item>
+      <title>internet</title>
+      <link>/ruhohblog/posts/internet</link>
+      <pubDate>March 07, 2014</pubDate>
+      <description>&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>test post</title>
+      <link>/ruhohblog/posts/test-post</link>
+      <pubDate>March 07, 2014</pubDate>
+      <description>&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>win city</title>
+      <link>/ruhohblog/posts/win-city</link>
+      <pubDate>March 07, 2014</pubDate>
+      <description>&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p&gt;
+</description>
+    </item>
+  </channel>
+</rss>
