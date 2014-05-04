@@ -1,0 +1,54 @@
+---
+title: Writings
+tagline: 
+description: hot
+---
+
+{{# posts.paginator }}
+<div class="post">
+  
+  <h2 class="title"><a href="{{url}}">{{title}}</a></h2>
+  <h3 class="date">{{ date }}</h3>
+  
+  <p class="index-description">{{{ description }}}</p>
+  <!--<p class="index-description text-none">{{{ summary }}}</p>-->
+  
+  <div class="more">
+    <a href="{{url}}" class="btn btn-default posts-btn">read more..</a>
+  </div>
+  <hr>
+</div>
+{{/ posts.paginator }}
+
+
+
+{{# pages.paginator }}
+
+<div class="post">
+  <h3 class="title"><a href="{{url}}">{{title}}</a> <span class="date">{{ date }}</span></h3>
+
+  {{{ summary }}}
+
+  <div class="more">
+    <a href="{{url}}" class="btn btn-default">read more..</a>
+  </div>
+</div>
+{{/ pages.paginator }}
+
+<div class="pagination">
+  <ul class="pagination">
+  {{#posts.paginator_navigation}}
+    {{#is_active_page}}
+      <li class="active"><a href="{{url}}">{{name}}</a></li>
+    {{/is_active_page}}
+    {{^is_active_page}}
+      <li><a href="{{url}}">{{name}}</a></li>
+    {{/is_active_page}}
+  {{/posts.paginator_navigation}}
+  </ul>
+</div>
+  
+
+
+
+
