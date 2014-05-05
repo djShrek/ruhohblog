@@ -8,6 +8,8 @@ posts :
   stop_at_header: false # default is false
   summary_lines : 1  # default is 20
 
+base_path: "/ruhohblog/"
+
 "date_format": "%B %d, %Y"
 
 "pages" :
