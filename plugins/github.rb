@@ -150,9 +150,7 @@ class Ruhoh
     #   Should extract "hello-world" from above example.
     def repository_name
       remote = origin_remote
-      remote = remote.include?(':') ?
-                remote.split(':')[1] :
-                remote.gsub(/^(http|https):\/\/github.com\//, '')
+      remote = remote.gsub(/^(http|https):\/\/github.com\//, '')
  
       # Parse username/<repo-name>.git
       remote.split('/')[1].chomp('.git')
