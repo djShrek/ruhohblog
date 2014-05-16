@@ -4,32 +4,32 @@
     <title>Shrek Code Blog</title>
     <description>Shrek Code Blog</description>
     <link/>
-    <pubDate>May 04, 2014</pubDate>
+    <pubDate>May 15, 2014</pubDate>
     <item>
       <title>About</title>
-      <link>/about</link>
+      <link>/ruhohblog/about</link>
       <description/>
     </item>
     <item>
       <title>Archive</title>
-      <link>/archive</link>
+      <link>/ruhohblog/archive</link>
       <description>  &lt;h2&gt;2014&lt;/h2&gt;
     &lt;h3&gt;March&lt;/h3&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;span&gt;March 25, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/posts/creating-a-messaging-system-part-1"&gt;Creating a Messaging System From Scratch Part 1&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;span&gt;March 07, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/posts/hello-moto"&gt;How Relations Work In Rails&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;span&gt;March 07, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/posts/dna-testing"&gt;How to Make A Sticky Header&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;span&gt;March 07, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/posts/sleep-deprived"&gt;Sleep deprived&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;span&gt;March 06, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/posts/hello-world"&gt;hello world&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;span&gt;March 07, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/posts/internet"&gt;internet&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;span&gt;March 07, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/posts/test-post"&gt;test post&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;span&gt;March 07, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/posts/win-city"&gt;win city&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;March 25, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/creating-a-messaging-system-part-1"&gt;Creating a Messaging System From Scratch Part 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;March 07, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/hello-moto"&gt;How Relations Work In Rails&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;March 07, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/dna-testing"&gt;How to Make A Sticky Header&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;March 07, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/sleep-deprived"&gt;Sleep deprived&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;March 06, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/hello-world"&gt;hello world&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;March 07, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/internet"&gt;internet&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;March 07, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/test-post"&gt;test post&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;March 07, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/win-city"&gt;win city&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
 </description>
     </item>
     <item>
       <title>Categories</title>
-      <link>/categories</link>
+      <link>/ruhohblog/categories</link>
       <description>&lt;ul class="tag_box inline"&gt;
 &lt;/ul&gt;
 
@@ -37,25 +37,25 @@
     </item>
     <item>
       <title>Pages</title>
-      <link>/pages</link>
+      <link>/ruhohblog/pages</link>
       <description>&lt;ul&gt;
   
-    &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/about"&gt;About&lt;/a&gt;&lt;/li&gt;
   
   
-    &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
   
   
-    &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
   
-    &lt;li class="active"&gt;&lt;a href="/pages" class="active"&gt;Pages&lt;/a&gt;&lt;/li&gt;
-  
-  
-  
-    &lt;li&gt;&lt;a href="/tags"&gt;Tags&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="active"&gt;&lt;a href="/ruhohblog/pages" class="active"&gt;Pages&lt;/a&gt;&lt;/li&gt;
   
   
-    &lt;li&gt;&lt;a href="/"&gt;Writings&lt;/a&gt;&lt;/li&gt;
+  
+    &lt;li&gt;&lt;a href="/ruhohblog/tags"&gt;Tags&lt;/a&gt;&lt;/li&gt;
+  
+  
+    &lt;li&gt;&lt;a href="/ruhohblog"&gt;Writings&lt;/a&gt;&lt;/li&gt;
   
 &lt;/ul&gt;
 
@@ -63,7 +63,7 @@
     </item>
     <item>
       <title>Tags</title>
-      <link>/tags</link>
+      <link>/ruhohblog/tags</link>
       <description>&lt;ul class="tag_box inline"&gt;
 &lt;/ul&gt;
 
@@ -72,7 +72,7 @@
     </item>
     <item>
       <title>Writings</title>
-      <link>/</link>
+      <link>/ruhohblog</link>
       <description>hot</description>
     </item>
   </channel>

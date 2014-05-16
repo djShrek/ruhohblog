@@ -4,10 +4,10 @@
     <title>Shrek Code Blog</title>
     <description>Shrek Code Blog</description>
     <link/>
-    <pubDate>May 04, 2014</pubDate>
+    <pubDate>May 15, 2014</pubDate>
     <item>
       <title>Creating a Messaging System From Scratch Part 1</title>
-      <link>/posts/creating-a-messaging-system-part-1</link>
+      <link>/ruhohblog/posts/creating-a-messaging-system-part-1</link>
       <pubDate>March 25, 2014</pubDate>
       <description>&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;In this series of posts, I&amp;#39;m going to share my experience of how I created a private messaging system between two users. The reason I picked this topic is because I noticed that many other developers had
 &lt;a href="http://stackoverflow.com/questions/5102832/rails-private-message-system"&gt;faced similar questions&lt;/a&gt; and
@@ -47,46 +47,46 @@ end
     </item>
     <item>
       <title>How Relations Work In Rails</title>
-      <link>/posts/hello-moto</link>
+      <link>/ruhohblog/posts/hello-moto</link>
       <pubDate>March 07, 2014</pubDate>
       <description>How relations work in Active Record and Rails</description>
     </item>
     <item>
       <title>How to Make A Sticky Header</title>
-      <link>/posts/dna-testing</link>
+      <link>/ruhohblog/posts/dna-testing</link>
       <pubDate>March 07, 2014</pubDate>
       <description>How to make a Sticky Header :D</description>
     </item>
     <item>
       <title>Sleep deprived</title>
-      <link>/posts/sleep-deprived</link>
+      <link>/ruhohblog/posts/sleep-deprived</link>
       <pubDate>March 07, 2014</pubDate>
       <description>&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p&gt;
 </description>
     </item>
     <item>
       <title>hello world</title>
-      <link>/posts/hello-world</link>
+      <link>/ruhohblog/posts/hello-world</link>
       <pubDate>March 06, 2014</pubDate>
       <description>Test</description>
     </item>
     <item>
       <title>internet</title>
-      <link>/posts/internet</link>
+      <link>/ruhohblog/posts/internet</link>
       <pubDate>March 07, 2014</pubDate>
       <description>&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p&gt;
 </description>
     </item>
     <item>
       <title>test post</title>
-      <link>/posts/test-post</link>
+      <link>/ruhohblog/posts/test-post</link>
       <pubDate>March 07, 2014</pubDate>
       <description>&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p&gt;
 </description>
     </item>
     <item>
       <title>win city</title>
-      <link>/posts/win-city</link>
+      <link>/ruhohblog/posts/win-city</link>
       <pubDate>March 07, 2014</pubDate>
       <description>&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p&gt;
 </description>
