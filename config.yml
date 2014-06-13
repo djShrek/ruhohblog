@@ -10,6 +10,9 @@ posts :
 
 base_path: "/ruhohblog/"
 
+"pages" :
+  "permalink" : "/ruhohblog/"
+
 "date_format": "%B %d, %Y"
 
 "pages" :
