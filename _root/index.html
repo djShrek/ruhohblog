@@ -2,16 +2,19 @@
 title: Writings
 tagline: 
 description: hot
+layout: default
 ---
 
 {{# posts.paginator }}
 <div class="post">
   
-  <h2 class="title"><a href="{{url}}">{{title}}</a></h2>
-  <h3 class="date">{{ date }}</h3>
-  
+  <div class="posts-header"> 
+    <h2 class="title text-center"><a href="{{url}}">{{title}}</a></h2>
+    <h4 class="date text-center">{{ date }}</h4>
+  </div>
+    
   <p class="index-description">{{{ description }}}</p>
-  <!--<p class="index-description text-none">{{{ summary }}}</p>-->
+  <p class="index-description text-none">{{{ summary }}}</p>
   
   <div class="more">
     <a href="{{url}}" class="btn btn-default posts-btn">read more..</a>
@@ -19,7 +22,6 @@ description: hot
   <hr>
 </div>
 {{/ posts.paginator }}
-
 
 
 {{# pages.paginator }}
@@ -35,7 +37,7 @@ description: hot
 </div>
 {{/ pages.paginator }}
 
-<div class="pagination">
+<div>
   <ul class="pagination">
   {{#posts.paginator_navigation}}
     {{#is_active_page}}
