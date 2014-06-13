@@ -6,7 +6,7 @@
     <title>Writings</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="hot">
-    <meta name="author" content="First-name Last-name">
+    <meta name="author" content="Bobby Ho">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -15,9 +15,9 @@
 
     <!-- Le styles -->
 <link href='/ruhohblog/assets/stylesheets/bootstrap.min-4eadbf7d1721bb2729e398595bc7f0bc.css' type='text/css' rel='stylesheet' media='all'>
-<link href='/ruhohblog/assets/stylesheets/style-98666b72c91625181bff0b6fa8cd0064.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/ruhohblog/assets/stylesheets/style-69e1dfc27cbd7884a5db379fb9d2205b.css' type='text/css' rel='stylesheet' media='all'>
 <link href='/ruhohblog/assets/stylesheets/google_prettify/sons-of-obsidian-afb0925bfa2d994f17dab93e13fbf999.css' type='text/css' rel='stylesheet' media='all'>
-<link href='/ruhohblog/assets/stylesheets/application.css' type='text/css' rel='stylesheet' media='all'>  <!-- Update these with your own images
+<link href='/ruhohblog/assets/stylesheets/font-awesome.min-5642646427f9f738a393e6cc05dd5003.css' type='text/css' rel='stylesheet' media='all'>  <!-- Update these with your own images
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
@@ -26,46 +26,39 @@
   </head>
 
   <body>
-
-<div class="main">
-
-    <header>
-      <div class="row">
-        <div class="cool-header">
-          <div class="col-sm-6 col-sm-offset-2">
-            <h1 class="header-text">Hello, my name is Bobby and this is my blog for all things code! :D</h1>
-             <button type="button" class="down btn btn-default btn-lg">
-                <span class="glyphicon glyphicon-circle-arrow-down"></span>
-             </button>
-          </div>
-        </div>
+<div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="/">Home</a>
+          <a class="blog-nav-item" href="/../about">About</a>
+          <a class="blog-nav-item" href="/../archive">Archives</a>
+          <a class="blog-nav-item" href="/../tags">Tags</a>
+          <a class="blog-nav-item" href="/../pages">Pages</a>
+        </nav>
       </div>
-    </header>
-
-  <nav class="main-nav">
-    <div class="navigation text-center">
-          <a class="lead" href="/../">Home</a>
-
-          <a class="lead" href="/../about">About</a>
-
-          <a class="lead" href="/../archive">Archives</a>
-          <a class="lead" href="/../tags">Tags</a>
     </div>
-  </nav>
 
-    <div class="root-content">
-        <div class="container-narrow">
-            <div class="text-center">
-                <div class="post">
+    <div class="container">
+      <div class="blog-header">
+        <h1 class="blog-title">Shrek Code Blog</h1>
+        <p class="lead blog-description">Mostly about code, occasional (unsolicited) opinions on life</p>
+      </div>
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+
+              <div class="post">
   
-  <h2 class="title"><a href="/ruhohblog/posts/creating-a-messaging-system-part-1">Creating a Messaging System From Scratch Part 1</a></h2>
-  <h3 class="date">March 25, 2014</h3>
-  
+  <div class="posts-header"> 
+    <h2 class="title text-center"><a href="/ruhohblog/posts/creating-a-messaging-system-part-1">Creating a Messaging System From Scratch Part 1</a></h2>
+    <h4 class="date text-center">March 25, 2014</h4>
+  </div>
+    
   <p class="index-description"></p>
-  <!--<p class="index-description text-none"><div class="summary ellipsis"><p>      In this series of posts, I'm going to share my experience of how I created a private messaging system between two users. The reason I picked this topic is because I noticed that many other developers had
+  <p class="index-description text-none"><div class="summary ellipsis"><p>      In this series of posts, I'm going to share my experience of how I created a private messaging system between two users. The reason I picked this topic is because I noticed that many other developers had
 <a href="http://stackoverflow.com/questions/5102832/rails-private-message-system">faced similar questions</a> and
 <a href="http://stackoverflow.com/questions/18952216/rails-3-set-a-conversation-id-for-private-messaging">problems</a>
-while I was browsing the StackOverFlow threads on the same topic. There was not a consensus among the community on how to develop a private messaging system, only that doing it from scratch would be most convenient for (we) the developers without having to implement an entire gem (i.e. mailboxer) for overkill. </p></div></p>-->
+while I was browsing the StackOverFlow threads on the same topic. There was not a consensus among the community on how to develop a private messaging system, only that doing it from scratch would be most convenient for (we) the developers without having to implement an entire gem (i.e. mailboxer) for overkill. </p></div></p>
   
   <div class="more">
     <a href="/ruhohblog/posts/creating-a-messaging-system-part-1" class="btn btn-default posts-btn">read more..</a>
@@ -74,11 +67,13 @@ while I was browsing the StackOverFlow threads on the same topic. There was not 
 </div>
 <div class="post">
   
-  <h2 class="title"><a href="/ruhohblog/posts/hello-moto">How Relations Work In Rails</a></h2>
-  <h3 class="date">March 07, 2014</h3>
-  
+  <div class="posts-header"> 
+    <h2 class="title text-center"><a href="/ruhohblog/posts/hello-moto">How Relations Work In Rails</a></h2>
+    <h4 class="date text-center">March 07, 2014</h4>
+  </div>
+    
   <p class="index-description">How relations work in Active Record and Rails</p>
-  <!--<p class="index-description text-none"><div class="summary"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div></p>-->
+  <p class="index-description text-none"><div class="summary"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div></p>
   
   <div class="more">
     <a href="/ruhohblog/posts/hello-moto" class="btn btn-default posts-btn">read more..</a>
@@ -87,15 +82,17 @@ while I was browsing the StackOverFlow threads on the same topic. There was not 
 </div>
 <div class="post">
   
-  <h2 class="title"><a href="/ruhohblog/posts/dna-testing">How to Make A Sticky Header</a></h2>
-  <h3 class="date">March 07, 2014</h3>
-  
+  <div class="posts-header"> 
+    <h2 class="title text-center"><a href="/ruhohblog/posts/dna-testing">How to Make A Sticky Header</a></h2>
+    <h4 class="date text-center">March 07, 2014</h4>
+  </div>
+    
   <p class="index-description">How to make a Sticky Header :D</p>
-  <!--<p class="index-description text-none"><div class="summary"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+  <p class="index-description text-none"><div class="summary"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
 eversince the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not 
 only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s 
 with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
-PageMaker including versions of Lorem Ipsum.</p></div></p>-->
+PageMaker including versions of Lorem Ipsum.</p></div></p>
   
   <div class="more">
     <a href="/ruhohblog/posts/dna-testing" class="btn btn-default posts-btn">read more..</a>
@@ -104,11 +101,13 @@ PageMaker including versions of Lorem Ipsum.</p></div></p>-->
 </div>
 <div class="post">
   
-  <h2 class="title"><a href="/ruhohblog/posts/sleep-deprived">Sleep deprived</a></h2>
-  <h3 class="date">March 07, 2014</h3>
-  
+  <div class="posts-header"> 
+    <h2 class="title text-center"><a href="/ruhohblog/posts/sleep-deprived">Sleep deprived</a></h2>
+    <h4 class="date text-center">March 07, 2014</h4>
+  </div>
+    
   <p class="index-description"></p>
-  <!--<p class="index-description text-none"><div class="summary"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div></p>-->
+  <p class="index-description text-none"><div class="summary"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div></p>
   
   <div class="more">
     <a href="/ruhohblog/posts/sleep-deprived" class="btn btn-default posts-btn">read more..</a>
@@ -117,11 +116,13 @@ PageMaker including versions of Lorem Ipsum.</p></div></p>-->
 </div>
 <div class="post">
   
-  <h2 class="title"><a href="/ruhohblog/posts/hello-world">hello world</a></h2>
-  <h3 class="date">March 06, 2014</h3>
-  
+  <div class="posts-header"> 
+    <h2 class="title text-center"><a href="/ruhohblog/posts/hello-world">hello world</a></h2>
+    <h4 class="date text-center">March 06, 2014</h4>
+  </div>
+    
   <p class="index-description">Test</p>
-  <!--<p class="index-description text-none"><div class="summary"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div></p>-->
+  <p class="index-description text-none"><div class="summary"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div></p>
   
   <div class="more">
     <a href="/ruhohblog/posts/hello-world" class="btn btn-default posts-btn">read more..</a>
@@ -131,8 +132,7 @@ PageMaker including versions of Lorem Ipsum.</p></div></p>-->
 
 
 
-
-<div class="pagination">
+<div>
   <ul class="pagination">
       <li class="active"><a href="/ruhohblog/posts/index/1">1</a></li>
       <li><a href="/ruhohblog/posts/index/2">2</a></li>
@@ -144,45 +144,43 @@ PageMaker including versions of Lorem Ipsum.</p></div></p>-->
 
 
 
-            </div>
-              <hr>
-              <div class="footer">
-                <p>&copy; First-name Last-name 2013
-                  with help from <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">ruhoh</a>
-                  and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
-              </div>
-        </div> <!-- /container -->
 
-            <!-- Google Prettify -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
-<script>
-  var pres = document.getElementsByTagName("pre");
-  for (var i=0; i < pres.length; ++i) {
-    pres[i].className = "prettyprint linenums";
-  }
-  prettyPrint();
-</script>
-<!-- end Google Prettify -->
-            
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+             <img src="https://pbs.twimg.com/profile_images/378800000831451608/8842e95126f50fc21f950801d1ae1f0e_400x400.jpeg" width="140px" height="140px" alt="..." class="img-circle">
+            <h3>About</h3>
+            <ul>
+              <li>Aspiring Full-Stack Developer</li>
+              <li>{Rubyist => Noob}</li>
+              <li>Whipster</li>
+              <li>Music Mixer</li>
+              <li>Boba Milk Tea Aficionado</li>
+            </ul>
+          </div>
+          
+
+           <div class="sidebar-module">
+            <h3>Elsewhere</h3>
+              <a href="https://github.com/djShrek"><i class="fa fa-github social-icons"></i></a>
+              <a href="https://twitter.com/BobbyHo2"><i class="fa fa-twitter social-icons"></i></a>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+        <div id="footer">
+      <div class="container">
+        <p>&copy; Bobby Ho 2014
+        with help from <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">ruhoh</a>
+        and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>
+      </p>
+      </div>
     </div>
-</div>
+
   </body>
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script>
-    var mn = $(".main-nav");
-    $(window).scroll(function(){
-        if ($(this).scrollTop() > 745) {
-            mn.addClass("main-nav-scrolled");
-        } else {
-            mn.removeClass("main-nav-scrolled");
-        }
-    });
-
-    $(".down").click(function(){
-        $('html, body').animate({
-    scrollTop: 745
-    }, 1000);
-    });
-
-  </script>
 </html>

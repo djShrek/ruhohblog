@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="First-name Last-name">
+    <meta name="author" content="Bobby Ho">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -14,43 +14,55 @@
 
     <!-- Le styles -->
 <link href='/ruhohblog/assets/stylesheets/bootstrap.min-4eadbf7d1721bb2729e398595bc7f0bc.css' type='text/css' rel='stylesheet' media='all'>
-<link href='/ruhohblog/assets/stylesheets/style-98666b72c91625181bff0b6fa8cd0064.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/ruhohblog/assets/stylesheets/style-69e1dfc27cbd7884a5db379fb9d2205b.css' type='text/css' rel='stylesheet' media='all'>
 <link href='/ruhohblog/assets/stylesheets/google_prettify/sons-of-obsidian-afb0925bfa2d994f17dab93e13fbf999.css' type='text/css' rel='stylesheet' media='all'>
-<link href='/ruhohblog/assets/stylesheets/application.css' type='text/css' rel='stylesheet' media='all'>    
-    <link href='/assets/stylesheets/style.css' type='text/css' rel='stylesheet' media='all'>
-
+<link href='/ruhohblog/assets/stylesheets/font-awesome.min-5642646427f9f738a393e6cc05dd5003.css' type='text/css' rel='stylesheet' media='all'>  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
   </head>
 
   <body>
-  
-<nav class="main-nav">
-    <div class="navigation text-center">
-          <a class="lead" href="/../">Home</a>
-
-          <a class="lead" href="/../about">About</a>
-
-          <a class="lead" href="/../archive">Archives</a>
-          <a class="lead" href="/../tags">Tags</a>
+<div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="/">Home</a>
+          <a class="blog-nav-item" href="/../about">About</a>
+          <a class="blog-nav-item" href="/../archive">Archives</a>
+          <a class="blog-nav-item" href="/../tags">Tags</a>
+          <a class="blog-nav-item" href="/../pages">Pages</a>
+        </nav>
+      </div>
     </div>
-  </nav>
 
-    <div class="root-content">
-        <div class="container-narrow">
-            <div class="none">
-                <div class="row-fluid">
+    <div class="container">
+      <div class="blog-header">
+        <h1 class="blog-title">Shrek Code Blog</h1>
+        <p class="lead blog-description">Mostly about code, occasional (unsolicited) opinions on life</p>
+      </div>
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+
+              <div class="row-fluid">
   <div class="span12">
       <div class="_root">
-        <div class="text-center">
-          <h3 class="title"><a href="/ruhohblog">Writings</a> </h3>
-          <span class="date"></span>
+        <div class="post-header">
+          <h2 class="title text-center "><a href="/ruhohblog">Writings</a> </h2>
+          <h4 class="date text-center"></h4>
         </div>
-
-        <div class="text-center more">
+          <div class="summary ellipsis"><p>      In this series of posts, I'm going to share my experience of how I created a private messaging system between two users. The reason I picked this topic is because I noticed that many other developers had
+<a href="http://stackoverflow.com/questions/5102832/rails-private-message-system">faced similar questions</a> and
+<a href="http://stackoverflow.com/questions/18952216/rails-3-set-a-conversation-id-for-private-messaging">problems</a>
+while I was browsing the StackOverFlow threads on the same topic. There was not a consensus among the community on how to develop a private messaging system, only that doing it from scratch would be most convenient for (we) the developers without having to implement an entire gem (i.e. mailboxer) for overkill. </p></div>
+        <div class="none more">
           <a href="/ruhohblog" class="btn btn-default">read more..</a>
         </div>
         <hr>
       </div>
-    <div class="pagination">
+    <div>
       <ul class="pagination">
           <li><a href="/ruhohblog/index/1">1</a></li>
           <li class="active"><a href="/ruhohblog/index/2">2</a></li>
@@ -59,28 +71,43 @@
   </div>
 </div>
 
-            </div>
-              <div class="footer">
-                <p>&copy; First-name Last-name 2013
-                  with help from <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">ruhoh</a>
-                  and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
-              </div>
-        </div> <!-- /container -->
 
-            <!-- Google Prettify -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
-<script>
-  var pres = document.getElementsByTagName("pre");
-  for (var i=0; i < pres.length; ++i) {
-    pres[i].className = "prettyprint linenums";
-  }
-  prettyPrint();
-</script>
-<!-- end Google Prettify -->
-            
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+             <img src="https://pbs.twimg.com/profile_images/378800000831451608/8842e95126f50fc21f950801d1ae1f0e_400x400.jpeg" width="140px" height="140px" alt="..." class="img-circle">
+            <h3>About</h3>
+            <ul>
+              <li>Aspiring Full-Stack Developer</li>
+              <li>{Rubyist => Noob}</li>
+              <li>Whipster</li>
+              <li>Music Mixer</li>
+              <li>Boba Milk Tea Aficionado</li>
+            </ul>
+          </div>
+          
+
+           <div class="sidebar-module">
+            <h3>Elsewhere</h3>
+              <a href="https://github.com/djShrek"><i class="fa fa-github social-icons"></i></a>
+              <a href="https://twitter.com/BobbyHo2"><i class="fa fa-twitter social-icons"></i></a>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+        <div id="footer">
+      <div class="container">
+        <p>&copy; Bobby Ho 2014
+        with help from <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">ruhoh</a>
+        and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>
+      </p>
+      </div>
     </div>
 
   </body>
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
- 
 </html>
