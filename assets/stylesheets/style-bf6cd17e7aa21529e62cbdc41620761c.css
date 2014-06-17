@@ -15,7 +15,6 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 100px;
-  font-family: "Helvetica Neue"
 }
 
  p {
@@ -80,7 +79,7 @@ body {
 }
 
 .posts-header .date {
-    color: black;
+    color: #CDC8D4;
 }
 
 .more {
