@@ -14,9 +14,12 @@
 
     <!-- Le styles -->
 <link href='/ruhohblog/assets/stylesheets/bootstrap.min-4eadbf7d1721bb2729e398595bc7f0bc.css' type='text/css' rel='stylesheet' media='all'>
-<link href='/ruhohblog/assets/stylesheets/style-bf6cd17e7aa21529e62cbdc41620761c.css' type='text/css' rel='stylesheet' media='all'>
-<link href='/ruhohblog/assets/stylesheets/google_prettify/sons-of-obsidian-afb0925bfa2d994f17dab93e13fbf999.css' type='text/css' rel='stylesheet' media='all'>
-<link href='/ruhohblog/assets/stylesheets/font-awesome.min-5642646427f9f738a393e6cc05dd5003.css' type='text/css' rel='stylesheet' media='all'>  <!-- Update these with your own images
+<link href='/ruhohblog/assets/stylesheets/style-cf00424739bf79506dc2bd44264c5406.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/ruhohblog/assets/stylesheets/google_prettify/default-b3ee55d958b6badce341f16d1644e306.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/ruhohblog/assets/stylesheets/font-awesome.min-5642646427f9f738a393e6cc05dd5003.css' type='text/css' rel='stylesheet' media='all'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+  <!-- Update these with your own images
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
@@ -53,10 +56,12 @@
           <h2 class="title text-center "><a href="/ruhohblog">Writings</a> </h2>
           <h4 class="date text-center"></h4>
         </div>
-          <div class="summary ellipsis"><p>      In this series of posts, I'm going to share my experience of how I created a private messaging system between two users. The reason I picked this topic is because I noticed that many other developers had
-<a href="http://stackoverflow.com/questions/5102832/rails-private-message-system">faced similar questions</a> and
-<a href="http://stackoverflow.com/questions/18952216/rails-3-set-a-conversation-id-for-private-messaging">problems</a>
-while I was browsing the StackOverFlow threads on the same topic. There was not a consensus among the community on how to develop a private messaging system, only that doing it from scratch would be most convenient for (we) the developers without having to implement an entire gem (i.e. mailboxer) for overkill. </p></div>
+          <div class="summary ellipsis"><p>     I recently decided that it would be a good idea to 
+do some simple code challenges so that I could review and refresh my knowledge
+in Javascript and Ruby. Codewars is a website that offers challenges in Javascript,
+Coffeescript, and Ruby. Certain challenges, called "kata", allow users to solve them with any of the
+aforementioned languages of their choice. Each code kata is written on specific
+level of difficulty called "kyu." </p></div>
         <div class="none more">
           <a href="/ruhohblog" class="btn btn-default">read more..</a>
         </div>
@@ -73,6 +78,8 @@ while I was browsing the StackOverFlow threads on the same topic. There was not 
 
 
         </div><!-- /.blog-main -->
+
+
 
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           <div class="sidebar-module sidebar-module-inset">
@@ -99,8 +106,48 @@ while I was browsing the StackOverFlow threads on the same topic. There was not 
 
       </div><!-- /.row -->
 
+          <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'whipstercode'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'whipstercode'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52375626-1', 'auto');
+  ga('send', 'pageview');
+
+  </script>
+
     </div><!-- /.container -->
-        <div id="footer">
+
+    <div id="footer">
       <div class="container">
         <p>&copy; Bobby Ho 2014
         with help from <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">ruhoh</a>
@@ -111,4 +158,15 @@ while I was browsing the StackOverFlow threads on the same topic. There was not 
 
   </body>
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  <script>(function(jQuery){
+  
+  jQuery( document ).ready( function() {
+    
+    prettyPrint();
+    
+  } );
+ 
+}(jQuery))
+  </script>
 </html>

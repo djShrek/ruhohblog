@@ -4,7 +4,96 @@
     <title>The Whipster Code Blog</title>
     <description>The Whipster Code Blog</description>
     <link/>
-    <pubDate>June 17, 2014</pubDate>
+    <pubDate>June 28, 2014</pubDate>
+    <item>
+      <title>Code Wars: Javascript Arguments Pt.1</title>
+      <link>/ruhohblog/posts/code-wars-javascript-vs-arrays</link>
+      <pubDate>June 28, 2014</pubDate>
+      <description>&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; I recently decided that it would be a good idea to 
+do some simple code challenges so that I could review and refresh my knowledge
+in Javascript and Ruby. Codewars is a website that offers challenges in Javascript,
+Coffeescript, and Ruby. Certain challenges, called &amp;quot;kata&amp;quot;, allow users to solve them with any of the
+aforementioned languages of their choice. Each code kata is written on specific
+level of difficulty called &amp;quot;kyu.&amp;quot; &lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The code challenge I did today had this description:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+    Write a function named numbers that returns true if all the parameters it is passed are are of the Number type. Otherwise, the function should return false. The function should accept any number of parameters.
+&lt;/pre&gt;
+
+&lt;p&gt;Breaking down this statement, I make these assertions:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Write a function named numbers&lt;/li&gt;
+&lt;li&gt;Return true if everything passed is of the Number type&lt;/li&gt;
+&lt;li&gt;Return false if any of the paramaters passed is NOT of the Number type.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;One:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+    function numbers(args){
+    
+}
+&lt;/pre&gt;
+
+&lt;p&gt;First, I create an empty function named numbers.&lt;/p&gt;
+
+&lt;p&gt;Two:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+function numbers(args){
+    var a = [];
+    for(var i = 0; i &lt; arguments.length; i++){
+        if (typeof(arguments[i]) === "number"){
+            a.push(true);
+        } 
+    }
+}
+&lt;/pre&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Then, I create an empty array so that it can store boolean values that correspond
+to whether the argument is a of the Number type. I iterate through each argument
+with a for-loop and check to see if they are a Number type with the typeof operand.&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;
+(Sidenote: The arguments identifier is specific to Javascript and acts as an &amp;quot;array-like&amp;quot; object that
+allows the argument values passed to the function to be retrieved by number like an array.
+Thats why you see me iterate over an arguments keyword in the numbers function when it was not explicitly
+declared as a variable, function etc.)
+&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;The typeof operand returns a string indicated the type of the unevaluated operand.
+(for more info: &lt;a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof"&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Three:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+function numbers(args){
+    var a = [];
+    for(var i = 0; i &lt; arguments.length; i++){
+        if (typeof(arguments[i]) === "number"){
+            a.push(true);
+        } else {
+            a.push(false);
+    }
+    }
+    return a.every(function(x){
+        return x === true;
+})
+}
+&lt;/pre&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Finally, I use the array &amp;quot;every&amp;quot; method (ECMAScript5)
+on the array to check to see if all the values in the array are true. If not,
+the entire numbers() function would return false (via the every method). &lt;/p&gt;
+
+&lt;p&gt;This code challenge didn&amp;#39;t take very long and was one of the shorter ones I did.
+However, the most optimal solution was achieved with 3 lines compared to my 13 
+lines of code. I&amp;#39;ll go over this in part-2 of this blog post!&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Creating a Messaging System From Scratch Part 1</title>
       <link>/ruhohblog/posts/creating-a-messaging-system-part-1</link>
@@ -62,6 +151,50 @@ end
       <link>/ruhohblog/posts/sleep-deprived</link>
       <pubDate>March 07, 2014</pubDate>
       <description>&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Why Ruby/Rails noobs should use RVM</title>
+      <link>/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm</link>
+      <pubDate>June 27, 2014</pubDate>
+      <description>&lt;p&gt;&amp;nbsp;&amp;nbsp;If you are just getting started with Ruby or Ruby on Rails, chances that you are likely have come across the Ruby Version Manager, or a.k.a RVM.
+As stated in the introduction of the home page, &amp;quot;RVM is a command-line tool which allows you to easily install, manage, and work with multiple environments from interpreters to sets of gems.&amp;quot; If you have not been acquainted with RVM, now is your chance to do so.&lt;/p&gt;
+
+&lt;p&gt;Why would this be important for someone who is just starting Ruby / Ruby on Rails?&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;RVM lets you keep your projects self-contained within their own environments, &amp;quot;from the specific version of ruby, all the way down to the precise set of required gems to run your application.&amp;quot; RVM allows you to switch between different versions of Ruby (its named Ruby Version Manager after all..) and organize your gems in a different sets depending on your application&amp;#39;s needs without different versions of the gems conflicting with one another. Having a different gem sets also avoids the issue of version conflicts between projects, which can cause HUGE, pain-in-the-neck for any newbie starting on a new project or tutorial. &lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;There are many more other benefits to using RVM, many that I haven&amp;#39;t even touched upon, but the main use for it for myself is creating different gem sets when I start a new project or work on a new tutorial. For example, I am a student at teamtreehouse.com and they have two courses that are related to Ruby on Rails. The first course (called &amp;quot;Build A Simple Application&amp;quot;) requires Ruby 1.9 and RoRails 3.2.7 and several gems. Their second course (titled &amp;quot;Build a Todo List Application&amp;quot;) requires Ruby 2.0 and Ruby on Rails 4. If I were to do course 1 but with installing Ruby 2.0 and RoRails 4 instead of their older versions, I would no doubt come across gem conflicts and/or gem incompatibility issues with the project and a massive headache would ensue. In fact, when following any online tutorial, I recommend installing the exact version numbers as you see them in the tutorial, and not just simple doing &amp;quot;gem install [insert gem name]&amp;quot; or simple adding &amp;quot; gem &amp;#39;[insert gem name]&amp;#39; &amp;quot; to your gemfile. Trust me, it&amp;#39;s better to be specific and explicit so you would avoid gem installation problems and/or errors when working on your tutorials/application.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;A simple example would be that I install Ruby 1.9  and RoRails 3.2.7 or the first course. Then create a gemset called &amp;quot;course1gemset&amp;quot; and install the required gems for the tutorial application. Then install Ruby 2.0 and create a new gemset called &amp;quot;todogemset&amp;quot; and install RoRails 4 with required gems for the tutorial. You can switch back and forth depending on which tutorial / project you are working on without having to worry about gem conflicts. Example on the command line:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+    rvm install Ruby --version 2.0
+    /* installs version of Ruby 2.0 */
+
+    rvm gemset create "todogemset" 
+    /* creates gemset */
+
+    rvm install Rails --version 4.0.0
+    /* installs 4.0 version of Rails into gemset*/
+&lt;/pre&gt;
+
+&lt;p&gt;Another example would be lets say you wanted to start your own project that uses Ruby 1.9.3 and Rails 3.2.7 but it uses gems that you might or might have not yet installed and they might be a different version from the gems you have previously installed. You can simply create a new gemset without having to worry if the old gem and its dependencies will be compatible with the gem required in your new project since this gemset is self-contained in its own environment. Example on the command line:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+    rvm install Ruby --version 1.9.3 
+    /* installs older version of Ruby */
+
+    rvm gemset create "rorTutgemset"
+    /* creates gemset */
+
+    rvm install Rails --version 3.2.7 
+    /* installs older version of Rails into gemset*/
+&lt;/pre&gt;
+
+&lt;p&gt;Now these two gemsets will be encapsulated in their own environments.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;For documentation on rvm and how to create gem sets, go to &lt;a href="https://rvm.io/"&gt;https://rvm.io/&lt;/a&gt; and &lt;a href="https://rvm.io/gemsets/basics"&gt;https://rvm.io/gemsets/basics&lt;/a&gt;. Good luck!  &lt;/p&gt;
 </description>
     </item>
     <item>

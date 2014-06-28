@@ -14,9 +14,12 @@
 
     <!-- Le styles -->
 <link href='/ruhohblog/assets/stylesheets/bootstrap.min-4eadbf7d1721bb2729e398595bc7f0bc.css' type='text/css' rel='stylesheet' media='all'>
-<link href='/ruhohblog/assets/stylesheets/style-bf6cd17e7aa21529e62cbdc41620761c.css' type='text/css' rel='stylesheet' media='all'>
-<link href='/ruhohblog/assets/stylesheets/google_prettify/sons-of-obsidian-afb0925bfa2d994f17dab93e13fbf999.css' type='text/css' rel='stylesheet' media='all'>
-<link href='/ruhohblog/assets/stylesheets/font-awesome.min-5642646427f9f738a393e6cc05dd5003.css' type='text/css' rel='stylesheet' media='all'>  <!-- Update these with your own images
+<link href='/ruhohblog/assets/stylesheets/style-cf00424739bf79506dc2bd44264c5406.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/ruhohblog/assets/stylesheets/google_prettify/default-b3ee55d958b6badce341f16d1644e306.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/ruhohblog/assets/stylesheets/font-awesome.min-5642646427f9f738a393e6cc05dd5003.css' type='text/css' rel='stylesheet' media='all'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+  <!-- Update these with your own images
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
@@ -65,7 +68,13 @@
           <h4 class="date text-center"></h4>
         </div>
           <div class="summary">  <h2>2014</h2>
-    <h3>March</h3>
+    <h3>June</h3>
+    <ul>
+<li>
+<span>June 28, 2014</span> » <a href="/ruhohblog/posts/code-wars-javascript-vs-arrays">Code Wars: Javascript Arguments Pt.1</a>
+</li>
+    </ul>
+<h3>March</h3>
     <ul>
 <li>
 <span>March 25, 2014</span> » <a href="/ruhohblog/posts/creating-a-messaging-system-part-1">Creating a Messaging System From Scratch Part 1</a>
@@ -79,7 +88,16 @@
       <li>
 <span>March 07, 2014</span> » <a href="/ruhohblog/posts/sleep-deprived">Sleep deprived</a>
 </li>
-      <li>
+    </ul>
+<h3>June</h3>
+    <ul>
+<li>
+<span>June 27, 2014</span> » <a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm">Why Ruby/Rails noobs should use RVM</a>
+</li>
+    </ul>
+<h3>March</h3>
+    <ul>
+<li>
 <span>March 06, 2014</span> » <a href="/ruhohblog/posts/hello-world">hello world</a>
 </li>
       <li>
@@ -103,7 +121,17 @@
           <h2 class="title text-center "><a href="/ruhohblog/categories">Categories</a> </h2>
           <h4 class="date text-center"></h4>
         </div>
-          <div class="summary"><ul class="tag_box inline"></ul></div>
+          <div class="summary">
+<ul class="tag_box inline">
+<li>
+    <a href="/ruhohblog/categories#code,%20ruby-ref">code, ruby <span>1</span></a>
+  </li>
+</ul>
+<h3>code, ruby (1)</h3>
+  <ul>
+<li><a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm">Why Ruby/Rails noobs should use RVM</a></li>
+  </ul>
+</div>
         <div class="none more">
           <a href="/ruhohblog/categories" class="btn btn-default">read more..</a>
         </div>
@@ -143,7 +171,30 @@
           <h2 class="title text-center "><a href="/ruhohblog/tags">Tags</a> </h2>
           <h4 class="date text-center"></h4>
         </div>
-          <div class="summary"><ul class="tag_box inline"></ul></div>
+          <div class="summary ellipsis">
+<ul class="tag_box inline">
+<li>
+    <a href="/ruhohblog/tags#code-ref">code <span>1</span></a>
+  </li>
+  <li>
+    <a href="/ruhohblog/tags#javascript-ref">javascript <span>1</span></a>
+  </li>
+  <li>
+    <a href="/ruhohblog/tags#codewars-ref">codewars <span>1</span></a>
+  </li>
+  <li>
+    <a href="/ruhohblog/tags#ruby-ref">ruby <span>1</span></a>
+  </li>
+  <li>
+    <a href="/ruhohblog/tags#rvm-ref">rvm <span>1</span></a>
+  </li>
+</ul>
+<h3 id="code-ref">code</h3>
+    <li><a href="/ruhohblog/posts/code-wars-javascript-vs-arrays">Code Wars: Javascript Arguments Pt.1</a></li>
+  <h3 id="javascript-ref">javascript</h3>
+    <li><a href="/ruhohblog/posts/code-wars-javascript-vs-arrays">Code Wars: Javascript Arguments Pt.1</a></li>
+  <h3 id="codewars-ref">codewars</h3>
+    </div>
         <div class="none more">
           <a href="/ruhohblog/tags" class="btn btn-default">read more..</a>
         </div>
@@ -160,6 +211,8 @@
 
 
         </div><!-- /.blog-main -->
+
+
 
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           <div class="sidebar-module sidebar-module-inset">
@@ -186,8 +239,48 @@
 
       </div><!-- /.row -->
 
+          <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'whipstercode'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'whipstercode'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52375626-1', 'auto');
+  ga('send', 'pageview');
+
+  </script>
+
     </div><!-- /.container -->
-        <div id="footer">
+
+    <div id="footer">
       <div class="container">
         <p>&copy; Bobby Ho 2014
         with help from <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">ruhoh</a>
@@ -198,4 +291,15 @@
 
   </body>
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  <script>(function(jQuery){
+  
+  jQuery( document ).ready( function() {
+    
+    prettyPrint();
+    
+  } );
+ 
+}(jQuery))
+  </script>
 </html>

@@ -4,7 +4,7 @@
     <title>The Whipster Code Blog</title>
     <description>The Whipster Code Blog</description>
     <link/>
-    <pubDate>June 17, 2014</pubDate>
+    <pubDate>June 28, 2014</pubDate>
     <item>
       <title>About</title>
       <link>/ruhohblog/about</link>
@@ -14,12 +14,23 @@
       <title>Archive</title>
       <link>/ruhohblog/archive</link>
       <description>  &lt;h2&gt;2014&lt;/h2&gt;
+    &lt;h3&gt;June&lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;span&gt;June 28, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/code-wars-javascript-vs-arrays"&gt;Code Wars: Javascript Arguments Pt.1&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
     &lt;h3&gt;March&lt;/h3&gt;
     &lt;ul&gt;
       &lt;li&gt;&lt;span&gt;March 25, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/creating-a-messaging-system-part-1"&gt;Creating a Messaging System From Scratch Part 1&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;span&gt;March 07, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/hello-moto"&gt;How Relations Work In Rails&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;span&gt;March 07, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/dna-testing"&gt;How to Make A Sticky Header&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;span&gt;March 07, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/sleep-deprived"&gt;Sleep deprived&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h3&gt;June&lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;span&gt;June 27, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm"&gt;Why Ruby/Rails noobs should use RVM&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h3&gt;March&lt;/h3&gt;
+    &lt;ul&gt;
       &lt;li&gt;&lt;span&gt;March 06, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/hello-world"&gt;hello world&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;span&gt;March 07, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/internet"&gt;internet&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;span&gt;March 07, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/test-post"&gt;test post&lt;/a&gt;&lt;/li&gt;
@@ -31,8 +42,15 @@
       <title>Categories</title>
       <link>/ruhohblog/categories</link>
       <description>&lt;ul class="tag_box inline"&gt;
+  &lt;li&gt;
+    &lt;a href="/ruhohblog/categories#code, ruby-ref"&gt;code, ruby &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
+  &lt;h3&gt;code, ruby (1)&lt;/h3&gt;
+  &lt;ul&gt;
+      &lt;li&gt;&lt;a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm"&gt;Why Ruby/Rails noobs should use RVM&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
 </description>
     </item>
     <item>
@@ -65,8 +83,33 @@
       <title>Tags</title>
       <link>/ruhohblog/tags</link>
       <description>&lt;ul class="tag_box inline"&gt;
+  &lt;li&gt;
+    &lt;a href="/ruhohblog/tags#code-ref"&gt;code &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="/ruhohblog/tags#javascript-ref"&gt;javascript &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="/ruhohblog/tags#codewars-ref"&gt;codewars &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="/ruhohblog/tags#ruby-ref"&gt;ruby &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="/ruhohblog/tags#rvm-ref"&gt;rvm &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
+  &lt;h3 id="code-ref"&gt;code&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-javascript-vs-arrays"&gt;Code Wars: Javascript Arguments Pt.1&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="javascript-ref"&gt;javascript&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-javascript-vs-arrays"&gt;Code Wars: Javascript Arguments Pt.1&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="codewars-ref"&gt;codewars&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-javascript-vs-arrays"&gt;Code Wars: Javascript Arguments Pt.1&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="ruby-ref"&gt;ruby&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm"&gt;Why Ruby/Rails noobs should use RVM&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="rvm-ref"&gt;rvm&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm"&gt;Why Ruby/Rails noobs should use RVM&lt;/a&gt;&lt;/li&gt;
  
 </description>
     </item>
