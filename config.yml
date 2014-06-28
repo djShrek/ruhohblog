@@ -1,6 +1,11 @@
 "theme-bootstrap-3" :
   "use" : "theme"
 
+widgets:
+  google_prettify: 
+    enable: true
+    linenums : true
+
 asset_pipeline:
   enable: false
 
