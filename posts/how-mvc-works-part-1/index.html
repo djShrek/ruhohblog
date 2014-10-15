@@ -3,7 +3,7 @@
   <head>
 
     <meta charset="utf-8">
-    <title></title>
+    <title>How MVC Works pt.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Bobby Ho">
 
@@ -49,31 +49,47 @@
 
         <div class="col-sm-8 blog-main">
 
-              <div class="row-fluid">
-  <div class="span12">
-      <div class="_root">
-        <div class="post-header">
-          <h2 class="title text-center "><a href="/ruhohblog">Writings</a> </h2>
-          <h4 class="date text-center"></h4>
-        </div>
-          <div class="summary ellipsis"><p>One of the first lessons I had when I started learning Javascript was a demmonstration
-of the Fizzbuzz challenge. The lesson demonstrated several aspects of the Javascript language
-including the use of the for loop, arrays, coditional and logical statements nad much more.
-Coming across this challenge was pretty exciting because it would test whether I remembered
-what I had learn long ago. However, this code challenge came with twist:</p></div>
-        <div class="none more">
-          <a href="/ruhohblog" class="btn btn-default">read more..</a>
-        </div>
-        <hr>
-      </div>
-    <div>
-      <ul class="pagination">
-          <li><a href="/ruhohblog/index/1">1</a></li>
-          <li class="active"><a href="/ruhohblog/index/2">2</a></li>
-      </ul>
-    </div>
+              
+<div class="text-center posts-title ">
+
+  <div class="posts-header">
+    <h2>How MVC Works pt.1 </h2>
+    <h4 class="date">July 22, 2014</h4>
   </div>
 </div>
+
+<div class="row-fluid post-full">
+  <div class="span12">
+    <div class="content">
+      <p>&nbsp;&nbsp;If you are using the Ruby on Rails framework,  it is necessary  to understand the basics of the Model-View-Controller MVC architectural  pattern since it is incorporated in Rails. Although it serves many different purposes, its main purpose in web applications is to help developers implement user-interfaces. The pattern separates the web application into three core components: the Model, View, and Controller. Each of these components has a separate responsibility to process what occurs after the Rails application has received a web request. 
+  <p>&nbsp;&nbsp;On a conceptual level, a browser sends a request to a web
+application, which is received by a web server and then passed on to the Rails router and subsequently to the controller.
+The controller will then interact with the model, which will then query the database for the data that the browser has
+requested for. After invoking the model, the controller will then renders the view accompanied with any data related to the
+corresponding model and returns a complete web page to the browser as HTML.</p></p>
+
+<p>&nbsp;&nbsp;Before I talk about the main components of the MVC pattern in Rails, I would like to share a 
+conceptual picture of what occurs after a web application receives a HTTP request: <br/>
+<img src="/ruhohblog/assets/media/mvc.jpg"></p>
+
+    </div>
+    <div class="container">
+        <hr>
+        <div class="pagination">
+          <ul>
+              <li class="prev"><a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm" title="Why Rails noobs should use RVM">&larr; Previous</a></li>
+    
+              <li><a href="/ruhohblog/archive">Archive</a></li>
+    
+              <li class="next"><a href="/ruhohblog/posts/code-wars-javascript-vs-arrays" title="Code Wars: Javascript Arguments Pt.1">Next &rarr;</a></li>
+          </ul>
+        </div>
+        <hr>
+        
+      </div>
+    </div>
+</div> 
+
 
 
         </div><!-- /.blog-main -->

@@ -4,7 +4,7 @@
     <title>The Whipster Code Blog</title>
     <description>The Whipster Code Blog</description>
     <link/>
-    <pubDate>June 28, 2014</pubDate>
+    <pubDate>October 15, 2014</pubDate>
     <item>
       <title>About</title>
       <link>/ruhohblog/about</link>
@@ -14,10 +14,22 @@
       <title>Archive</title>
       <link>/ruhohblog/archive</link>
       <description>  &lt;h2&gt;2014&lt;/h2&gt;
+    &lt;h3&gt;July&lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;span&gt;July 22, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/code-wars-fizzbuzz-array"&gt;Code Wars: Fizzbuzz Array&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;July 01, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/code-wars-javascript-arguments-pt-2"&gt;Code Wars: Javascript Arguments Pt. 2&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
     &lt;h3&gt;June&lt;/h3&gt;
     &lt;ul&gt;
       &lt;li&gt;&lt;span&gt;June 28, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/code-wars-javascript-vs-arrays"&gt;Code Wars: Javascript Arguments Pt.1&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;span&gt;June 27, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm"&gt;Why Ruby/Rails noobs should use RVM&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h3&gt;July&lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;span&gt;July 22, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/how-mvc-works-part-1"&gt;How MVC Works pt.1&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h3&gt;June&lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;span&gt;June 27, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm"&gt;Why Rails noobs should use RVM&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
 </description>
     </item>
@@ -32,7 +44,7 @@
 
   &lt;h3&gt;code, ruby (1)&lt;/h3&gt;
   &lt;ul&gt;
-      &lt;li&gt;&lt;a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm"&gt;Why Ruby/Rails noobs should use RVM&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm"&gt;Why Rails noobs should use RVM&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 </description>
     </item>
@@ -67,32 +79,68 @@
       <link>/ruhohblog/tags</link>
       <description>&lt;ul class="tag_box inline"&gt;
   &lt;li&gt;
+    &lt;a href="/ruhohblog/tags#javascript-ref"&gt;javascript &lt;span&gt;3&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="/ruhohblog/tags#code challenges-ref"&gt;code challenges &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="/ruhohblog/tags#fizzbuzz-ref"&gt;fizzbuzz &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="/ruhohblog/tags#codewars-ref"&gt;codewars &lt;span&gt;3&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="/ruhohblog/tags#arrays-ref"&gt;arrays &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
     &lt;a href="/ruhohblog/tags#code-ref"&gt;code &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;a href="/ruhohblog/tags#javascript-ref"&gt;javascript &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+    &lt;a href="/ruhohblog/tags#MVC-ref"&gt;MVC &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;a href="/ruhohblog/tags#codewars-ref"&gt;codewars &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+    &lt;a href="/ruhohblog/tags#design patterns-ref"&gt;design patterns &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;a href="/ruhohblog/tags#ruby-ref"&gt;ruby &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+    &lt;a href="/ruhohblog/tags#rails-ref"&gt;rails &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="/ruhohblog/tags#ruby-ref"&gt;ruby &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;a href="/ruhohblog/tags#rvm-ref"&gt;rvm &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
+  &lt;h3 id="javascript-ref"&gt;javascript&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-fizzbuzz-array"&gt;Code Wars: Fizzbuzz Array&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-javascript-arguments-pt-2"&gt;Code Wars: Javascript Arguments Pt. 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-javascript-vs-arrays"&gt;Code Wars: Javascript Arguments Pt.1&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="code challenges-ref"&gt;code challenges&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-fizzbuzz-array"&gt;Code Wars: Fizzbuzz Array&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-javascript-arguments-pt-2"&gt;Code Wars: Javascript Arguments Pt. 2&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="fizzbuzz-ref"&gt;fizzbuzz&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-fizzbuzz-array"&gt;Code Wars: Fizzbuzz Array&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="codewars-ref"&gt;codewars&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-fizzbuzz-array"&gt;Code Wars: Fizzbuzz Array&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-javascript-arguments-pt-2"&gt;Code Wars: Javascript Arguments Pt. 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-javascript-vs-arrays"&gt;Code Wars: Javascript Arguments Pt.1&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="arrays-ref"&gt;arrays&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-fizzbuzz-array"&gt;Code Wars: Fizzbuzz Array&lt;/a&gt;&lt;/li&gt;
   &lt;h3 id="code-ref"&gt;code&lt;/h3&gt;
     &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-javascript-vs-arrays"&gt;Code Wars: Javascript Arguments Pt.1&lt;/a&gt;&lt;/li&gt;
-  &lt;h3 id="javascript-ref"&gt;javascript&lt;/h3&gt;
-    &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-javascript-vs-arrays"&gt;Code Wars: Javascript Arguments Pt.1&lt;/a&gt;&lt;/li&gt;
-  &lt;h3 id="codewars-ref"&gt;codewars&lt;/h3&gt;
-    &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-javascript-vs-arrays"&gt;Code Wars: Javascript Arguments Pt.1&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="MVC-ref"&gt;MVC&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/how-mvc-works-part-1"&gt;How MVC Works pt.1&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="design patterns-ref"&gt;design patterns&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/how-mvc-works-part-1"&gt;How MVC Works pt.1&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="rails-ref"&gt;rails&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/how-mvc-works-part-1"&gt;How MVC Works pt.1&lt;/a&gt;&lt;/li&gt;
   &lt;h3 id="ruby-ref"&gt;ruby&lt;/h3&gt;
-    &lt;li&gt;&lt;a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm"&gt;Why Ruby/Rails noobs should use RVM&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/how-mvc-works-part-1"&gt;How MVC Works pt.1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm"&gt;Why Rails noobs should use RVM&lt;/a&gt;&lt;/li&gt;
   &lt;h3 id="rvm-ref"&gt;rvm&lt;/h3&gt;
-    &lt;li&gt;&lt;a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm"&gt;Why Ruby/Rails noobs should use RVM&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm"&gt;Why Rails noobs should use RVM&lt;/a&gt;&lt;/li&gt;
  
 </description>
     </item>

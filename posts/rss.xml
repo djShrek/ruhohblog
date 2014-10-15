@@ -4,7 +4,192 @@
     <title>The Whipster Code Blog</title>
     <description>The Whipster Code Blog</description>
     <link/>
-    <pubDate>June 28, 2014</pubDate>
+    <pubDate>October 15, 2014</pubDate>
+    <item>
+      <title>Code Wars: Fizzbuzz Array</title>
+      <link>/ruhohblog/posts/code-wars-fizzbuzz-array</link>
+      <pubDate>July 22, 2014</pubDate>
+      <description>&lt;p&gt;One of the first lessons I had when I started learning Javascript was a demmonstration
+of the Fizzbuzz challenge. The lesson demonstrated several aspects of the Javascript language
+including the use of the for loop, arrays, coditional and logical statements nad much more.
+Coming across this challenge was pretty exciting because it would test whether I remembered
+what I had learn long ago. However, this code challenge came with twist:&lt;/p&gt;
+
+&lt;blockquote&gt;
+1. Create a method/function that returns an array of numbers from 1 to 100.
+&lt;br/&gt;
+2. If no arguments are passed the value at the index of the array for number should be 'Fizz' if it is divisible by 3, 'Buzz' if divisible by 5, 'FizzBuzz' if it divisible by both 3 and 5, or the number if it is not divisible by 3 or 5.
+&lt;br/&gt;
+3. The method should take up to 4 arguments:
+&lt;br/&gt;
+The first and second arguments are strings, which should be 'Fizz' and 'Buzz' by default.
+&lt;br/&gt;
+The third and fourth arguments are integers and and should be 3 and 5 by default.
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ll go through each step with my solution as an example.&lt;/p&gt;
+
+&lt;p&gt;First, we create function that will take 4 arguments:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+    var fizzBuzzCustom = function(stringOne, stringTwo, numOne, numTwo){
+}
+&lt;/pre&gt;
+
+&lt;p&gt;Then set the defaults if no arguments are passed&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+    var fizzBuzzCustom = function(stringOne, stringTwo, numOne, numTwo){
+        var stringOne = stringOne || "Fizz"; 
+        var stringTwo = stringTwo || "BUzz";
+        var numOne = numOne || 3;
+        var numTwo = numTwo || 5;
+    }
+&lt;/pre&gt;
+
+&lt;p&gt;Then I create an empty array:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+    var coolArray = [];
+&lt;/pre&gt;
+
+&lt;p&gt;Then I set up the main logic:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+    for(var i = 1; i &lt; 100; i++) // 1. For loop beginning with 1 and ending with 100
+      if ( i % numOne === 0 ) { // 2. If i is divisible by the number passed in or 3 (by default)
+        if ( i % numTwo === 0) { // 3. If i is divisble by the number passed in or 5 (by default)
+            coolArray.push(stringOne + stringTwo) // 4. Add the two strings together and push to coolArray
+        } else {
+        coolArray.push(stringOne) // 5. Push stringOne to our coolArray 
+        } 
+    } else if (i % numTwo === 0){ // 6. else if the first if statement is false, check if i is divisble by numTwo ( or 5 by default).
+        coolArray.push(stringTwo) // 7. Push stringTwo to our coolArray
+    } else {
+        coolArray.push(i) // else just push i to coolArray.
+    }
+  }
+&lt;/pre&gt;
+
+&lt;p&gt;and thats it!&lt;/p&gt;
+
+&lt;p&gt;the final function looks something like this:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+var fizzBuzzCustom = function(stringOne, stringTwo, numOne, numTwo) {
+    var stringOne = stringOne || "Fizz";
+    var stringTwo = stringTwo || "Buzz";
+    var numOne = numOne || 3;
+    var numTwo = numTwo || 5;
+    var coolArray = [];
+      for(var i = 1; i &lt; 100; i++){
+        if (i % numOne === 0){
+          if(i % numTwo === 0) {
+          coolArray.push(stringOne+stringTwo);
+          } else {
+          coolArray.push(stringOne);
+          }
+        }
+        else if (i % numTwo === 0){
+          coolArray.push(stringTwo);
+        }
+        else {
+          coolArray.push(i);
+        }
+      }
+}
+&lt;/pre&gt;
+
+&lt;p&gt;Notes: &lt;br/&gt;
+1. One of the first &amp;quot;gotchas&amp;quot; that I encountered with Fizzbuzz was the first line
+after the for-loop begins. The first if statement checks if the variable i is divisble
+by the value of numOne, which is either going to be the value of the argument passed into
+the function or the default value of 3. If this is true, then it moves on to the next line and
+checks the same for numTwo but instead with a default value of 5. If this is also true,
+then the two strings will be concatenated together and pushed into coolArray. However, if numTwo is false, only
+the first string will be pushed to the array. Similarly, if i is not divisible by numOne, the interpreter
+moves onto to next else if statement and checks if i is divisible by numTwo or the number 5 and push
+the second string to cool array. Finally, is this doesn&amp;#39;t work, the value of I is pushd into the array.
+phew that was alot!
+&lt;br/&gt;
+&lt;br/&gt;
+2. I also want to note that instead of doing:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+   if (i % numOne === 0){
+          if(i % numTwo === 0) {
+          
+          } 
+&lt;/pre&gt;
+
+&lt;p&gt;You can do:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+   if (i % numOne === 0 &amp;&amp; i % numTwo === 0) {
+          coolArray.push(stringOne+stringTwo);
+      } 
+&lt;/pre&gt;
+
+&lt;p&gt;That was a long post! I hope you enjoyed it! &lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Code Wars: Javascript Arguments Pt. 2</title>
+      <link>/ruhohblog/posts/code-wars-javascript-arguments-pt-2</link>
+      <pubDate>July 01, 2014</pubDate>
+      <description>&lt;p&gt;In my previous &lt;a href="/posts/code-wars-javascript-vs-arrays"&gt;post&lt;/a&gt;, I discussed
+my solution to a Javascript code challenge from Code Wars. I would like to now 
+talk about the optimal / &amp;quot;best solution&amp;quot; that was shown once I solved that challenge.
+Once again, the description for the challenge went like this:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+    Write a function named numbers that returns true if all the parameters it is passed are are of the Number type. Otherwise, the function should return false. The function should accept any number of parameters.
+&lt;/pre&gt;
+
+&lt;p&gt;The &amp;quot;top&amp;quot; solution that was given once I solved the code challenge was:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+var numbers = function() {
+    return Array.prototype.filter.call(arguments, function(n) { 
+        return typeof n !== 'number'; }
+        ).length === 0;
+    }
+&lt;/pre&gt;
+
+&lt;p&gt;It looks pretty complicated but makes sense once we break it down: &lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;The solution begins with a function being stored in a numbers variable. &lt;/li&gt;
+&lt;li&gt;The function returns boolean value. Even though it looks a bit complicated,
+the logic is simply a equality expression checking to see if two values equal each
+other. (In this case, whether the value is equal to 0)&lt;/li&gt;
+&lt;li&gt;The function used as part of the boolean check is the call method, which is used to 
+&amp;quot;borrow&amp;quot; the Array.prototype method &amp;quot;filter&amp;quot; and also takes a callback function
+as an argument.&lt;/li&gt;
+&lt;li&gt;The callback function used inside the filter method returns a boolean value
+based on the on whether the equality expression evaluates to true or false.
+(The &lt;a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"&gt;filter&lt;/a&gt; method takes callback functions that are predicate functions.)&lt;/li&gt;
+&lt;li&gt;The callback returns true if the values passed to the &amp;quot;n&amp;quot; variable does NOT
+equal to a number type. Otherwise, it returns false and that value (a number) will not be
+added to the returned array.&lt;/li&gt;
+&lt;li&gt;The length method is called on the returned array (from the filter method)
+and is checked to see if it evaluates to 0. What this means is that if 
+the length of the returned array is anything above 0, then there were 1 or more
+values from the arguments object that evaluated to !number or a non &amp;quot;number&amp;quot; value.
+Therefore, any number that does not equal to &amp;quot;0&amp;quot; will now return false.&lt;/li&gt;
+&lt;li&gt; In the end, the function successfully satisfies the requirements and objectives
+of the code challenge.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Phew! That honestly took some time to research and write! 
+As you can see, the optimal solution was about 4-5 lines of code versus my 
+13! Quite the savings if you are very proficient at Javascript!
+If you have any questions,
+please feel free to leave a message!. Hope this helped. :D&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Code Wars: Javascript Arguments Pt.1</title>
       <link>/ruhohblog/posts/code-wars-javascript-vs-arrays</link>
@@ -95,7 +280,23 @@ lines of code. I&amp;#39;ll go over this in part-2 of this blog post!&lt;/p&gt;
 </description>
     </item>
     <item>
-      <title>Why Ruby/Rails noobs should use RVM</title>
+      <title>How MVC Works pt.1</title>
+      <link>/ruhohblog/posts/how-mvc-works-part-1</link>
+      <pubDate>July 22, 2014</pubDate>
+      <description>&lt;p&gt;&amp;nbsp;&amp;nbsp;If you are using the Ruby on Rails framework,  it is necessary  to understand the basics of the Model-View-Controller MVC architectural  pattern since it is incorporated in Rails. Although it serves many different purposes, its main purpose in web applications is to help developers implement user-interfaces. The pattern separates the web application into three core components: the Model, View, and Controller. Each of these components has a separate responsibility to process what occurs after the Rails application has received a web request. 
+  &lt;p&gt;&amp;nbsp;&amp;nbsp;On a conceptual level, a browser sends a request to a web
+application, which is received by a web server and then passed on to the Rails router and subsequently to the controller.
+The controller will then interact with the model, which will then query the database for the data that the browser has
+requested for. After invoking the model, the controller will then renders the view accompanied with any data related to the
+corresponding model and returns a complete web page to the browser as HTML.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;Before I talk about the main components of the MVC pattern in Rails, I would like to share a 
+conceptual picture of what occurs after a web application receives a HTTP request: &lt;br/&gt;
+&lt;img src="/ruhohblog/assets/media/mvc.jpg"&gt;&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Why Rails noobs should use RVM</title>
       <link>/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm</link>
       <pubDate>June 27, 2014</pubDate>
       <description>&lt;p&gt;&amp;nbsp;&amp;nbsp;If you are just getting started with Ruby or Ruby on Rails, chances that you are likely have come across the Ruby Version Manager, or a.k.a RVM.
