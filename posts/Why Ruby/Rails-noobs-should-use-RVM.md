@@ -1,5 +1,5 @@
 ---
-title: 'Why Ruby/Rails noobs should use RVM'
+title: 'Why Rails noobs should use RVM'
 date: '2014-06-27'
 description:
 tags: [ruby, rvm]
