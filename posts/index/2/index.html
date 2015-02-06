@@ -3,7 +3,7 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Code Wars: Javascript Arguments Pt. 2</title>
+    <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Bobby Ho">
 
@@ -49,86 +49,61 @@
 
         <div class="col-sm-8 blog-main">
 
-              
-<div class="text-center posts-title ">
-
-  <div class="posts-header">
-    <h2>Code Wars: Javascript Arguments Pt. 2 </h2>
-    <h4 class="date">2014-07-01</h4>
-  </div>
-</div>
-
-<div class="row-fluid post-full">
+              <div class="row-fluid">
   <div class="span12">
-    <div class="content">
-      <p>In my previous <a href="/posts/code-wars-javascript-vs-arrays">post</a>, I discussed
-my solution to a Javascript code challenge from Code Wars. I would like to now 
-talk about the optimal / &quot;best solution&quot; that was shown once I solved that challenge.
-Once again, the description for the challenge went like this:</p>
-
-<pre class="prettyprint">
-    Write a function named numbers that returns true if all the parameters it is passed are are of the Number type. Otherwise, the function should return false. The function should accept any number of parameters.
-</pre>
-
-<p>The &quot;top&quot; solution that was given once I solved the code challenge was:</p>
-
-<pre class="prettyprint">
-var numbers = function() {
-    return Array.prototype.filter.call(arguments, function(n) { 
-        return typeof n !== 'number'; }
-        ).length === 0;
-    }
-</pre>
-
-<p>It looks pretty complicated but makes sense once we break it down: </p>
-
-<ol>
-<li>The solution begins with a function being stored in a numbers variable. </li>
-<li>The function returns boolean value. Even though it looks a bit complicated,
-the logic is simply a equality expression checking to see if two values equal each
-other. (In this case, whether the value is equal to 0)</li>
-<li>The function used as part of the boolean check is the call method, which is used to 
-&quot;borrow&quot; the Array.prototype method &quot;filter&quot; and also takes a callback function
-as an argument.</li>
-<li>The callback function used inside the filter method returns a boolean value
-based on the on whether the equality expression evaluates to true or false.
-(The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">filter</a> method takes callback functions that are predicate functions.)</li>
-<li>The callback returns true if the values passed to the &quot;n&quot; variable does NOT
-equal to a number type. Otherwise, it returns false and that value (a number) will not be
-added to the returned array.</li>
-<li>The length method is called on the returned array (from the filter method)
-and is checked to see if it evaluates to 0. What this means is that if 
-the length of the returned array is anything above 0, then there were 1 or more
-values from the arguments object that evaluated to !number or a non &quot;number&quot; value.
-Therefore, any number that does not equal to &quot;0&quot; will now return false.</li>
-<li> In the end, the function successfully satisfies the requirements and objectives
-of the code challenge.</li>
-</ol>
-
-<p>Phew! That honestly took some time to research and write! 
-As you can see, the optimal solution was about 4-5 lines of code versus my 
-13! Quite the savings if you are very proficient at Javascript!
-If you have any questions,
-please feel free to leave a message!. Hope this helped. :D</p>
-
-    </div>
-    <div class="container">
-        <hr>
-        <div class="pagination">
-          <ul>
-              <li class="prev"><a href="/ruhohblog/posts/code-wars-javascript-vs-arrays" title="Code Wars: Javascript Arguments Pt.1">&larr; Previous</a></li>
-    
-              <li><a href="/ruhohblog/archive">Archive</a></li>
-    
-              <li class="next"><a href="/ruhohblog/posts/code-wars-fizzbuzz-array" title="Code Wars: Fizzbuzz Array">Next &rarr;</a></li>
-          </ul>
+      <div class="posts">
+        <div class="post-header">
+          <h2 class="title text-center "><a href="/ruhohblog/posts/authentication">What is Authentication and hy do we need it in our Rails Apps?</a> </h2>
+          <h4 class="date text-center">2014-11-21</h4>
+        </div>
+          <div class="summary"></div>
+        <div class="none more">
+          <a href="/ruhohblog/posts/authentication" class="btn btn-default">read more..</a>
         </div>
         <hr>
-        
       </div>
-    </div>
-</div> 
+      <div class="posts">
+        <div class="post-header">
+          <h2 class="title text-center "><a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm">Why Rails noobs should use RVM</a> </h2>
+          <h4 class="date text-center">2014-06-27</h4>
+        </div>
+          <div class="summary ellipsis">
+<p>  If you are just getting started with Ruby or Ruby on Rails, chances that you are likely have come across the Ruby Version Manager, or a.k.a RVM.
+As stated in the introduction of the home page, "RVM is a command-line tool which allows you to easily install, manage, and work with multiple environments from interpreters to sets of gems." If you have not been acquainted with RVM, now is your chance to do so.</p>
 
+<p>Why would this be important for someone who is just starting Ruby / Ruby on Rails?</p>
+
+<p>    RVM lets you keep your projects self-contained within their own environments, "from the specific version of ruby, all the way down to the precise set of required gems to run your application." RVM allows you to switch between different versions of Ruby (its named Ruby Version Manager after all..) and organize your gems in a different sets depending on your application's needs without different versions of the gems conflicting with one another. Having a different gem sets also avoids the issue of version conflicts between projects, which can cause HUGE, pain-in-the-neck for any newbie starting on a new project or tutorial. </p>
+
+<p>    There are many more other benefits to using RVM, many that I haven't even touched upon, but the main use for it for myself is creating different gem sets when I start a new project or work on a new tutorial. For example, I am a student at teamtreehouse.com and they have two courses that are related to Ruby on Rails. The first course (called "Build A Simple Application") requires Ruby 1.9 and RoRails 3.2.7 and several gems. Their second course (titled "Build a Todo List Application") requires Ruby 2.0 and Ruby on Rails 4. If I were to do course 1 but with installing Ruby 2.0 and RoRails 4 instead of their older versions, I would no doubt come across gem conflicts and/or gem incompatibility issues with the project and a massive headache would ensue. In fact, when following any online tutorial, I recommend installing the exact version numbers as you see them in the tutorial, and not just simple doing "gem install [insert gem name]" or simple adding " gem '[insert gem name]' " to your gemfile. Trust me, it's better to be specific and explicit so you would avoid gem installation problems and/or errors when working on your tutorials/application.</p>
+
+<p>    A simple example would be that I install Ruby 1.9  and RoRails 3.2.7 or the first course. Then create a gemset called "course1gemset" and install the required gems for the tutorial application. Then install Ruby 2.0 and create a new gemset called "todogemset" and install RoRails 4 with required gems for the tutorial. You can switch back and forth depending on which tutorial / project you are working on without having to worry about gem conflicts. Example on the command line:</p>
+
+<pre class="prettyprint">
+    rvm install Ruby --version 2.0
+    /* installs version of Ruby 2.0 */
+
+    rvm gemset create "todogemset" 
+    /* creates gemset */
+
+    rvm install Rails --version 4.0.0
+    /* installs 4.0 version of Rails into gemset*/
+</pre>
+
+</div>
+        <div class="none more">
+          <a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm" class="btn btn-default">read more..</a>
+        </div>
+        <hr>
+      </div>
+    <div>
+      <ul class="pagination">
+          <li><a href="/ruhohblog/posts/index/1">1</a></li>
+          <li class="active"><a href="/ruhohblog/posts/index/2">2</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 
         </div><!-- /.blog-main -->

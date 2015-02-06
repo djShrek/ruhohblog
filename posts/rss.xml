@@ -4,11 +4,11 @@
     <title>The Whipster Code Blog</title>
     <description>The Whipster Code Blog</description>
     <link/>
-    <pubDate>October 15, 2014</pubDate>
+    <pubDate>2015-02-05</pubDate>
     <item>
       <title>Code Wars: Fizzbuzz Array</title>
       <link>/ruhohblog/posts/code-wars-fizzbuzz-array</link>
-      <pubDate>July 22, 2014</pubDate>
+      <pubDate>2014-07-22</pubDate>
       <description>&lt;p&gt;One of the first lessons I had when I started learning Javascript was a demmonstration
 of the Fizzbuzz challenge. The lesson demonstrated several aspects of the Javascript language
 including the use of the for loop, arrays, coditional and logical statements nad much more.
@@ -138,7 +138,7 @@ phew that was alot!
     <item>
       <title>Code Wars: Javascript Arguments Pt. 2</title>
       <link>/ruhohblog/posts/code-wars-javascript-arguments-pt-2</link>
-      <pubDate>July 01, 2014</pubDate>
+      <pubDate>2014-07-01</pubDate>
       <description>&lt;p&gt;In my previous &lt;a href="/posts/code-wars-javascript-vs-arrays"&gt;post&lt;/a&gt;, I discussed
 my solution to a Javascript code challenge from Code Wars. I would like to now 
 talk about the optimal / &amp;quot;best solution&amp;quot; that was shown once I solved that challenge.
@@ -193,7 +193,7 @@ please feel free to leave a message!. Hope this helped. :D&lt;/p&gt;
     <item>
       <title>Code Wars: Javascript Arguments Pt.1</title>
       <link>/ruhohblog/posts/code-wars-javascript-vs-arrays</link>
-      <pubDate>June 28, 2014</pubDate>
+      <pubDate>2014-06-28</pubDate>
       <description>&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; I recently decided that it would be a good idea to 
 do some simple code challenges so that I could review and refresh my knowledge
 in Javascript and Ruby. Codewars is a website that offers challenges in Javascript,
@@ -280,9 +280,15 @@ lines of code. I&amp;#39;ll go over this in part-2 of this blog post!&lt;/p&gt;
 </description>
     </item>
     <item>
+      <title>Codewars: Color Ghost</title>
+      <link>/ruhohblog/posts/codewars-color-ghost</link>
+      <pubDate>2014-10-20</pubDate>
+      <description>Simple 8-kyu code challenge in Ruby</description>
+    </item>
+    <item>
       <title>How MVC Works pt.1</title>
       <link>/ruhohblog/posts/how-mvc-works-part-1</link>
-      <pubDate>July 22, 2014</pubDate>
+      <pubDate>2014-07-22</pubDate>
       <description>&lt;p&gt;&amp;nbsp;&amp;nbsp;If you are using the Ruby on Rails framework,  it is necessary  to understand the basics of the Model-View-Controller MVC architectural  pattern since it is incorporated in Rails. Although it serves many different purposes, its main purpose in web applications is to help developers implement user-interfaces. The pattern separates the web application into three core components: the Model, View, and Controller. Each of these components has a separate responsibility to process what occurs after the Rails application has received a web request. 
   &lt;p&gt;&amp;nbsp;&amp;nbsp;On a conceptual level, a browser sends a request to a web
 application, which is received by a web server and then passed on to the Rails router and subsequently to the controller.
@@ -296,9 +302,15 @@ conceptual picture of what occurs after a web application receives a HTTP reques
 </description>
     </item>
     <item>
+      <title>What is Authentication and hy do we need it in our Rails Apps?</title>
+      <link>/ruhohblog/posts/authentication</link>
+      <pubDate>2014-11-21</pubDate>
+      <description/>
+    </item>
+    <item>
       <title>Why Rails noobs should use RVM</title>
       <link>/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm</link>
-      <pubDate>June 27, 2014</pubDate>
+      <pubDate>2014-06-27</pubDate>
       <description>&lt;p&gt;&amp;nbsp;&amp;nbsp;If you are just getting started with Ruby or Ruby on Rails, chances that you are likely have come across the Ruby Version Manager, or a.k.a RVM.
 As stated in the introduction of the home page, &amp;quot;RVM is a command-line tool which allows you to easily install, manage, and work with multiple environments from interpreters to sets of gems.&amp;quot; If you have not been acquainted with RVM, now is your chance to do so.&lt;/p&gt;
 

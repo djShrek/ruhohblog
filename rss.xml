@@ -4,7 +4,7 @@
     <title>The Whipster Code Blog</title>
     <description>The Whipster Code Blog</description>
     <link/>
-    <pubDate>October 15, 2014</pubDate>
+    <pubDate>2015-02-05</pubDate>
     <item>
       <title>About</title>
       <link>/ruhohblog/about</link>
@@ -16,20 +16,28 @@
       <description>  &lt;h2&gt;2014&lt;/h2&gt;
     &lt;h3&gt;July&lt;/h3&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;span&gt;July 22, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/code-wars-fizzbuzz-array"&gt;Code Wars: Fizzbuzz Array&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;span&gt;July 01, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/code-wars-javascript-arguments-pt-2"&gt;Code Wars: Javascript Arguments Pt. 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;2014-07-22&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/code-wars-fizzbuzz-array"&gt;Code Wars: Fizzbuzz Array&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;2014-07-01&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/code-wars-javascript-arguments-pt-2"&gt;Code Wars: Javascript Arguments Pt. 2&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
     &lt;h3&gt;June&lt;/h3&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;span&gt;June 28, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/code-wars-javascript-vs-arrays"&gt;Code Wars: Javascript Arguments Pt.1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;2014-06-28&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/code-wars-javascript-vs-arrays"&gt;Code Wars: Javascript Arguments Pt.1&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h3&gt;October&lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;span&gt;2014-10-20&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/codewars-color-ghost"&gt;Codewars: Color Ghost&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
     &lt;h3&gt;July&lt;/h3&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;span&gt;July 22, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/how-mvc-works-part-1"&gt;How MVC Works pt.1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;2014-07-22&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/how-mvc-works-part-1"&gt;How MVC Works pt.1&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h3&gt;November&lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;span&gt;2014-11-21&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/authentication"&gt;What is Authentication and hy do we need it in our Rails Apps?&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
     &lt;h3&gt;June&lt;/h3&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;span&gt;June 27, 2014&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm"&gt;Why Rails noobs should use RVM&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;2014-06-27&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm"&gt;Why Rails noobs should use RVM&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
 </description>
     </item>
@@ -79,6 +87,15 @@
       <link>/ruhohblog/tags</link>
       <description>&lt;ul class="tag_box inline"&gt;
   &lt;li&gt;
+    &lt;a href="/ruhohblog/tags#rails-ref"&gt;rails &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="/ruhohblog/tags#authentication-ref"&gt;authentication &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="/ruhohblog/tags#devise-ref"&gt;devise &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
     &lt;a href="/ruhohblog/tags#javascript-ref"&gt;javascript &lt;span&gt;3&lt;/span&gt;&lt;/a&gt;
   &lt;/li&gt;
   &lt;li&gt;
@@ -97,13 +114,19 @@
     &lt;a href="/ruhohblog/tags#code-ref"&gt;code &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
   &lt;/li&gt;
   &lt;li&gt;
+    &lt;a href="/ruhohblog/tags#Ruby-ref"&gt;Ruby &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="/ruhohblog/tags#CodeWars-ref"&gt;CodeWars &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="/ruhohblog/tags#kata-ref"&gt;kata &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
     &lt;a href="/ruhohblog/tags#MVC-ref"&gt;MVC &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;a href="/ruhohblog/tags#design patterns-ref"&gt;design patterns &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;a href="/ruhohblog/tags#rails-ref"&gt;rails &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;a href="/ruhohblog/tags#ruby-ref"&gt;ruby &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;
@@ -113,6 +136,13 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
+  &lt;h3 id="rails-ref"&gt;rails&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/authentication"&gt;What is Authentication and hy do we need it in our Rails Apps?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/how-mvc-works-part-1"&gt;How MVC Works pt.1&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="authentication-ref"&gt;authentication&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/authentication"&gt;What is Authentication and hy do we need it in our Rails Apps?&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="devise-ref"&gt;devise&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/authentication"&gt;What is Authentication and hy do we need it in our Rails Apps?&lt;/a&gt;&lt;/li&gt;
   &lt;h3 id="javascript-ref"&gt;javascript&lt;/h3&gt;
     &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-fizzbuzz-array"&gt;Code Wars: Fizzbuzz Array&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-javascript-arguments-pt-2"&gt;Code Wars: Javascript Arguments Pt. 2&lt;/a&gt;&lt;/li&gt;
@@ -130,11 +160,15 @@
     &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-fizzbuzz-array"&gt;Code Wars: Fizzbuzz Array&lt;/a&gt;&lt;/li&gt;
   &lt;h3 id="code-ref"&gt;code&lt;/h3&gt;
     &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-javascript-vs-arrays"&gt;Code Wars: Javascript Arguments Pt.1&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="Ruby-ref"&gt;Ruby&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/codewars-color-ghost"&gt;Codewars: Color Ghost&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="CodeWars-ref"&gt;CodeWars&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/codewars-color-ghost"&gt;Codewars: Color Ghost&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="kata-ref"&gt;kata&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/codewars-color-ghost"&gt;Codewars: Color Ghost&lt;/a&gt;&lt;/li&gt;
   &lt;h3 id="MVC-ref"&gt;MVC&lt;/h3&gt;
     &lt;li&gt;&lt;a href="/ruhohblog/posts/how-mvc-works-part-1"&gt;How MVC Works pt.1&lt;/a&gt;&lt;/li&gt;
   &lt;h3 id="design patterns-ref"&gt;design patterns&lt;/h3&gt;
-    &lt;li&gt;&lt;a href="/ruhohblog/posts/how-mvc-works-part-1"&gt;How MVC Works pt.1&lt;/a&gt;&lt;/li&gt;
-  &lt;h3 id="rails-ref"&gt;rails&lt;/h3&gt;
     &lt;li&gt;&lt;a href="/ruhohblog/posts/how-mvc-works-part-1"&gt;How MVC Works pt.1&lt;/a&gt;&lt;/li&gt;
   &lt;h3 id="ruby-ref"&gt;ruby&lt;/h3&gt;
     &lt;li&gt;&lt;a href="/ruhohblog/posts/how-mvc-works-part-1"&gt;How MVC Works pt.1&lt;/a&gt;&lt;/li&gt;

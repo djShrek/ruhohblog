@@ -27,6 +27,8 @@
   </head>
 
   <body>
+
+    byebye
 <div class="blog-masthead">
       <div class="container">
         <nav class="blog-nav">
@@ -50,19 +52,38 @@
 
         <div class="col-sm-8 blog-main">
 
-              <div class="post">
+              hihi
+<div class="post">
   
   <div class="posts-header"> 
     <h2 class="title text-center"><a href="/ruhohblog/posts/code-wars-fizzbuzz-array">Code Wars: Fizzbuzz Array</a></h2>
-    <h4 class="date text-center">July 22, 2014</h4>
+    <h4 class="date text-center">2014-07-22</h4>
   </div>
     
   <p class="index-description"></p>
-  <p class="index-description text-none"><div class="summary ellipsis"><p>One of the first lessons I had when I started learning Javascript was a demmonstration
+  <p class="index-description text-none"><div class="summary ellipsis">
+<p>One of the first lessons I had when I started learning Javascript was a demmonstration
 of the Fizzbuzz challenge. The lesson demonstrated several aspects of the Javascript language
 including the use of the for loop, arrays, coditional and logical statements nad much more.
 Coming across this challenge was pretty exciting because it would test whether I remembered
-what I had learn long ago. However, this code challenge came with twist:</p></div></p>
+what I had learn long ago. However, this code challenge came with twist:</p>
+
+<blockquote>
+1. Create a method/function that returns an array of numbers from 1 to 100.
+<br>
+2. If no arguments are passed the value at the index of the array for number should be 'Fizz' if it is divisible by 3, 'Buzz' if divisible by 5, 'FizzBuzz' if it divisible by both 3 and 5, or the number if it is not divisible by 3 or 5.
+<br>
+3. The method should take up to 4 arguments:
+<br>
+The first and second arguments are strings, which should be 'Fizz' and 'Buzz' by default.
+<br>
+The third and fourth arguments are integers and and should be 3 and 5 by default.
+</blockquote>
+
+<p><br></p>
+
+<p>I'll go through each step with my solution as an example.</p>
+</div></p>
   
   <div class="more">
     <a href="/ruhohblog/posts/code-wars-fizzbuzz-array" class="btn btn-default posts-btn">read more..</a>
@@ -73,14 +94,33 @@ what I had learn long ago. However, this code challenge came with twist:</p></di
   
   <div class="posts-header"> 
     <h2 class="title text-center"><a href="/ruhohblog/posts/code-wars-javascript-arguments-pt-2">Code Wars: Javascript Arguments Pt. 2</a></h2>
-    <h4 class="date text-center">July 01, 2014</h4>
+    <h4 class="date text-center">2014-07-01</h4>
   </div>
     
   <p class="index-description"></p>
-  <p class="index-description text-none"><div class="summary ellipsis"><p>In my previous <a href="/posts/code-wars-javascript-vs-arrays">post</a>, I discussed
+  <p class="index-description text-none"><div class="summary ellipsis">
+<p>In my previous <a href="/posts/code-wars-javascript-vs-arrays">post</a>, I discussed
 my solution to a Javascript code challenge from Code Wars. I would like to now 
 talk about the optimal / "best solution" that was shown once I solved that challenge.
-Once again, the description for the challenge went like this:</p></div></p>
+Once again, the description for the challenge went like this:</p>
+
+<pre class="prettyprint">
+    Write a function named numbers that returns true if all the parameters it is passed are are of the Number type. Otherwise, the function should return false. The function should accept any number of parameters.
+</pre>
+
+<p>The "top" solution that was given once I solved the code challenge was:</p>
+
+<pre class="prettyprint">
+var numbers = function() {
+    return Array.prototype.filter.call(arguments, function(n) { 
+        return typeof n !== 'number'; }
+        ).length === 0;
+    }
+</pre>
+
+<p>It looks pretty complicated but makes sense once we break it down: </p>
+
+</div></p>
   
   <div class="more">
     <a href="/ruhohblog/posts/code-wars-javascript-arguments-pt-2" class="btn btn-default posts-btn">read more..</a>
@@ -91,16 +131,39 @@ Once again, the description for the challenge went like this:</p></div></p>
   
   <div class="posts-header"> 
     <h2 class="title text-center"><a href="/ruhohblog/posts/code-wars-javascript-vs-arrays">Code Wars: Javascript Arguments Pt.1</a></h2>
-    <h4 class="date text-center">June 28, 2014</h4>
+    <h4 class="date text-center">2014-06-28</h4>
   </div>
     
   <p class="index-description"></p>
-  <p class="index-description text-none"><div class="summary ellipsis"><p>     I recently decided that it would be a good idea to 
+  <p class="index-description text-none"><div class="summary ellipsis">
+<p>     I recently decided that it would be a good idea to 
 do some simple code challenges so that I could review and refresh my knowledge
 in Javascript and Ruby. Codewars is a website that offers challenges in Javascript,
 Coffeescript, and Ruby. Certain challenges, called "kata", allow users to solve them with any of the
 aforementioned languages of their choice. Each code kata is written on specific
-level of difficulty called "kyu." </p></div></p>
+level of difficulty called "kyu." </p>
+
+<p>     The code challenge I did today had this description:</p>
+
+<pre class="prettyprint">
+    Write a function named numbers that returns true if all the parameters it is passed are are of the Number type. Otherwise, the function should return false. The function should accept any number of parameters.
+</pre>
+
+<p>Breaking down this statement, I make these assertions:</p>
+
+<ol>
+<li>Write a function named numbers</li>
+<li>Return true if everything passed is of the Number type</li>
+<li>Return false if any of the paramaters passed is NOT of the Number type.</li>
+</ol>
+<p>One:</p>
+
+<pre class="prettyprint">
+    function numbers(args){
+    
+}
+</pre>
+</div></p>
   
   <div class="more">
     <a href="/ruhohblog/posts/code-wars-javascript-vs-arrays" class="btn btn-default posts-btn">read more..</a>
@@ -110,32 +173,56 @@ level of difficulty called "kyu." </p></div></p>
 <div class="post">
   
   <div class="posts-header"> 
-    <h2 class="title text-center"><a href="/ruhohblog/posts/how-mvc-works-part-1">How MVC Works pt.1</a></h2>
-    <h4 class="date text-center">July 22, 2014</h4>
+    <h2 class="title text-center"><a href="/ruhohblog/posts/codewars-color-ghost">Codewars: Color Ghost</a></h2>
+    <h4 class="date text-center">2014-10-20</h4>
   </div>
     
-  <p class="index-description"></p>
-  <p class="index-description text-none"><div class="summary ellipsis"><p>  If you are using the Ruby on Rails framework,  it is necessary  to understand the basics of the Model-View-Controller MVC architectural  pattern since it is incorporated in Rails. Although it serves many different purposes, its main purpose in web applications is to help developers implement user-interfaces. The pattern separates the web application into three core components: the Model, View, and Controller. Each of these components has a separate responsibility to process what occurs after the Rails application has received a web request. 
-  </p></div></p>
+  <p class="index-description">Simple 8-kyu code challenge in Ruby</p>
+  <p class="index-description text-none"><div class="summary">
+<p>This is simple 8-kyu (easiest level on CodeWars) code challenge but is good
+review for creating a simple object with certain desired behaviors.</p>
+
+<p>Description:</p>
+
+<blockquote>
+Color Ghost
+
+Create a class Ghost
+
+Ghost objects are instantiated without any arguments.
+
+Ghost objects are given a random color attribute of white" or "yellow" or "purple" or "red" when instantiated
+</blockquote>
+</div></p>
   
   <div class="more">
-    <a href="/ruhohblog/posts/how-mvc-works-part-1" class="btn btn-default posts-btn">read more..</a>
+    <a href="/ruhohblog/posts/codewars-color-ghost" class="btn btn-default posts-btn">read more..</a>
   </div>
   <hr>
 </div>
 <div class="post">
   
   <div class="posts-header"> 
-    <h2 class="title text-center"><a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm">Why Rails noobs should use RVM</a></h2>
-    <h4 class="date text-center">June 27, 2014</h4>
+    <h2 class="title text-center"><a href="/ruhohblog/posts/how-mvc-works-part-1">How MVC Works pt.1</a></h2>
+    <h4 class="date text-center">2014-07-22</h4>
   </div>
     
   <p class="index-description"></p>
-  <p class="index-description text-none"><div class="summary ellipsis"><p>  If you are just getting started with Ruby or Ruby on Rails, chances that you are likely have come across the Ruby Version Manager, or a.k.a RVM.
-As stated in the introduction of the home page, "RVM is a command-line tool which allows you to easily install, manage, and work with multiple environments from interpreters to sets of gems." If you have not been acquainted with RVM, now is your chance to do so.</p></div></p>
+  <p class="index-description text-none"><div class="summary">
+<p>  If you are using the Ruby on Rails framework,  it is necessary  to understand the basics of the Model-View-Controller MVC architectural  pattern since it is incorporated in Rails. Although it serves many different purposes, its main purpose in web applications is to help developers implement user-interfaces. The pattern separates the web application into three core components: the Model, View, and Controller. Each of these components has a separate responsibility to process what occurs after the Rails application has received a web request. 
+  </p>
+<p>  On a conceptual level, a browser sends a request to a web
+application, which is received by a web server and then passed on to the Rails router and subsequently to the controller.
+The controller will then interact with the model, which will then query the database for the data that the browser has
+requested for. After invoking the model, the controller will then renders the view accompanied with any data related to the
+corresponding model and returns a complete web page to the browser as HTML.</p>
+
+<p>  Before I talk about the main components of the MVC pattern in Rails, I would like to share a 
+conceptual picture of what occurs after a web application receives a HTTP request: <br><img src="/ruhohblog/assets/media/mvc.jpg"></p>
+</div></p>
   
   <div class="more">
-    <a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm" class="btn btn-default posts-btn">read more..</a>
+    <a href="/ruhohblog/posts/how-mvc-works-part-1" class="btn btn-default posts-btn">read more..</a>
   </div>
   <hr>
 </div>
@@ -145,6 +232,7 @@ As stated in the introduction of the home page, "RVM is a command-line tool whic
 <div>
   <ul class="pagination">
       <li class="active"><a href="/ruhohblog/posts/index/1">1</a></li>
+      <li><a href="/ruhohblog/posts/index/2">2</a></li>
   </ul>
 </div>
   
