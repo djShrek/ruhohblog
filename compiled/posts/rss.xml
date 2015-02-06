@@ -1,0 +1,355 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>The Whipster Code Blog</title>
+    <description>The Whipster Code Blog</description>
+    <link/>
+    <pubDate>2015-02-05</pubDate>
+    <item>
+      <title>Code Wars: Fizzbuzz Array</title>
+      <link>/posts/code-wars-fizzbuzz-array</link>
+      <pubDate>2014-07-22</pubDate>
+      <description>&lt;p&gt;One of the first lessons I had when I started learning Javascript was a demmonstration
+of the Fizzbuzz challenge. The lesson demonstrated several aspects of the Javascript language
+including the use of the for loop, arrays, coditional and logical statements nad much more.
+Coming across this challenge was pretty exciting because it would test whether I remembered
+what I had learn long ago. However, this code challenge came with twist:&lt;/p&gt;
+
+&lt;blockquote&gt;
+1. Create a method/function that returns an array of numbers from 1 to 100.
+&lt;br/&gt;
+2. If no arguments are passed the value at the index of the array for number should be 'Fizz' if it is divisible by 3, 'Buzz' if divisible by 5, 'FizzBuzz' if it divisible by both 3 and 5, or the number if it is not divisible by 3 or 5.
+&lt;br/&gt;
+3. The method should take up to 4 arguments:
+&lt;br/&gt;
+The first and second arguments are strings, which should be 'Fizz' and 'Buzz' by default.
+&lt;br/&gt;
+The third and fourth arguments are integers and and should be 3 and 5 by default.
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ll go through each step with my solution as an example.&lt;/p&gt;
+
+&lt;p&gt;First, we create function that will take 4 arguments:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+    var fizzBuzzCustom = function(stringOne, stringTwo, numOne, numTwo){
+}
+&lt;/pre&gt;
+
+&lt;p&gt;Then set the defaults if no arguments are passed&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+    var fizzBuzzCustom = function(stringOne, stringTwo, numOne, numTwo){
+        var stringOne = stringOne || "Fizz"; 
+        var stringTwo = stringTwo || "BUzz";
+        var numOne = numOne || 3;
+        var numTwo = numTwo || 5;
+    }
+&lt;/pre&gt;
+
+&lt;p&gt;Then I create an empty array:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+    var coolArray = [];
+&lt;/pre&gt;
+
+&lt;p&gt;Then I set up the main logic:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+    for(var i = 1; i &lt; 100; i++) // 1. For loop beginning with 1 and ending with 100
+      if ( i % numOne === 0 ) { // 2. If i is divisible by the number passed in or 3 (by default)
+        if ( i % numTwo === 0) { // 3. If i is divisble by the number passed in or 5 (by default)
+            coolArray.push(stringOne + stringTwo) // 4. Add the two strings together and push to coolArray
+        } else {
+        coolArray.push(stringOne) // 5. Push stringOne to our coolArray 
+        } 
+    } else if (i % numTwo === 0){ // 6. else if the first if statement is false, check if i is divisble by numTwo ( or 5 by default).
+        coolArray.push(stringTwo) // 7. Push stringTwo to our coolArray
+    } else {
+        coolArray.push(i) // else just push i to coolArray.
+    }
+  }
+&lt;/pre&gt;
+
+&lt;p&gt;and thats it!&lt;/p&gt;
+
+&lt;p&gt;the final function looks something like this:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+var fizzBuzzCustom = function(stringOne, stringTwo, numOne, numTwo) {
+    var stringOne = stringOne || "Fizz";
+    var stringTwo = stringTwo || "Buzz";
+    var numOne = numOne || 3;
+    var numTwo = numTwo || 5;
+    var coolArray = [];
+      for(var i = 1; i &lt; 100; i++){
+        if (i % numOne === 0){
+          if(i % numTwo === 0) {
+          coolArray.push(stringOne+stringTwo);
+          } else {
+          coolArray.push(stringOne);
+          }
+        }
+        else if (i % numTwo === 0){
+          coolArray.push(stringTwo);
+        }
+        else {
+          coolArray.push(i);
+        }
+      }
+}
+&lt;/pre&gt;
+
+&lt;p&gt;Notes: &lt;br/&gt;
+1. One of the first &amp;quot;gotchas&amp;quot; that I encountered with Fizzbuzz was the first line
+after the for-loop begins. The first if statement checks if the variable i is divisble
+by the value of numOne, which is either going to be the value of the argument passed into
+the function or the default value of 3. If this is true, then it moves on to the next line and
+checks the same for numTwo but instead with a default value of 5. If this is also true,
+then the two strings will be concatenated together and pushed into coolArray. However, if numTwo is false, only
+the first string will be pushed to the array. Similarly, if i is not divisible by numOne, the interpreter
+moves onto to next else if statement and checks if i is divisible by numTwo or the number 5 and push
+the second string to cool array. Finally, is this doesn&amp;#39;t work, the value of I is pushd into the array.
+phew that was alot!
+&lt;br/&gt;
+&lt;br/&gt;
+2. I also want to note that instead of doing:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+   if (i % numOne === 0){
+          if(i % numTwo === 0) {
+          
+          } 
+&lt;/pre&gt;
+
+&lt;p&gt;You can do:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+   if (i % numOne === 0 &amp;&amp; i % numTwo === 0) {
+          coolArray.push(stringOne+stringTwo);
+      } 
+&lt;/pre&gt;
+
+&lt;p&gt;That was a long post! I hope you enjoyed it! &lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Code Wars: Javascript Arguments Pt. 2</title>
+      <link>/posts/code-wars-javascript-arguments-pt-2</link>
+      <pubDate>2014-07-01</pubDate>
+      <description>&lt;p&gt;In my previous &lt;a href="/posts/code-wars-javascript-vs-arrays"&gt;post&lt;/a&gt;, I discussed
+my solution to a Javascript code challenge from Code Wars. I would like to now 
+talk about the optimal / &amp;quot;best solution&amp;quot; that was shown once I solved that challenge.
+Once again, the description for the challenge went like this:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+    Write a function named numbers that returns true if all the parameters it is passed are are of the Number type. Otherwise, the function should return false. The function should accept any number of parameters.
+&lt;/pre&gt;
+
+&lt;p&gt;The &amp;quot;top&amp;quot; solution that was given once I solved the code challenge was:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+var numbers = function() {
+    return Array.prototype.filter.call(arguments, function(n) { 
+        return typeof n !== 'number'; }
+        ).length === 0;
+    }
+&lt;/pre&gt;
+
+&lt;p&gt;It looks pretty complicated but makes sense once we break it down: &lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;The solution begins with a function being stored in a numbers variable. &lt;/li&gt;
+&lt;li&gt;The function returns boolean value. Even though it looks a bit complicated,
+the logic is simply a equality expression checking to see if two values equal each
+other. (In this case, whether the value is equal to 0)&lt;/li&gt;
+&lt;li&gt;The function used as part of the boolean check is the call method, which is used to 
+&amp;quot;borrow&amp;quot; the Array.prototype method &amp;quot;filter&amp;quot; and also takes a callback function
+as an argument.&lt;/li&gt;
+&lt;li&gt;The callback function used inside the filter method returns a boolean value
+based on the on whether the equality expression evaluates to true or false.
+(The &lt;a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"&gt;filter&lt;/a&gt; method takes callback functions that are predicate functions.)&lt;/li&gt;
+&lt;li&gt;The callback returns true if the values passed to the &amp;quot;n&amp;quot; variable does NOT
+equal to a number type. Otherwise, it returns false and that value (a number) will not be
+added to the returned array.&lt;/li&gt;
+&lt;li&gt;The length method is called on the returned array (from the filter method)
+and is checked to see if it evaluates to 0. What this means is that if 
+the length of the returned array is anything above 0, then there were 1 or more
+values from the arguments object that evaluated to !number or a non &amp;quot;number&amp;quot; value.
+Therefore, any number that does not equal to &amp;quot;0&amp;quot; will now return false.&lt;/li&gt;
+&lt;li&gt; In the end, the function successfully satisfies the requirements and objectives
+of the code challenge.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Phew! That honestly took some time to research and write! 
+As you can see, the optimal solution was about 4-5 lines of code versus my 
+13! Quite the savings if you are very proficient at Javascript!
+If you have any questions,
+please feel free to leave a message!. Hope this helped. :D&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Code Wars: Javascript Arguments Pt.1</title>
+      <link>/posts/code-wars-javascript-vs-arrays</link>
+      <pubDate>2014-06-28</pubDate>
+      <description>&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; I recently decided that it would be a good idea to 
+do some simple code challenges so that I could review and refresh my knowledge
+in Javascript and Ruby. Codewars is a website that offers challenges in Javascript,
+Coffeescript, and Ruby. Certain challenges, called &amp;quot;kata&amp;quot;, allow users to solve them with any of the
+aforementioned languages of their choice. Each code kata is written on specific
+level of difficulty called &amp;quot;kyu.&amp;quot; &lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The code challenge I did today had this description:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+    Write a function named numbers that returns true if all the parameters it is passed are are of the Number type. Otherwise, the function should return false. The function should accept any number of parameters.
+&lt;/pre&gt;
+
+&lt;p&gt;Breaking down this statement, I make these assertions:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Write a function named numbers&lt;/li&gt;
+&lt;li&gt;Return true if everything passed is of the Number type&lt;/li&gt;
+&lt;li&gt;Return false if any of the paramaters passed is NOT of the Number type.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;One:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+    function numbers(args){
+    
+}
+&lt;/pre&gt;
+
+&lt;p&gt;First, I create an empty function named numbers.&lt;/p&gt;
+
+&lt;p&gt;Two:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+function numbers(args){
+    var a = [];
+    for(var i = 0; i &lt; arguments.length; i++){
+        if (typeof(arguments[i]) === "number"){
+            a.push(true);
+        } 
+    }
+}
+&lt;/pre&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Then, I create an empty array so that it can store boolean values that correspond
+to whether the argument is a of the Number type. I iterate through each argument
+with a for-loop and check to see if they are a Number type with the typeof operand.&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;
+(Sidenote: The arguments identifier is specific to Javascript and acts as an &amp;quot;array-like&amp;quot; object that
+allows the argument values passed to the function to be retrieved by number like an array.
+Thats why you see me iterate over an arguments keyword in the numbers function when it was not explicitly
+declared as a variable, function etc.)
+&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;The typeof operand returns a string indicated the type of the unevaluated operand.
+(for more info: &lt;a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof"&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Three:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+function numbers(args){
+    var a = [];
+    for(var i = 0; i &lt; arguments.length; i++){
+        if (typeof(arguments[i]) === "number"){
+            a.push(true);
+        } else {
+            a.push(false);
+    }
+    }
+    return a.every(function(x){
+        return x === true;
+})
+}
+&lt;/pre&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Finally, I use the array &amp;quot;every&amp;quot; method (ECMAScript5)
+on the array to check to see if all the values in the array are true. If not,
+the entire numbers() function would return false (via the every method). &lt;/p&gt;
+
+&lt;p&gt;This code challenge didn&amp;#39;t take very long and was one of the shorter ones I did.
+However, the most optimal solution was achieved with 3 lines compared to my 13 
+lines of code. I&amp;#39;ll go over this in part-2 of this blog post!&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Codewars: Color Ghost</title>
+      <link>/posts/codewars-color-ghost</link>
+      <pubDate>2014-10-20</pubDate>
+      <description>Simple 8-kyu code challenge in Ruby</description>
+    </item>
+    <item>
+      <title>How MVC Works pt.1</title>
+      <link>/posts/how-mvc-works-part-1</link>
+      <pubDate>2014-07-22</pubDate>
+      <description>&lt;p&gt;&amp;nbsp;&amp;nbsp;If you are using the Ruby on Rails framework,  it is necessary  to understand the basics of the Model-View-Controller MVC architectural  pattern since it is incorporated in Rails. Although it serves many different purposes, its main purpose in web applications is to help developers implement user-interfaces. The pattern separates the web application into three core components: the Model, View, and Controller. Each of these components has a separate responsibility to process what occurs after the Rails application has received a web request. 
+  &lt;p&gt;&amp;nbsp;&amp;nbsp;On a conceptual level, a browser sends a request to a web
+application, which is received by a web server and then passed on to the Rails router and subsequently to the controller.
+The controller will then interact with the model, which will then query the database for the data that the browser has
+requested for. After invoking the model, the controller will then renders the view accompanied with any data related to the
+corresponding model and returns a complete web page to the browser as HTML.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;Before I talk about the main components of the MVC pattern in Rails, I would like to share a 
+conceptual picture of what occurs after a web application receives a HTTP request: &lt;br/&gt;
+&lt;img src="/assets/media/mvc.jpg"&gt;&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>What is Authentication and hy do we need it in our Rails Apps?</title>
+      <link>/posts/authentication</link>
+      <pubDate>2014-11-21</pubDate>
+      <description/>
+    </item>
+    <item>
+      <title>Why Rails noobs should use RVM</title>
+      <link>/posts/why-ruby/rails-noobs-should-use-rvm</link>
+      <pubDate>2014-06-27</pubDate>
+      <description>&lt;p&gt;&amp;nbsp;&amp;nbsp;If you are just getting started with Ruby or Ruby on Rails, chances that you are likely have come across the Ruby Version Manager, or a.k.a RVM.
+As stated in the introduction of the home page, &amp;quot;RVM is a command-line tool which allows you to easily install, manage, and work with multiple environments from interpreters to sets of gems.&amp;quot; If you have not been acquainted with RVM, now is your chance to do so.&lt;/p&gt;
+
+&lt;p&gt;Why would this be important for someone who is just starting Ruby / Ruby on Rails?&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;RVM lets you keep your projects self-contained within their own environments, &amp;quot;from the specific version of ruby, all the way down to the precise set of required gems to run your application.&amp;quot; RVM allows you to switch between different versions of Ruby (its named Ruby Version Manager after all..) and organize your gems in a different sets depending on your application&amp;#39;s needs without different versions of the gems conflicting with one another. Having a different gem sets also avoids the issue of version conflicts between projects, which can cause HUGE, pain-in-the-neck for any newbie starting on a new project or tutorial. &lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;There are many more other benefits to using RVM, many that I haven&amp;#39;t even touched upon, but the main use for it for myself is creating different gem sets when I start a new project or work on a new tutorial. For example, I am a student at teamtreehouse.com and they have two courses that are related to Ruby on Rails. The first course (called &amp;quot;Build A Simple Application&amp;quot;) requires Ruby 1.9 and RoRails 3.2.7 and several gems. Their second course (titled &amp;quot;Build a Todo List Application&amp;quot;) requires Ruby 2.0 and Ruby on Rails 4. If I were to do course 1 but with installing Ruby 2.0 and RoRails 4 instead of their older versions, I would no doubt come across gem conflicts and/or gem incompatibility issues with the project and a massive headache would ensue. In fact, when following any online tutorial, I recommend installing the exact version numbers as you see them in the tutorial, and not just simple doing &amp;quot;gem install [insert gem name]&amp;quot; or simple adding &amp;quot; gem &amp;#39;[insert gem name]&amp;#39; &amp;quot; to your gemfile. Trust me, it&amp;#39;s better to be specific and explicit so you would avoid gem installation problems and/or errors when working on your tutorials/application.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;A simple example would be that I install Ruby 1.9  and RoRails 3.2.7 or the first course. Then create a gemset called &amp;quot;course1gemset&amp;quot; and install the required gems for the tutorial application. Then install Ruby 2.0 and create a new gemset called &amp;quot;todogemset&amp;quot; and install RoRails 4 with required gems for the tutorial. You can switch back and forth depending on which tutorial / project you are working on without having to worry about gem conflicts. Example on the command line:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+    rvm install Ruby --version 2.0
+    /* installs version of Ruby 2.0 */
+
+    rvm gemset create "todogemset" 
+    /* creates gemset */
+
+    rvm install Rails --version 4.0.0
+    /* installs 4.0 version of Rails into gemset*/
+&lt;/pre&gt;
+
+&lt;p&gt;Another example would be lets say you wanted to start your own project that uses Ruby 1.9.3 and Rails 3.2.7 but it uses gems that you might or might have not yet installed and they might be a different version from the gems you have previously installed. You can simply create a new gemset without having to worry if the old gem and its dependencies will be compatible with the gem required in your new project since this gemset is self-contained in its own environment. Example on the command line:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+    rvm install Ruby --version 1.9.3 
+    /* installs older version of Ruby */
+
+    rvm gemset create "rorTutgemset"
+    /* creates gemset */
+
+    rvm install Rails --version 3.2.7 
+    /* installs older version of Rails into gemset*/
+&lt;/pre&gt;
+
+&lt;p&gt;Now these two gemsets will be encapsulated in their own environments.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;For documentation on rvm and how to create gem sets, go to &lt;a href="https://rvm.io/"&gt;https://rvm.io/&lt;/a&gt; and &lt;a href="https://rvm.io/gemsets/basics"&gt;https://rvm.io/gemsets/basics&lt;/a&gt;. Good luck!  &lt;/p&gt;
+</description>
+    </item>
+  </channel>
+</rss>
