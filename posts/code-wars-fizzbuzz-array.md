@@ -1,5 +1,5 @@
 ---
-title: 'Code Wars: Fizzbuzz Array'
+title: 'Code Wars: Fizzbuzz Array!!!'
 date: '2014-07-22'
 description: 
 tags: [javascript, code challenges, fizzbuzz, codewars, arrays]
