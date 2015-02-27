@@ -23,81 +23,73 @@
       font-awesome.min.css
     {{/ stylesheets.load }}
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-  <!-- Update these with your own images
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-  -->
   </head>
 
   <body>
 
-    byebye
-<div class="blog-masthead">
-      <div class="container">
-        <nav class="blog-nav">
-          <a class="blog-nav-item active" href="">Home</a>
-          <a class="blog-nav-item" href="about">About</a>
-          <a class="blog-nav-item" href="archive">Archives</a>
-          <a class="blog-nav-item" href="tags">Tags</a>
-          <a class="blog-nav-item" href="pages">Pages</a>
-        </nav>
-      </div>
-    </div>
-
-    <div class="container">
-
-      <div class="blog-header">
-        <h1 class="blog-title">{{{data.title}}}</h1>
-        <p class="lead blog-description">{{{data.tagline}}}</p>
-      </div>
-
-      <div class="row">
-
-        <div class="col-sm-8 blog-main">
-
-              {{{content}}}
-
-        </div><!-- /.blog-main -->
-
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          <div class="sidebar-module sidebar-module-inset about">
-            <img src="https://pbs.twimg.com/profile_images/378800000831451608/8842e95126f50fc21f950801d1ae1f0e_400x400.jpeg" width="140px" height="140px" alt="..." class="img-circle">
-            <h3>About</h3>
-            <ul>
-              <li>Cleft-Baby :D</li>
-              <li>Aspiring Full-Stack Developer</li>
-              <li>{Rubyist => Yay!}</li>
-              <li>Whipster</li>
-              <li>Music Mixer</li>
-              <li>Boba Milk Tea Aficionado</li>
-            </ul>
+    <div class="blog-masthead">
+          <div class="container-fluid">
+            <nav class="blog-nav">
+              <a class="blog-nav-item active" href="">Home</a>
+              <a class="blog-nav-item" href="about">About</a>
+              <a class="blog-nav-item" href="archive">Archives</a>
+              <a class="blog-nav-item" href="tags">Tags</a>
+              <a class="blog-nav-item" href="pages">Pages</a>
+            </nav>
           </div>
-          
+        </div>
 
-          <div class="sidebar-module">
-            <h3>Elsewhere</h3>
-              <a href="https://github.com/djShrek"><i class="fa fa-github social-icons"></i></a>
-              <a href="https://twitter.com/BobbyHo2"><i class="fa fa-twitter social-icons"></i></a>
+
+
+
+          <div class="container">
+            <div class="row">
+
+            <div class="blog-header">
+              <h1 class="blog-title">{{{data.title}}}</h1>
+              <p class="lead blog-description">{{{data.tagline}}}</p>
+            </div>
+
+
+              <div class="col-sm-9 blog-main">
+                    {{{content}}}
+              </div><!-- /.blog-main -->
+
+                <div class="col-sm-2 col-sm-offset-1 blog-sidebar">
+                    <div class="sidebar-module sidebar-module-inset about">
+                      <img src="https://pbs.twimg.com/profile_images/378800000831451608/8842e95126f50fc21f950801d1ae1f0e_400x400.jpeg" width="140px" height="140px" alt="..." class="img-circle">
+                      <h3>About</h3>
+                      <ul>
+                        <li>Cleft-Baby :D</li>
+                        <li>Aspiring Full-Stack Developer</li>
+                        <li>{Rubyist => Yay!}</li>
+                        <li>Whipster</li>
+                        <li>Music Mixer</li>
+                        <li>Boba Milk Tea Aficionado</li>
+                      </ul>
+                    </div>
+                    
+
+                    <div class="sidebar-module">
+                      <h3>Elsewhere</h3>
+                        <a href="https://github.com/djShrek"><i class="fa fa-github social-icons"></i></a>
+                        <a href="https://twitter.com/BobbyHo2"><i class="fa fa-twitter social-icons"></i></a>
+                    </div>
+                </div><!-- /.blog-sidebar -->
+
+            </div>
+          </div><!-- /.row -->
+
+
+      <div id="footer">
+        <div class="container">
+          <div class="footer-inner text-center">
+            <p>&copy; {{ data.author.name }} 2014
+            with help from <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">ruhoh</a>
+            and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>
           </div>
-        </div><!-- /.blog-sidebar -->
-
-
-      </div><!-- /.row -->
-
-    </div><!-- /.container -->
-
-    <div id="footer">
-      <div class="container">
-        <p>&copy; {{ data.author.name }} 2014
-        with help from <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">ruhoh</a>
-        and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>
+        </div>
       </div>
-    </div>
-
-
-
   </body>
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 </html>

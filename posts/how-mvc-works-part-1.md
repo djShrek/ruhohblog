@@ -13,4 +13,4 @@ corresponding model and returns a complete web page to the browser as HTML.</p>
 
 &nbsp;&nbsp;Before I talk about the main components of the MVC pattern in Rails, I would like to share a 
 conceptual picture of what occurs after a web application receives a HTTP request: <br/>
-<img src="{{urls.media}}/mvc.jpg">
+<img class="img-responsive" src="{{urls.media}}/mvc.jpg">

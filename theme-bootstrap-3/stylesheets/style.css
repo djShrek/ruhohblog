@@ -74,7 +74,7 @@ body {
   margin-top: -100px;
 }
 
-/* Posts */
+/********** Posts ************/
 
 .posts-header {
     margin-bottom: 30px;
@@ -98,3 +98,5 @@ body {
     margin: 0 30px;
     list-style-type: none;
 }
+
+/********** Posts ************/
