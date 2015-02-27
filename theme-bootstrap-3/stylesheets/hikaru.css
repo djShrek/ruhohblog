@@ -1,0 +1,70 @@
+/* --- BASE --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+  *:before, *:after {
+    box-sizing: border-box; }
+
+body {
+  font: 1.25em "Open Sans", sans-serif;
+  color: black; }
+
+header {
+  width: 100%;
+  background: white;
+  display: block; }
+
+.site-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%; }
+
+/* --- HEADER --- */
+.header-wrap {
+  padding: 2em; }
+  .header-wrap .blog-title {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-weight: normal; }
+    .header-wrap .blog-title a {
+      background: transparent;
+      text-decoration: none; }
+  .header-wrap .menu-icon {
+    position: absolute;
+    padding: 2em;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 200; }
+    .header-wrap .menu-icon .lines {
+      display: inline-block;
+      position: relative;
+      width: 25px;
+      height: 2px;
+      background: #333;
+      border-radius: 20px; }
+      .header-wrap .menu-icon .lines:before, .header-wrap .menu-icon .lines:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        width: 25px;
+        height: 2px;
+        background: #333;
+        border-radius: 20px;
+        transition: all .3s ease;
+        -webkit-transition: all .3s ease; }
+      .header-wrap .menu-icon .lines:before {
+        top: 8px; }
+      .header-wrap .menu-icon .lines:after {
+        top: -8px; }
+
+/* --- HEADER END --- */
+/* --- SHAME --- */
+h1 {
+  margin: 0; }
+
+/* --- SHAME END --- */
