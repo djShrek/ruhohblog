@@ -1,54 +1,45 @@
 ---
-title: Writings
+title: The Whipster Code Blog - Blog of Robert Ho, Los Angeles Web Developer
 tagline: 
 description: hot
-
 ---
-{{# posts.paginator }}
-<div class="post">
-  
-  <div class="posts-header"> 
-    <h2 class="title text-center"><a href="{{url}}">{{title}}</a></h2>
-    <h4 class="date text-center">{{ date }}</h4>
-  </div>
-    
-  <p class="index-description">{{{ description }}}</p>
-  <p class="index-description text-none">{{{ summary }}}</p>
-  
-  <div class="more">
-    <a href="{{url}}" class="btn btn-default posts-btn">read more..</a>
-  </div>
-  <hr>
+
+<div class="single-wrap">
+    {{# posts.paginator }}
+    <div class="post">
+      <div class="posts-header"> 
+         <div class="feat">
+          <h5 class="page-date">
+            <time>{{date}}</time>
+          </h5>
+        </div>
+         <h1 class="page-title" itemprop="name headline"><a href="{{url}}">{{ title }} {{#tagline }} <small>{{ . }}</small>{{/tagline }}</a></h1>
+      </div>
+        
+      <p class="index-description">{{{ description }}}</p>
+      <p class="index-description text-none">{{{ summary }}}</p>
+      
+        <a href="{{url}}" class="button">Continue reading..</a>
+    </div>
+    {{/ posts.paginator }}
+
+    <div class="pagination-wrap">
+      <div class="pagination">
+        <ul>
+          <li class="previous hidden"><a href="#">Previous</a></li>
+        {{#posts.paginator_navigation}}
+          {{#is_active_page}}
+            <li class="active"><a href="{{url}}">{{name}}</a></li>
+          {{/is_active_page}}
+          {{^is_active_page}}
+            <li><a href="{{url}}">{{name}}</a></li>
+          {{/is_active_page}}
+        {{/posts.paginator_navigation}}
+        <li class="next hidden"><a href="#">Next</a></li>
+        </ul>
+      </div>
+    </div>
 </div>
-{{/ posts.paginator }}
-
-
-{{# pages.paginator }}
-
-<div class="post">
-  <h3 class="title"><a href="{{url}}">{{title}}</a> <span class="date">{{ date }}</span></h3>
-
-  {{{ summary }}}
-
-  <div class="more">
-    <a href="{{url}}" class="btn btn-default">read more..</a>
-  </div>
-</div>
-{{/ pages.paginator }}
-
-<div>
-  <ul class="pagination">
-  {{#posts.paginator_navigation}}
-    {{#is_active_page}}
-      <li class="active"><a href="{{url}}">{{name}}</a></li>
-    {{/is_active_page}}
-    {{^is_active_page}}
-      <li><a href="{{url}}">{{name}}</a></li>
-    {{/is_active_page}}
-  {{/posts.paginator_navigation}}
-  </ul>
-</div>
-  
 
 
 
