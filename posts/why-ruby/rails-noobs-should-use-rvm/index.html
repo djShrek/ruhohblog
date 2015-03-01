@@ -2,66 +2,86 @@
 <html lang="en">
   <head>
 
-    <meta charset="utf-8">
-    <title>Why Rails noobs should use RVM</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Bobby Ho">
+      <meta charset="utf-8">
+      <title>Why Rails noobs should use RVM</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="the whipster">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+      <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+      <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+      <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
-    <!-- Le styles -->
+
+      <!-- Le styles -->
 <link href='/ruhohblog/assets/stylesheets/bootstrap.min-4eadbf7d1721bb2729e398595bc7f0bc.css' type='text/css' rel='stylesheet' media='all'>
-<link href='/ruhohblog/assets/stylesheets/style-cf00424739bf79506dc2bd44264c5406.css' type='text/css' rel='stylesheet' media='all'>
-<link href='/ruhohblog/assets/stylesheets/google_prettify/desert-bdedfc6fe81b79f3dc1367175cfc5719.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/ruhohblog/assets/stylesheets/flat-ui-2859ee4304ecec2aab78cfa0fd2fa6ff.css' type='text/css' rel='stylesheet' media='all'>
 <link href='/ruhohblog/assets/stylesheets/font-awesome.min-5642646427f9f738a393e6cc05dd5003.css' type='text/css' rel='stylesheet' media='all'>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
-  <!-- Update these with your own images
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-  -->
+<link href='/ruhohblog/assets/stylesheets/google_prettify/prettify-a987f72342eeaece278982a377eca816.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/ruhohblog/assets/stylesheets/style-d41d8cd98f00b204e9800998ecf8427e.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/ruhohblog/assets/stylesheets/hikaru-abce992778140e01307c29d0df0d0202.css' type='text/css' rel='stylesheet' media='all'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic' rel='stylesheet' type='text/css'>
   </head>
 
-  <body>
-<div class="blog-masthead">
-      <div class="container">
-        <nav class="blog-nav">
-          <a class="blog-nav-item active" href="/ruhohblog/">Home</a>
-          <a class="blog-nav-item" href="/ruhohblog/about">About</a>
-          <a class="blog-nav-item" href="/ruhohblog/archive">Archives</a>
-          <a class="blog-nav-item" href="/ruhohblog/tags">Tags</a>
-          <a class="blog-nav-item" href="/ruhohblog/pages">Pages</a>
-        </nav>
+
+<body>
+
+    <div class="off-canvas">
+        <figure class="avatar">
+          <img src="https://pbs.twimg.com/profile_images/378800000831451608/8842e95126f50fc21f950801d1ae1f0e_400x400.jpeg" width="140px" title="Its me, Bobby" height="140px" alt="avatar" class="img-circle">
+
+        </figure>
+          <div class="sidebar">    
+            <h3>About</h3>
+            <ul>
+              <li>{ :name => "Bobby" }</li>
+              <li>Cleft-Baby :D</li>
+              <li>Self-taught Web Developer</li>
+              <li>Whipster</li>
+              <li>Music Mixer</li>
+              <li>Boba Milk Tea Aficionado</li>
+            </ul>
+          </div>
+                      
+
+          <div class="sidebar-module">
+            <h3>Elsewhere</h3>
+              <a href="https://github.com/djShrek"><i class="fa fa-github social-icons"></i></a>
+              <a href="https://twitter.com/BobbyHo2"><i class="fa fa-twitter social-icons"></i></a>
+          </div>
       </div>
-    </div>
 
-    <div class="container">
-      <div class="blog-header">
-        <h1 class="blog-title">The Whipster Code Blog</h1>
-        <p class="lead blog-description">Mostly about code, occasional (unsolicited) opinions on life</p>
-      </div>
-      <div class="row">
+    <div class="site-wrapper">
+      <header>
+          <div class="header-wrap">
+            <h3 class="blog-title">
+              <a href="/">the whipster code blog</a><br/>
+              <small>Mostly about code, occasional (unsolicited) opinions on life</small>
+            </h3>
+            
+            <a class="menu-icon" title="Open Bio" href="#">
+              <span class="lines"></span>
+            </a>
+          </div>
+      </header>
+      <main>
+          
+    <div class="single-wrap">
+      <article class="single-content" itemscope>
 
-        <div class="col-sm-8 blog-main">
+        <div class="feat">
+          <h5 class="page-date">
+            <time>2014-06-27</time>
+          </h5>
+        </div>
 
-              
-<div class="text-center posts-title ">
+        <h1 class="page-title" itemprop="name headline">Why Rails noobs should use RVM </h1>
 
-  <div class="posts-header">
-    <h2>Why Rails noobs should use RVM </h2>
-    <h4 class="date">2014-06-27</h4>
-  </div>
-</div>
 
-<div class="row-fluid post-full">
-  <div class="span12">
-    <div class="content">
-      <p>&nbsp;&nbsp;If you are just getting started with Ruby or Ruby on Rails, chances that you are likely have come across the Ruby Version Manager, or a.k.a RVM.
+            <div class="articleBody">
+              <p>&nbsp;&nbsp;If you are just getting started with Ruby or Ruby on Rails, chances that you are likely have come across the Ruby Version Manager, or a.k.a RVM.
 As stated in the introduction of the home page, &quot;RVM is a command-line tool which allows you to easily install, manage, and work with multiple environments from interpreters to sets of gems.&quot; If you have not been acquainted with RVM, now is your chance to do so.</p>
 
 <p>Why would this be important for someone who is just starting Ruby / Ruby on Rails?</p>
@@ -100,109 +120,78 @@ As stated in the introduction of the home page, &quot;RVM is a command-line tool
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;For documentation on rvm and how to create gem sets, go to <a href="https://rvm.io/">https://rvm.io/</a> and <a href="https://rvm.io/gemsets/basics">https://rvm.io/gemsets/basics</a>. Good luck!  </p>
 
-    </div>
-    <div class="container">
-        <hr>
-        <div class="pagination">
-          <ul>
-              <li class="prev disabled"><a>&larr; Previous</a></li>
-    
-              <li><a href="/ruhohblog/archive">Archive</a></li>
-    
-              <li class="next"><a href="/ruhohblog/posts/authentication" title="What is Authentication and hy do we need it in our Rails Apps?">Next &rarr;</a></li>
-          </ul>
-        </div>
-        <hr>
-        
-      </div>
-    </div>
-</div> 
+            </div>
+
+            <div class="feat sharing">
+              <a href="" class="popup">
+                <span></span>
+              </a>
+            </div>
 
 
+                      <a id="prev" href="" class="prev disabled"  title="" >&larr;</a>
 
-        </div><!-- /.blog-main -->
+                      <a id="next" class="next" href="/ruhohblog/posts/authentication" title="What is Authentication and hy do we need it in our Rails Apps?">&rarr;</a>
+           
+      </article>
 
+      <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                var disqus_shortname = 'whipstercode'; // required: replace example with your forum shortname
 
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          <div class="sidebar-module sidebar-module-inset">
-             <img src="https://pbs.twimg.com/profile_images/378800000831451608/8842e95126f50fc21f950801d1ae1f0e_400x400.jpeg" width="140px" height="140px" alt="..." class="img-circle">
-            <h3>About</h3>
-            <ul>
-              <li>Cleft-Baby :D</li>
-              <li>Aspiring Full-Stack Developer</li>
-              <li>{Rubyist => Yay!}</li>
-              <li>Whipster</li>
-              <li>Music Mixer</li>
-              <li>Boba Milk Tea Aficionado</li>
-            </ul>
-          </div>
-          
+                <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'whipstercode'; // required: replace example with your forum shortname
 
-           <div class="sidebar-module">
-            <h3>Elsewhere</h3>
-              <a href="https://github.com/djShrek"><i class="fa fa-github social-icons"></i></a>
-              <a href="https://twitter.com/BobbyHo2"><i class="fa fa-twitter social-icons"></i></a>
-          </div>
-        </div><!-- /.blog-sidebar -->
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var s = document.createElement('script'); s.async = true;
+                s.type = 'text/javascript';
+                s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+            }());
+            </script>
 
+          <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      </div><!-- /.row -->
+          ga('create', 'UA-52375626-1', 'auto');
+          ga('send', 'pageview');
 
-          <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'whipstercode'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-        <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'whipstercode'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-    </script>
-
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-52375626-1', 'auto');
-  ga('send', 'pageview');
-
-  </script>
-
-    </div><!-- /.container -->
-
-    <div id="footer">
-      <div class="container">
-        <p>&copy; Bobby Ho 2014
-        with help from <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">ruhoh</a>
-        and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>
-      </p>
-      </div>
+          </script>
     </div>
 
-  </body>
-  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-  <script>(function(jQuery){
+      </main>
+
+
+      <footer id="footer">
+          <span>&copy; the whipster 2015
+          with help from <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">ruhoh</a>
+          and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>
+        </span>
+      </footer>
+    </div>
+</body>
+ 
+
+<script src='/ruhohblog/assets/javascripts/prettify-d435ff18c832044c3ddf7a0cf826eb72.js'></script>
+<script src='/ruhohblog/assets/javascripts/main-2b0b3358f0559bb57e8d54bd10a4e70f.js'></script>
+<script type="text/javascript">
+(function(jQuery){
   
   jQuery( document ).ready( function() {
     
@@ -211,5 +200,20 @@ As stated in the introduction of the home page, &quot;RVM is a command-line tool
   } );
  
 }(jQuery))
-  </script>
+  
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60234034-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+ 
+
 </html>

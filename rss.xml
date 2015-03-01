@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <rss version="2.0">
   <channel>
-    <title>The Whipster Code Blog</title>
-    <description>The Whipster Code Blog</description>
+    <title>the whipster code blog</title>
+    <description>the whipster code blog</description>
     <link/>
-    <pubDate>2015-02-05</pubDate>
+    <pubDate>2015-02-28</pubDate>
     <item>
       <title>About</title>
       <link>/ruhohblog/about</link>
@@ -76,7 +76,7 @@
     &lt;li&gt;&lt;a href="/ruhohblog/tags"&gt;Tags&lt;/a&gt;&lt;/li&gt;
   
   
-    &lt;li&gt;&lt;a href="/ruhohblog"&gt;Writings&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog"&gt;The Whipster Code Blog - Blog of Robert Ho, Los Angeles Web Developer&lt;/a&gt;&lt;/li&gt;
   
 &lt;/ul&gt;
 
@@ -179,7 +179,7 @@
 </description>
     </item>
     <item>
-      <title>Writings</title>
+      <title>The Whipster Code Blog - Blog of Robert Ho, Los Angeles Web Developer</title>
       <link>/ruhohblog</link>
       <description>hot</description>
     </item>

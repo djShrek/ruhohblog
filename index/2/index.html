@@ -2,181 +2,157 @@
 <html lang="en">
   <head>
 
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Bobby Ho">
+      <meta charset="utf-8">
+      <title></title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="the whipster">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+      <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+      <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+      <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
-    <!-- Le styles -->
+
+      <!-- Le styles -->
 <link href='/ruhohblog/assets/stylesheets/bootstrap.min-4eadbf7d1721bb2729e398595bc7f0bc.css' type='text/css' rel='stylesheet' media='all'>
-<link href='/ruhohblog/assets/stylesheets/style-cf00424739bf79506dc2bd44264c5406.css' type='text/css' rel='stylesheet' media='all'>
-<link href='/ruhohblog/assets/stylesheets/google_prettify/desert-bdedfc6fe81b79f3dc1367175cfc5719.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/ruhohblog/assets/stylesheets/flat-ui-2859ee4304ecec2aab78cfa0fd2fa6ff.css' type='text/css' rel='stylesheet' media='all'>
 <link href='/ruhohblog/assets/stylesheets/font-awesome.min-5642646427f9f738a393e6cc05dd5003.css' type='text/css' rel='stylesheet' media='all'>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
-  <!-- Update these with your own images
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-  -->
+<link href='/ruhohblog/assets/stylesheets/google_prettify/prettify-a987f72342eeaece278982a377eca816.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/ruhohblog/assets/stylesheets/style-d41d8cd98f00b204e9800998ecf8427e.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/ruhohblog/assets/stylesheets/hikaru-abce992778140e01307c29d0df0d0202.css' type='text/css' rel='stylesheet' media='all'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic' rel='stylesheet' type='text/css'>
   </head>
 
-  <body>
-<div class="blog-masthead">
-      <div class="container">
-        <nav class="blog-nav">
-          <a class="blog-nav-item active" href="/ruhohblog/">Home</a>
-          <a class="blog-nav-item" href="/ruhohblog/about">About</a>
-          <a class="blog-nav-item" href="/ruhohblog/archive">Archives</a>
-          <a class="blog-nav-item" href="/ruhohblog/tags">Tags</a>
-          <a class="blog-nav-item" href="/ruhohblog/pages">Pages</a>
-        </nav>
-      </div>
-    </div>
 
-    <div class="container">
-      <div class="blog-header">
-        <h1 class="blog-title">The Whipster Code Blog</h1>
-        <p class="lead blog-description">Mostly about code, occasional (unsolicited) opinions on life</p>
-      </div>
-      <div class="row">
+<body>
 
-        <div class="col-sm-8 blog-main">
+    <div class="off-canvas">
+        <figure class="avatar">
+          <img src="https://pbs.twimg.com/profile_images/378800000831451608/8842e95126f50fc21f950801d1ae1f0e_400x400.jpeg" width="140px" title="Its me, Bobby" height="140px" alt="avatar" class="img-circle">
 
-              <div class="row-fluid">
-  <div class="span12">
-      <div class="_root">
-        <div class="post-header">
-          <h2 class="title text-center "><a href="/ruhohblog">Writings</a> </h2>
-          <h4 class="date text-center"></h4>
-        </div>
-          <div class="summary ellipsis">
-<p>One of the first lessons I had when I started learning Javascript was a demmonstration
-of the Fizzbuzz challenge. The lesson demonstrated several aspects of the Javascript language
-including the use of the for loop, arrays, coditional and logical statements nad much more.
-Coming across this challenge was pretty exciting because it would test whether I remembered
-what I had learn long ago. However, this code challenge came with twist:</p>
-
-<blockquote>
-1. Create a method/function that returns an array of numbers from 1 to 100.
-<br>
-2. If no arguments are passed the value at the index of the array for number should be 'Fizz' if it is divisible by 3, 'Buzz' if divisible by 5, 'FizzBuzz' if it divisible by both 3 and 5, or the number if it is not divisible by 3 or 5.
-<br>
-3. The method should take up to 4 arguments:
-<br>
-The first and second arguments are strings, which should be 'Fizz' and 'Buzz' by default.
-<br>
-The third and fourth arguments are integers and and should be 3 and 5 by default.
-</blockquote>
-
-<p><br></p>
-
-<p>I'll go through each step with my solution as an example.</p>
-</div>
-        <div class="none more">
-          <a href="/ruhohblog" class="btn btn-default">read more..</a>
-        </div>
-        <hr>
-      </div>
-    <div>
-      <ul class="pagination">
-          <li><a href="/ruhohblog/index/1">1</a></li>
-          <li class="active"><a href="/ruhohblog/index/2">2</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
-        </div><!-- /.blog-main -->
-
-
-
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          <div class="sidebar-module sidebar-module-inset">
-             <img src="https://pbs.twimg.com/profile_images/378800000831451608/8842e95126f50fc21f950801d1ae1f0e_400x400.jpeg" width="140px" height="140px" alt="..." class="img-circle">
+        </figure>
+          <div class="sidebar">    
             <h3>About</h3>
             <ul>
+              <li>{ :name => "Bobby" }</li>
               <li>Cleft-Baby :D</li>
-              <li>Aspiring Full-Stack Developer</li>
-              <li>{Rubyist => Yay!}</li>
+              <li>Self-taught Web Developer</li>
               <li>Whipster</li>
               <li>Music Mixer</li>
               <li>Boba Milk Tea Aficionado</li>
             </ul>
           </div>
-          
+                      
 
-           <div class="sidebar-module">
+          <div class="sidebar-module">
             <h3>Elsewhere</h3>
               <a href="https://github.com/djShrek"><i class="fa fa-github social-icons"></i></a>
               <a href="https://twitter.com/BobbyHo2"><i class="fa fa-twitter social-icons"></i></a>
           </div>
-        </div><!-- /.blog-sidebar -->
+      </div>
 
-
-      </div><!-- /.row -->
-
-          <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'whipstercode'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-        <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'whipstercode'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-    </script>
-
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-52375626-1', 'auto');
-  ga('send', 'pageview');
-
-  </script>
-
-    </div><!-- /.container -->
-
-    <div id="footer">
-      <div class="container">
-        <p>&copy; Bobby Ho 2014
-        with help from <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">ruhoh</a>
-        and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>
-      </p>
+    <div class="site-wrapper">
+      <header>
+          <div class="header-wrap">
+            <h3 class="blog-title">
+              <a href="/">the whipster code blog</a><br/>
+              <small>Mostly about code, occasional (unsolicited) opinions on life</small>
+            </h3>
+            
+            <a class="menu-icon" title="Open Bio" href="#">
+              <span class="lines"></span>
+            </a>
+          </div>
+      </header>
+      <main>
+          <div class="single-wrap">
+    <div class="post">
+      <div class="posts-header"> 
+         <div class="feat">
+          <h5 class="page-date">
+            <time>2014-11-21</time>
+          </h5>
+        </div>
+         <h1 class="page-title" itemprop="name headline"><a href="/ruhohblog/posts/authentication">What is Authentication and hy do we need it in our Rails Apps? </a></h1>
+      </div>
+        
+      <p class="index-description"></p>
+      <p class="index-description text-none"><div class="summary"></div></p>
+      
+      <div class="more">
+        <a href="/ruhohblog/posts/authentication" class="button">Continue reading..</a>
       </div>
     </div>
+    <div class="post">
+      <div class="posts-header"> 
+         <div class="feat">
+          <h5 class="page-date">
+            <time>2014-06-27</time>
+          </h5>
+        </div>
+         <h1 class="page-title" itemprop="name headline"><a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm">Why Rails noobs should use RVM </a></h1>
+      </div>
+        
+      <p class="index-description"></p>
+      <p class="index-description text-none"><div class="summary ellipsis">
+<p>  If you are just getting started with Ruby or Ruby on Rails, chances that you are likely have come across the Ruby Version Manager, or a.k.a RVM.
+As stated in the introduction of the home page, "RVM is a command-line tool which allows you to easily install, manage, and work with multiple environments from interpreters to sets of gems." If you have not been acquainted with RVM, now is your chance to do so.</p>
 
-  </body>
-  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-  <script>(function(jQuery){
+<p>Why would this be important for someone who is just starting Ruby / Ruby on Rails?</p>
+
+<p>    RVM lets you keep your projects self-contained within their own environments, "from the specific version of ruby, all the way down to the precise set of required gems to run your application." RVM allows you to switch between different versions of Ruby (its named Ruby Version Manager after all..) and organize your gems in a different sets depending on your application's needs without different versions of the gems conflicting with one another. Having a different gem sets also avoids the issue of version conflicts between projects, which can cause HUGE, pain-in-the-neck for any newbie starting on a new project or tutorial. </p>
+
+<p>    There are many more other benefits to using RVM, many that I haven't even touched upon, but the main use for it for myself is creating different gem sets when I start a new project or work on a new tutorial. For example, I am a student at teamtreehouse.com and they have two courses that are related to Ruby on Rails. The first course (called "Build A Simple Application") requires Ruby 1.9 and RoRails 3.2.7 and several gems. Their second course (titled "Build a Todo List Application") requires Ruby 2.0 and Ruby on Rails 4. If I were to do course 1 but with installing Ruby 2.0 and RoRails 4 instead of their older versions, I would no doubt come across gem conflicts and/or gem incompatibility issues with the project and a massive headache would ensue. In fact, when following any online tutorial, I recommend installing the exact version numbers as you see them in the tutorial, and not just simple doing "gem install [insert gem name]" or simple adding " gem '[insert gem name]' " to your gemfile. Trust me, it's better to be specific and explicit so you would avoid gem installation problems and/or errors when working on your tutorials/application.</p>
+
+<p>    A simple example would be that I install Ruby 1.9  and RoRails 3.2.7 or the first course. Then create a gemset called "course1gemset" and install the required gems for the tutorial application. Then install Ruby 2.0 and create a new gemset called "todogemset" and install RoRails 4 with required gems for the tutorial. You can switch back and forth depending on which tutorial / project you are working on without having to worry about gem conflicts. Example on the command line:</p>
+
+<pre class="prettyprint">
+    rvm install Ruby --version 2.0
+    /* installs version of Ruby 2.0 */
+
+    rvm gemset create "todogemset" 
+    /* creates gemset */
+
+    rvm install Rails --version 4.0.0
+    /* installs 4.0 version of Rails into gemset*/
+</pre>
+
+</div></p>
+      
+      <div class="more">
+        <a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm" class="button">Continue reading..</a>
+      </div>
+    </div>
+    <div class="pagination-wrap">
+      <div class="pagination">
+        <ul>
+          <li class="previous hidden"><a href="#">Previous</a></li>
+            <li><a href="/ruhohblog/posts/index/1">1</a></li>
+            <li class="active"><a href="/ruhohblog/posts/index/2">2</a></li>
+        <li class="next hidden"><a href="#">Next</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+      </main>
+
+
+      <footer id="footer">
+          <span>&copy; the whipster 2015
+          with help from <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">ruhoh</a>
+          and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>
+        </span>
+      </footer>
+    </div>
+</body>
+ 
+
+<script src='/ruhohblog/assets/javascripts/prettify-d435ff18c832044c3ddf7a0cf826eb72.js'></script>
+<script src='/ruhohblog/assets/javascripts/main-2b0b3358f0559bb57e8d54bd10a4e70f.js'></script>
+<script type="text/javascript">
+(function(jQuery){
   
   jQuery( document ).ready( function() {
     
@@ -185,5 +161,20 @@ The third and fourth arguments are integers and and should be 3 and 5 by default
   } );
  
 }(jQuery))
-  </script>
+  
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60234034-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+ 
+
 </html>
