@@ -7,20 +7,19 @@ layout : default
 
 <div class="single-wrap">
     {{# posts.paginator }}
-    <div class="post articleBody">
-      <div class="posts-header"> 
-         <div class="feat">
+    <article class="single-content">
+        <div class="feat">
           <h5 class="page-date">
             <time>{{date}}</time>
           </h5>
         </div>
          <h1 class="page-title" itemprop="name headline"><a href="{{url}}">{{ title }} {{#tagline }} <small>{{ . }}</small>{{/tagline }}</a></h1>
-      </div>
         
-      <div class="more">
-        <a href="{{url}}" class="button">Continue reading..</a>
-      </div>
-    </div>
+      <p class="index-description">{{{ description }}}</p>
+      <p class="index-description text-none">{{{ summary }}}</p>
+      
+       <a href="{{url}}" class="button">Continue reading..</a>
+    </article>
     {{/ posts.paginator }}
     <div class="pagination-wrap">
       <div class="pagination">
