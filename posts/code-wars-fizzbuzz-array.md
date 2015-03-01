@@ -29,43 +29,60 @@ I'll go through each step with my solution as an example.
 First, we create function that will take 4 arguments:
 
 <pre class="prettyprint">
+  <code class="prettyprint linenums">
     var fizzBuzzCustom = function(stringOne, stringTwo, numOne, numTwo){
-}
+    // ..code here..
+  }
+  </code>
 </pre>
 
 Then set the defaults if no arguments are passed
 
 <pre class="prettyprint">
+  <code class="prettyprint linenums">
     var fizzBuzzCustom = function(stringOne, stringTwo, numOne, numTwo){
         var stringOne = stringOne || "Fizz"; 
         var stringTwo = stringTwo || "BUzz";
         var numOne = numOne || 3;
         var numTwo = numTwo || 5;
     }
+  </code>
 </pre>
 
 Then I create an empty array:
 
 <pre class="prettyprint">
+  <code class="prettyprint linenums">
     var coolArray = [];
+  </code>
 </pre>
 
 Then I set up the main logic:
 
 <pre class="prettyprint">
-    for(var i = 1; i < 100; i++) // 1. For loop beginning with 1 and ending with 100
-      if ( i % numOne === 0 ) { // 2. If i is divisible by the number passed in or 3 (by default)
-        if ( i % numTwo === 0) { // 3. If i is divisble by the number passed in or 5 (by default)
-            coolArray.push(stringOne + stringTwo) // 4. Add the two strings together and push to coolArray
+  <code class="prettyprint linenums">
+    // 1. For loop beginning with 1 and ending with 100
+    for(var i = 1; i < 100; i++)
+      // 2. If i is divisible by the number passed in or 3 (by default)
+      if ( i % numOne === 0 ) { 
+      // 3. If i is divisble by the number passed in or 5 (by default)
+        if ( i % numTwo === 0) { 
+        // 4. Add the two strings together and push to coolArray
+            coolArray.push(stringOne + stringTwo) 
         } else {
-        coolArray.push(stringOne) // 5. Push stringOne to our coolArray 
+        // 5. Push stringOne to our coolArray 
+        coolArray.push(stringOne) 
         } 
-    } else if (i % numTwo === 0){ // 6. else if the first if statement is false, check if i is divisble by numTwo ( or 5 by default).
-        coolArray.push(stringTwo) // 7. Push stringTwo to our coolArray
+    // 6. else if the first if statement is false, check if i is divisble by numTwo ( or 5 by default).
+    } else if (i % numTwo === 0){
+    // 7. Push stringTwo to our coolArray
+        coolArray.push(stringTwo)
+    // else just push i to coolArray.
     } else {
-        coolArray.push(i) // else just push i to coolArray.
+        coolArray.push(i) 
     }
   }
+  </code>
 </pre>
 
 and thats it!
@@ -73,28 +90,30 @@ and thats it!
 the final function looks something like this:
 
 <pre class="prettyprint">
-var fizzBuzzCustom = function(stringOne, stringTwo, numOne, numTwo) {
-    var stringOne = stringOne || "Fizz";
-    var stringTwo = stringTwo || "Buzz";
-    var numOne = numOne || 3;
-    var numTwo = numTwo || 5;
-    var coolArray = [];
-      for(var i = 1; i < 100; i++){
-        if (i % numOne === 0){
-          if(i % numTwo === 0) {
-          coolArray.push(stringOne+stringTwo);
-          } else {
-          coolArray.push(stringOne);
+  <code class="prettyprint linenums">
+    var fizzBuzzCustom = function(stringOne, stringTwo, numOne, numTwo) {
+        var stringOne = stringOne || "Fizz";
+        var stringTwo = stringTwo || "Buzz";
+        var numOne = numOne || 3;
+        var numTwo = numTwo || 5;
+        var coolArray = [];
+          for(var i = 1; i < 100; i++){
+            if (i % numOne === 0){
+              if(i % numTwo === 0) {
+              coolArray.push(stringOne+stringTwo);
+              } else {
+              coolArray.push(stringOne);
+              }
+            }
+            else if (i % numTwo === 0){
+              coolArray.push(stringTwo);
+            }
+            else {
+              coolArray.push(i);
+            }
           }
-        }
-        else if (i % numTwo === 0){
-          coolArray.push(stringTwo);
-        }
-        else {
-          coolArray.push(i);
-        }
-      }
-}
+    }
+  </code>
 </pre>
 
 
@@ -114,18 +133,22 @@ phew that was alot!
 2. I also want to note that instead of doing:
 
 <pre class="prettyprint">
+  <code class="prettyprint linenums">
    if (i % numOne === 0){
           if(i % numTwo === 0) {
           
-          } 
+          }
+  </code>
 </pre>
 
 You can do:
 
 <pre class="prettyprint">
+  <code class="prettyprint linenums">
    if (i % numOne === 0 && i % numTwo === 0) {
           coolArray.push(stringOne+stringTwo);
       } 
+  </code>
 </pre>
 
 That was a long post! I hope you enjoyed it! 

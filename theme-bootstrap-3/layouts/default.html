@@ -21,13 +21,14 @@
         flat-ui.css
         style.css
         hikaru.css
-        google_prettify/desert.css
         font-awesome.min.css
       {{/ stylesheets.load }}
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic' rel='stylesheet' type='text/css'>
+     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&skin=sons-of-obsidian"></script>
   </head>
+
 
 <body>
 
@@ -35,7 +36,7 @@
       <figure class="avatar">
         <img src="https://pbs.twimg.com/profile_images/378800000831451608/8842e95126f50fc21f950801d1ae1f0e_400x400.jpeg" width="140px" title="Its me, Bobby" height="140px" alt="avatar" class="img-circle">
       </figure>
-     <div class="sidebar-module sidebar-module-inset about">
+     <div class="sidebar">
                       <h3>About</h3>
                       <ul>
                         <li>Cleft-Baby :D</li>
@@ -82,19 +83,10 @@
     </div>
 </body>
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+ 
 
   {{# javascripts.load }}
       main.js
     {{/ javascripts.load }}
-  <script>(function(jQuery){
-  
-  jQuery( document ).ready( function() {
-    
-    prettyPrint();
-    
-  } );
- 
-}(jQuery))
-  </script>
+
 </html>
