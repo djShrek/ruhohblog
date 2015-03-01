@@ -22,7 +22,11 @@ html {
 body {
     font-size: 1.25em;
     font-family: "Open Sans", sans-serif;
-    color: black;
+    color: #333;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    background-color: #fff;
+    margin: 0
 }
 
 p {
@@ -70,7 +74,7 @@ h1 {
 
 .single-wrap {
     width: 100%;
-    max-width: 780px;
+    max-width: 760px;
     margin: 1em auto;
     font-family: "Lora", Georgia, serif;
     background: white;
