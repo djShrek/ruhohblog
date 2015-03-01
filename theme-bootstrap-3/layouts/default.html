@@ -14,47 +14,50 @@
       <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
       <![endif]-->
+      <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
 
       <!-- Le styles -->
       {{# stylesheets.load }}
         bootstrap.min.css
         flat-ui.css
+        font-awesome.min.css
+        google_prettify/prettify.css
         style.css
         hikaru.css
-        font-awesome.min.css
       {{/ stylesheets.load }}
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic' rel='stylesheet' type='text/css'>
-     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&skin=sons-of-obsidian"></script>
   </head>
 
 
 <body>
 
     <div class="off-canvas">
-      <figure class="avatar">
-        <img src="https://pbs.twimg.com/profile_images/378800000831451608/8842e95126f50fc21f950801d1ae1f0e_400x400.jpeg" width="140px" title="Its me, Bobby" height="140px" alt="avatar" class="img-circle">
-      </figure>
-     <div class="sidebar">
-                      <h3>About</h3>
-                      <ul>
-                        <li>Cleft-Baby :D</li>
-                        <li>Aspiring Full-Stack Developer</li>
-                        <li>{Rubyist => Yay!}</li>
-                        <li>Whipster</li>
-                        <li>Music Mixer</li>
-                        <li>Boba Milk Tea Aficionado</li>
-                      </ul>
-                    </div>
-                    
+        <figure class="avatar">
+          <img src="https://pbs.twimg.com/profile_images/378800000831451608/8842e95126f50fc21f950801d1ae1f0e_400x400.jpeg" width="140px" title="Its me, Bobby" height="140px" alt="avatar" class="img-circle">
 
-                    <div class="sidebar-module">
-                      <h3>Elsewhere</h3>
-                        <a href="https://github.com/djShrek"><i class="fa fa-github social-icons"></i></a>
-                        <a href="https://twitter.com/BobbyHo2"><i class="fa fa-twitter social-icons"></i></a>
-                    </div>
-    </div>
+        </figure>
+          <div class="sidebar">    
+            <h3>About</h3>
+            <ul>
+              <li>{ :name => "Bobby" }</li>
+              <li>Cleft-Baby :D</li>
+              <li>Self-taught Web Developer</li>
+              <li>Whipster</li>
+              <li>Music Mixer</li>
+              <li>Boba Milk Tea Aficionado</li>
+            </ul>
+          </div>
+                      
+
+          <div class="sidebar-module">
+            <h3>Elsewhere</h3>
+              <a href="https://github.com/djShrek"><i class="fa fa-github social-icons"></i></a>
+              <a href="https://twitter.com/BobbyHo2"><i class="fa fa-twitter social-icons"></i></a>
+          </div>
+      </div>
 
     <div class="site-wrapper">
       <header>
@@ -82,11 +85,26 @@
       </footer>
     </div>
 </body>
-  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
  
 
   {{# javascripts.load }}
+      prettify.js
       main.js
-    {{/ javascripts.load }}
+  {{/ javascripts.load }}
+
+<script type="text/javascript">
+(function(jQuery){
+  
+  jQuery( document ).ready( function() {
+    
+    prettyPrint();
+    
+  } );
+ 
+}(jQuery))
+  
+</script>
+
+ 
 
 </html>

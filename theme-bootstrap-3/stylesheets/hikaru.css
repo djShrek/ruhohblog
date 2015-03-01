@@ -164,6 +164,8 @@ h1 {
 
 /* --- HEADER END --- */
 /* --- MODULES ---*/
+/* --- PRE/CODE HIGHLIGHTING ---*/
+/* --- PRE/CODE HIGHLIGHTING END ---*/
 /* --- PREVIOUS / NEXT BTNS ---*/
 #prev, #next {
   position: fixed;
@@ -245,6 +247,7 @@ h1 {
   border-left: 1px solid #e0e1e6; }
 
 .sidebar ul li {
+  color: gray;
   margin-left: 50px; }
 
 .sidebar-module a {
