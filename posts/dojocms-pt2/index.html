@@ -3,7 +3,7 @@
   <head>
 
       <meta charset="utf-8">
-      <title>Why Rails noobs should use RVM</title>
+      <title>Creating dojoCMS Part 2 - Installing Twitter Bootstrap</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="author" content="the whipster">
 
@@ -73,52 +73,48 @@
 
         <div class="feat">
           <h5 class="page-date">
-            <time>2014-06-27</time>
+            <time>2015-05-15</time>
           </h5>
         </div>
 
-        <h1 class="page-title" itemprop="name headline">Why Rails noobs should use RVM </h1>
+        <h1 class="page-title" itemprop="name headline">Creating dojoCMS Part 2 - Installing Twitter Bootstrap </h1>
 
 
             <div class="articleBody">
-              <p>&nbsp;&nbsp;If you are just getting started with Ruby or Ruby on Rails, chances that you are likely have come across the Ruby Version Manager, or a.k.a RVM.
-As stated in the introduction of the home page, &quot;RVM is a command-line tool which allows you to easily install, manage, and work with multiple environments from interpreters to sets of gems.&quot; If you have not been acquainted with RVM, now is your chance to do so.</p>
+              <p><a href="http://getbootstrap.com/">Twitter Bootstrap</a> is a robust front-end <a href="http://www.sitepoint.com/5-most-popular-frontend-frameworks-compared/">framework</a> that makes front-end development fast and easy. It contains a mobile-friendly/responsive grid, a lot of nifty front-end
+components (navbars, tabs, styled buttons etc.), and useful Javascript plugins that make
+facillitates faster development of user interfaces.</p>
 
-<p>Why would this be important for someone who is just starting Ruby / Ruby on Rails?</p>
+<p>We will be using Twitter Bootstrap in our dojoCMS application to give our application
+some basic styling. To install Twitter Bootstrap, we will be using the 
+<a href="https://github.com/seyhunak/twitter-bootstrap-rails">twitter-bootstrap-rails</a> gem.
+To get started, add the gem to your gemfile along with its dependencies:</p>
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;RVM lets you keep your projects self-contained within their own environments, &quot;from the specific version of ruby, all the way down to the precise set of required gems to run your application.&quot; RVM allows you to switch between different versions of Ruby (its named Ruby Version Manager after all..) and organize your gems in a different sets depending on your application&#39;s needs without different versions of the gems conflicting with one another. Having a different gem sets also avoids the issue of version conflicts between projects, which can cause HUGE, pain-in-the-neck for any newbie starting on a new project or tutorial. </p>
+<p><code>gem therubyracer</code>
+<code>gem less-rails</code>
+<code>gem twitter-bootstrap-rails</code></p>
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;There are many more other benefits to using RVM, many that I haven&#39;t even touched upon, but the main use for it for myself is creating different gem sets when I start a new project or work on a new tutorial. For example, I am a student at teamtreehouse.com and they have two courses that are related to Ruby on Rails. The first course (called &quot;Build A Simple Application&quot;) requires Ruby 1.9 and RoRails 3.2.7 and several gems. Their second course (titled &quot;Build a Todo List Application&quot;) requires Ruby 2.0 and Ruby on Rails 4. If I were to do course 1 but with installing Ruby 2.0 and RoRails 4 instead of their older versions, I would no doubt come across gem conflicts and/or gem incompatibility issues with the project and a massive headache would ensue. In fact, when following any online tutorial, I recommend installing the exact version numbers as you see them in the tutorial, and not just simple doing &quot;gem install [insert gem name]&quot; or simple adding &quot; gem &#39;[insert gem name]&#39; &quot; to your gemfile. Trust me, it&#39;s better to be specific and explicit so you would avoid gem installation problems and/or errors when working on your tutorials/application.</p>
+<p>Then run:</p>
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;A simple example would be that I install Ruby 1.9  and RoRails 3.2.7 or the first course. Then create a gemset called &quot;course1gemset&quot; and install the required gems for the tutorial application. Then install Ruby 2.0 and create a new gemset called &quot;todogemset&quot; and install RoRails 4 with required gems for the tutorial. You can switch back and forth depending on which tutorial / project you are working on without having to worry about gem conflicts. Example on the command line:</p>
+<p><code>bundle install</code></p>
 
-<pre class="prettyprint">
-    rvm install Ruby --version 2.0
-    /* installs version of Ruby 2.0 */
+<p>After the gems have been installed, go to the root of your directory and run</p>
 
-    rvm gemset create "todogemset" 
-    /* creates gemset */
+<p><code>rails g bootstrap:install</code></p>
 
-    rvm install Rails --version 4.0.0
-    /* installs 4.0 version of Rails into gemset*/
-</pre>
+<p>This will install the necessary CSS and Javascript libaries to the application.</p>
 
-<p>Another example would be lets say you wanted to start your own project that uses Ruby 1.9.3 and Rails 3.2.7 but it uses gems that you might or might have not yet installed and they might be a different version from the gems you have previously installed. You can simply create a new gemset without having to worry if the old gem and its dependencies will be compatible with the gem required in your new project since this gemset is self-contained in its own environment. Example on the command line:</p>
+<p>If you run your Rails server and go to localhost:3000/statuses, you should
+see a change in styles.</p>
 
-<pre class="prettyprint">
-    rvm install Ruby --version 1.9.3 
-    /* installs older version of Ruby */
+<p>You can take a look at the page source (right on click on the page and click view source)
+and observe the bootstrap css and javascript libraries that have been loaded. We
+may not need all of these libraries for our application, but I will remove them
+in a future post.</p>
 
-    rvm gemset create "rorTutgemset"
-    /* creates gemset */
-
-    rvm install Rails --version 3.2.7 
-    /* installs older version of Rails into gemset*/
-</pre>
-
-<p>Now these two gemsets will be encapsulated in their own environments.</p>
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;For documentation on rvm and how to create gem sets, go to <a href="https://rvm.io/">https://rvm.io/</a> and <a href="https://rvm.io/gemsets/basics">https://rvm.io/gemsets/basics</a>. Good luck!  </p>
+<p>At this point, I notice that the scaffolds.scss is adding styles that I don&#39;t care for
+on top of the Bootstrap CSS, so now it would be a good time to delete the scaffolds.scss
+to avoid future conflicts.  </p>
 
             </div>
 
@@ -128,10 +124,10 @@ As stated in the introduction of the home page, &quot;RVM is a command-line tool
               </a>
             </div>
 
+                      <a id="prev" href="/ruhohblog/posts/dojocms-pt1" class="prev"  title="Creating dojoBook Pt. 1- Generating the Application" >&larr;</a>
 
-                      <a id="prev" href="" class="prev disabled"  title="" >&larr;</a>
 
-                      <a id="next" class="next" href="/ruhohblog/posts/authentication" title="What is Authentication and hy do we need it in our Rails Apps?">&rarr;</a>
+                      <a id="next" class="next" href="/ruhohblog/posts/dojocms-pt3" title="Creating dojoCMS Part 3 - Adding Basic Styling to Layout with Bootstrap">&rarr;</a>
            
       </article>
 

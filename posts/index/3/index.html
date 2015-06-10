@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+      <meta charset="utf-8">
+      <title></title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="the whipster">
+
+      <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+      <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+      <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+
+      <!-- Le styles -->
+<link href='/ruhohblog/assets/stylesheets/bootstrap.min-4eadbf7d1721bb2729e398595bc7f0bc.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/ruhohblog/assets/stylesheets/flat-ui-2859ee4304ecec2aab78cfa0fd2fa6ff.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/ruhohblog/assets/stylesheets/font-awesome.min-5642646427f9f738a393e6cc05dd5003.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/ruhohblog/assets/stylesheets/google_prettify/prettify-a987f72342eeaece278982a377eca816.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/ruhohblog/assets/stylesheets/style-d41d8cd98f00b204e9800998ecf8427e.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/ruhohblog/assets/stylesheets/hikaru-21e6de2f195b5baa8a8a10b7f73ca8df.css' type='text/css' rel='stylesheet' media='all'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic' rel='stylesheet' type='text/css'>
+  </head>
+
+
+<body>
+
+    <div class="off-canvas">
+        <figure class="avatar">
+          <img src="https://pbs.twimg.com/profile_images/378800000831451608/8842e95126f50fc21f950801d1ae1f0e_400x400.jpeg" width="140px" title="Its me, Bobby" height="140px" alt="avatar" class="img-circle">
+
+        </figure>
+          <div class="sidebar">    
+            <h3>About</h3>
+            <ul>
+              <li>{ :name => "Bobby" }</li>
+              <li>Cleft-Baby :D</li>
+              <li>Self-taught Web Developer</li>
+              <li>Whipster</li>
+              <li>Music Mixer</li>
+              <li>Boba Milk Tea Aficionado</li>
+            </ul>
+          </div>
+                      
+
+          <div class="sidebar-module">
+            <h3>Elsewhere</h3>
+              <a href="https://github.com/djShrek"><i class="fa fa-github social-icons"></i></a>
+              <a href="https://twitter.com/BobbyHo2"><i class="fa fa-twitter social-icons"></i></a>
+          </div>
+      </div>
+
+    <div class="site-wrapper">
+      <header>
+          <div class="header-wrap">
+            <h3 class="blog-title">
+              <a href="/ruhohblog">the whipster code blog</a><br/>
+              <small>Mostly about code, occasional (unsolicited) opinions on life</small>
+            </h3>
+            
+            <a class="menu-icon" title="Open Bio" href="#">
+              <span class="lines"></span>
+            </a>
+          </div>
+      </header>
+      <main>
+          <div class="single-wrap">
+    <article class="single-content">
+        <div class="feat">
+          <h5 class="page-date">
+            <time>2015-05-15</time>
+          </h5>
+        </div>
+         <h1 class="page-title" itemprop="name headline"><a href="/ruhohblog/posts/dojocms-pt2">Creating dojoCMS Part 2 - Installing Twitter Bootstrap </a></h1>
+        
+      <p class="index-description"></p>
+      <p class="index-description text-none"><div class="summary ellipsis">
+<p><a href="http://getbootstrap.com/">Twitter Bootstrap</a> is a robust front-end <a href="http://www.sitepoint.com/5-most-popular-frontend-frameworks-compared/">framework</a> that makes front-end development fast and easy. It contains a mobile-friendly/responsive grid, a lot of nifty front-end
+components (navbars, tabs, styled buttons etc.), and useful Javascript plugins that make
+facillitates faster development of user interfaces.</p>
+
+<p>We will be using Twitter Bootstrap in our dojoCMS application to give our application
+some basic styling. To install Twitter Bootstrap, we will be using the 
+<a href="https://github.com/seyhunak/twitter-bootstrap-rails">twitter-bootstrap-rails</a> gem.
+To get started, add the gem to your gemfile along with its dependencies:</p>
+
+<p><code>gem therubyracer</code>
+<code>gem less-rails</code>
+<code>gem twitter-bootstrap-rails</code></p>
+
+<p>Then run:</p>
+
+<p><code>bundle install</code></p>
+
+<p>After the gems have been installed, go to the root of your directory and run</p>
+
+<p><code>rails g bootstrap:install</code></p>
+
+</div></p>
+      
+       <a href="/ruhohblog/posts/dojocms-pt2" class="button">Continue reading..</a>
+    </article>
+    <article class="single-content">
+        <div class="feat">
+          <h5 class="page-date">
+            <time>2015-05-04</time>
+          </h5>
+        </div>
+         <h1 class="page-title" itemprop="name headline"><a href="/ruhohblog/posts/dojocms-pt1">Creating dojoBook Pt. 1- Generating the Application </a></h1>
+        
+      <p class="index-description"></p>
+      <p class="index-description text-none"><div class="summary ellipsis">
+<p>This is the first part of a long series of posts that will act simultaneously
+as a place to write and record the progress of creating a social networking site
+in Ruby on Rails and act as a tutorial to those who wish to learn how to create a 
+social networking site in Rails. This project is motivated by another Rails application that I recently
+took over that includes outdated ways of programming in Rails.
+This project will also serve as practice to upgrading the old Rails application and 
+I will eventually use this project as a boilerplate for other applications that
+require similar features. </p>
+
+<p>The requires Ruby version 2.1.5, RVM, and Rails 4.1.5. Any other gems, packages,
+or ancillary parts will be stated as we move along during the course of the project.
+You will also need a text editor. I am currently using <a href="http://www.sublimetext.com/">Sublime Text</a>,
+which is my preferred text editor. If you don't know how to install Ruby or Ruby Rails, please 
+see <a href="http://rubyonrails.org/download/">here</a></p>
+
+<p>We begin by creating a new project in the command line:</p>
+
+<p><code>rails new dojoCMS</code> </p>
+
+<p>This will <a href="http://guides.rubyonrails.org/getting_started.html#creating-the-blog-application">generate</a> a project called "dojoCMS." Once this is done, change directory into the 
+folder like this:</p>
+</div></p>
+      
+       <a href="/ruhohblog/posts/dojocms-pt1" class="button">Continue reading..</a>
+    </article>
+    <article class="single-content">
+        <div class="feat">
+          <h5 class="page-date">
+            <time>2014-11-21</time>
+          </h5>
+        </div>
+         <h1 class="page-title" itemprop="name headline"><a href="/ruhohblog/posts/authentication">What is Authentication and why do we need it in our Rails Apps? </a></h1>
+        
+      <p class="index-description"></p>
+      <p class="index-description text-none"><div class="summary ellipsis">
+<p>        Generally, authentication is confirming the truth of any entity or piece of data (thanks <a href="http://en.wikipedia.org/wiki/Authentication">wikipedia!</a> :D). This is the same
+for authentication with the different aspects of the web. Some common forms of authentication that you may have come
+across on the web include logging into Facebook with your password, using a captcha to confirm that you are not a robot,
+and even clicking a confirmation e-mail to verify ownership of an e-mail address. For web applications, a user signs into
+their account by inputting their user name or email and password. The authentication system checks that the password matches the one in the database (not entirely true but you will find out why in a second) and then confirms that
+the user of an account is in indeed who he/she says they are, which then grants authorization and certain privileges to
+perform actions on that account's behalf. </p>
+
+<p>        Even after a user has been authenticated and logged into their account, web applications need a way to “prove”
+that the user is who they claim to be  when navigating from page to page on a web application. For example once you sign into Facebook, Facebook needs a way to prove that you are the user who logged in with the correct credentials with
+each subsequent web request. Because HTTP is <a href="http://en.wikipedia.org/wiki/Stateless_protocol">stateless</a>, there needs to be a system in place that “remembers”
+you are the authenticated user every time you make any kind of web request. If Facebook did not have an authentication
+system, it would not be able to confirm the identity of users who make web requests and therefore authorization to make
+commands (post pictures, create status updates, update profile) would be granted to everyone. With this knowledge in mind,
+any web application that is going to have users that do any kind of action must also have an authentication system in
+place. </p>
+
+<p>So what does an authentication system look like in code and in Rails? </p>
+
+<p>        In his book, the Ruby on Rails tutorial, Michael Hartl demonstrates a simple authentication from scratch and I will
+summarize it here:</p>
+</div></p>
+      
+       <a href="/ruhohblog/posts/authentication" class="button">Continue reading..</a>
+    </article>
+    <article class="single-content">
+        <div class="feat">
+          <h5 class="page-date">
+            <time>2014-07-22</time>
+          </h5>
+        </div>
+         <h1 class="page-title" itemprop="name headline"><a href="/ruhohblog/posts/code-wars-fizzbuzz-array">Code Wars: Fizzbuzz Array!!! </a></h1>
+        
+      <p class="index-description"></p>
+      <p class="index-description text-none"><div class="summary ellipsis">
+<p>One of the first lessons I had when I started learning Javascript was a demmonstration
+of the Fizzbuzz challenge. The lesson demonstrated several aspects of the Javascript language
+including the use of the for loop, arrays, coditional and logical statements nad much more.
+Coming across this challenge was pretty exciting because it would test whether I remembered
+what I had learn long ago. However, this code challenge came with twist:</p>
+
+<blockquote>
+1. Create a method/function that returns an array of numbers from 1 to 100.
+<br>
+2. If no arguments are passed the value at the index of the array for number should be 'Fizz' if it is divisible by 3, 'Buzz' if divisible by 5, 'FizzBuzz' if it divisible by both 3 and 5, or the number if it is not divisible by 3 or 5.
+<br>
+3. The method should take up to 4 arguments:
+<br>
+The first and second arguments are strings, which should be 'Fizz' and 'Buzz' by default.
+<br>
+The third and fourth arguments are integers and and should be 3 and 5 by default.
+</blockquote>
+
+<p><br></p>
+
+<p>I'll go through each step with my solution as an example.</p>
+</div></p>
+      
+       <a href="/ruhohblog/posts/code-wars-fizzbuzz-array" class="button">Continue reading..</a>
+    </article>
+    <article class="single-content">
+        <div class="feat">
+          <h5 class="page-date">
+            <time>2014-07-01</time>
+          </h5>
+        </div>
+         <h1 class="page-title" itemprop="name headline"><a href="/ruhohblog/posts/code-wars-javascript-arguments-pt-2">Code Wars: Javascript Arguments Pt. 2 </a></h1>
+        
+      <p class="index-description"></p>
+      <p class="index-description text-none"><div class="summary ellipsis">
+<p>In my previous <a href="/posts/code-wars-javascript-vs-arrays">post</a>, I discussed
+my solution to a Javascript code challenge from Code Wars. I would like to now 
+talk about the optimal / "best solution" that was shown once I solved that challenge.
+Once again, the description for the challenge went like this:</p>
+
+<pre class="prettyprint">
+    Write a function named numbers that returns true if all the parameters it is passed are are of the Number type. Otherwise, the function should return false. The function should accept any number of parameters.
+</pre>
+
+<p>The "top" solution that was given once I solved the code challenge was:</p>
+
+<pre class="prettyprint">
+var numbers = function() {
+    return Array.prototype.filter.call(arguments, function(n) { 
+        return typeof n !== 'number'; }
+        ).length === 0;
+    }
+</pre>
+
+<p>It looks pretty complicated but makes sense once we break it down: </p>
+
+</div></p>
+      
+       <a href="/ruhohblog/posts/code-wars-javascript-arguments-pt-2" class="button">Continue reading..</a>
+    </article>
+    <div class="pagination-wrap">
+      <div class="pagination">
+        <ul>
+          <li class="previous hidden"><a href="#">Previous</a></li>
+            <li><a href="/ruhohblog/posts/index/1">1</a></li>
+            <li><a href="/ruhohblog/posts/index/2">2</a></li>
+            <li class="active"><a href="/ruhohblog/posts/index/3">3</a></li>
+            <li><a href="/ruhohblog/posts/index/4">4</a></li>
+        <li class="next hidden"><a href="#">Next</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+      </main>
+
+
+      <footer id="footer">
+          <span>&copy; the whipster 2015
+          with help from <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">ruhoh</a>
+          and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>
+        </span>
+      </footer>
+    </div>
+</body>
+ 
+
+<script src='/ruhohblog/assets/javascripts/prettify-d435ff18c832044c3ddf7a0cf826eb72.js'></script>
+<script src='/ruhohblog/assets/javascripts/main-2b0b3358f0559bb57e8d54bd10a4e70f.js'></script>
+<script type="text/javascript">
+(function(jQuery){
+  
+  jQuery( document ).ready( function() {
+    
+    prettyPrint();
+    
+  } );
+ 
+}(jQuery))
+  
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60234034-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+ 
+
+</html>

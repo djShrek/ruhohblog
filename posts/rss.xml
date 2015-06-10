@@ -4,7 +4,848 @@
     <title>the whipster code blog</title>
     <description>the whipster code blog</description>
     <link/>
-    <pubDate>2015-02-28</pubDate>
+    <pubDate>2015-06-09</pubDate>
+    <item>
+      <title>Creating dojoCMS Part 9 - Adding has_many / belongs_to relationship</title>
+      <link>/ruhohblog/posts/dojocms-pt9</link>
+      <pubDate>2015-06-02</pubDate>
+      <description>&lt;p&gt;In this post, we will associate our statuses with our users so that our users can generate statuses when logged into their account. We first generate a new migration:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rails generate migration add_user_id_to_statuses&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This will create a new migration file where we can add statuses column to our users table. Go to db/migrate and click on the most recently created migration file(the name of the files will be different depending on the time you create the file). Once inside, add this code to your file:&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+    def change
+      add_column :statuses, :user_id, :integer
+    end
+&lt;/pre&gt;
+
+&lt;p&gt;What this code does is that it will add a column &amp;quot;user_id&amp;quot; with a type &amp;quot;integer&amp;quot; to your statuses table. Since we will also want to find the user based on the status, we will also add an index as well:&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+    def change
+      add_column :statuses, :user_id, :integer
+      add_index :statuses, :user_id
+      remove_column :statuses, :name
+    end
+&lt;/pre&gt;
+
+&lt;p&gt;If you noticed, I also added a remove_column :statuses, :name since we wont&amp;#39; be needing the name attribute of the status anymore. Our statuses will now be linked to the user who created that status. Once this is done, we will run the migration:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rake db:migrate&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;After this, you can go into the rails console and delete all the previous statuses so you will only have statuses containing the new attributes:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rails c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;then:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Status.delete_all&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you are done with this, your statuses will now &amp;quot;belong&amp;quot; to users and users will &amp;quot;have many&amp;quot; statuses.&lt;/p&gt;
+
+&lt;p&gt;If you have been following along up until this point, your sign up page should look something like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="img-responsive" src="/ruhohblog/assets/media/revised_sign_up.png"&gt;&lt;/p&gt;
+
+&lt;p&gt;Statuses#index should look something like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="img-responsive" src="/ruhohblog/assets/media/revised_statuses.png"&gt;&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Codewars: Flexible Card Game - 6 KYU Part 2</title>
+      <link>/ruhohblog/posts/code-wars-flexible-card-game-pt2</link>
+      <pubDate>2015-05-31</pubDate>
+      <description>&lt;p&gt;In the second part of this post, I go over how I created the &#x201C;Deck&#x201D; class that passed the kata.
+To see how created the &#x201C;Card&#x201D; class, check out my previous post &#x201C;here.&#x201D;&lt;/p&gt;
+
+&lt;p&gt;I create the Desk class that contains a constant variable called suits which contains an 
+array of strings that each represent a type of suit. The class also has an accessor method
+called cards which is initialized in the initialize method and ends up being an array containing
+card objects representing each cards in a deck.&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+  def initialize
+    @cards = []
+    SUITS.each do |suit|
+      (1..13).each do |rank|
+        card = Card.new(suit, rank)
+        @cards &amp;lt;&amp;lt; card
+      end
+    end
+  end
+&lt;/pre&gt;
+
+&lt;p&gt;I kind of cheat with the shuffle method and use the ruby shuffle method. At first the kata tests were not 
+passing, but then I realized that the shuffle method was returning the cards array without it being shuffled.
+So I added a bang &#x201C;!&#x201D; to the method, which actually &#x201C;shuffles&#x201D; the @cards array.&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+  def shuffle
+    cards.shuffle!
+  end
+&lt;/pre&gt;
+
+&lt;p&gt;The count method is another easy method as it just returns the number of cards left in the deck.&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+  def count
+    cards.count
+  end
+&lt;/pre&gt;
+
+&lt;p&gt;The drawn method takes a number as an argument (number 1 by default) and uses a range to remove
+card objects from the deck. The cards array uses the pop() method to remove card objects and then adds
+these cards to a drawn_cards array. The drawn method then returns the drawn_cards array in reversed_order.&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+  def draw(n = 1)
+    drawn_cards = []
+    (1..n).each do |x|
+      removed_card = cards.pop()
+      drawn_cards &lt;&lt; removed_card
+    end
+    return drawn_cards.reverse()
+  end
+&lt;/pre&gt;
+
+&lt;p&gt;And thats it! This solution passes all of the kata&#x2019;s tests. If you have anything to add such as questions
+or comments, please feel free to send them my way! The full code is found &lt;a href="https://github.com/djShrek/codewars/blob/master/Lvl%206%20Kyu/flexible_card_game.rb"&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Execution of a mysqldump and scp</title>
+      <link>/ruhohblog/posts/mysqldump_and_copy</link>
+      <pubDate>2015-05-30</pubDate>
+      <description>&lt;p&gt;I recently encountered a bug in an application that was very hard to debug
+due to the fact that the data in our respective databases were not in sync. Trying to debug the application in the linux environment was starting to become a pain, so I decided it would be easier to try to debug the issue in my local environment (MAC OSX).&lt;/p&gt;
+
+&lt;p&gt;So I had to do extract the data and execute a mysql dump and then copy that
+file back into my local system. Once I had the file, I would be able to accurately find the bug since the local and production databases would reflect the same data. 
+The first step was to use mysqldump to dump the data into a sql file. While in the production server, I type this command into the terminal:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;mysqldump -u [dbname] -p [nuc_production_db] &amp;gt; name_of_sql_file.sql&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Once this command is input, the terminal asks me for the password of the production database and I provide the corresponding pw. The -u flag The file takes only less than a second to generate even though it is the size of about 124mb. Now that that file the is generated, I need to copy the file back down to my local machine. I open the terminal to my local machine and use the scp command to copy the sql file from my remote server to my local server:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;scp name_of_user@ip_address:/file/to/send /where/to/put&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Example: &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;scp super_user@123.456.78.90:/home/app/superapp/5_27.sql home/Desktop&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;After this command, the terminal will download the sql file to my local machine and I will be able
+to import the data back to own mysql database!&lt;/p&gt;
+
+&lt;p&gt;For more information:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://unix.stackexchange.com/questions/188285/how-to-copy-a-file-from-remote-server-to-local-machine"&gt;http://unix.stackexchange.com/questions/188285/how-to-copy-a-file-from-remote-server-to-local-machine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://dev.mysql.com/doc/refman/5.0/en/mysqldump-sql-format.html"&gt;https://dev.mysql.com/doc/refman/5.0/en/mysqldump-sql-format.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    <item>
+      <title>Codewars: Flexible Card Game - 6 KYU Part 1</title>
+      <link>/ruhohblog/posts/code-wars-flexible-card-game-pt1</link>
+      <pubDate>2015-05-30</pubDate>
+      <description>&lt;p&gt;I really liked this simple kata because it tests one&#x2019;s ability to properly create classes and 
+knowledge of object-oriented programming.&lt;/p&gt;
+
+&lt;p&gt;Description of kata found &lt;a href="http://www.codewars.com/kata/5436fdf34e3d6cb156000350"&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Essentially, you are creating a &#x201C;Deck&#x201D; class and a &#x201C;Card&#x201D; class that can be used and modified to create different types of card games.&lt;/p&gt;
+
+&lt;p&gt;The Deck class has 1 public attribute &#x201C;cards&#x201D; 3 public methods: count(), shuffle(), and  draw(n). 
+The Card class has 2 public attributes including &#x201C;suit&#x201D; and &#x201C;rank&#x201D; with 2 public methods face&lt;em&gt;card? and a to&lt;/em&gt;s method. The cards must also be comparable to other cards, so the Ruby Comparable module will be used to compare the ranks of the cards only.&lt;/p&gt;
+
+&lt;p&gt;I first start with the card class and begin by including the Comparable module. Now the card class will be able to use operators such has &amp;lt;=&amp;gt; (spaceship?) operator to compare other cards.&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+class Card
+  include Comparable ## 1
+end
+&lt;/pre&gt;
+
+&lt;p&gt;Then I create a constant variable that will hold a hash which maps numbers to their respective face card values. 
+Example: 11 =&amp;gt; &#x201C;jack&#x201D;, 12 =&amp;gt; &#x201C;queen&#x201D;, 13..etc etc.&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+FACE_CARDS = { 11 =&gt; "jack", 12 =&gt; "queen", 13 =&gt; "king", 1 =&gt; "ace" }
+&lt;/pre&gt;
+
+&lt;p&gt;I create the 2 public attributes using attr&lt;em&gt;accessor methods for both :suit and :rank. I could have just gone with attr&lt;/em&gt;reader but I think I was more focused on finishing the class. Bad habits I know :(&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+  attr_accessor :suit
+  attr_accessor :rank
+&lt;/pre&gt;
+
+&lt;p&gt;The initialize method simply sets up instance variables for @suit and @rank.&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+  def initialize(suit, rank)
+    @suit = suit
+    @rank = rank
+  end
+&lt;/pre&gt;
+
+&lt;p&gt;The face_card? method returns true if rank of the card is above 10, which suggests it will either be a Jack, Queen or King..Or else, return false.&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+  def face_card?
+    return true if rank &gt; 10
+    false
+  end
+&lt;/pre&gt;
+
+&lt;p&gt;The to&lt;em&gt;s method is a method that returns a string describing the card in a English sentence.
+     My strategy was to check the FACE&lt;/em&gt;CARDS constant against the cards rank and if it had the rank
+     return the corresponding string with the name of the face card and suit,  or else just return 
+     the rank and suit of the card.&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+  def to_s
+    if FACE_CARDS.has_key?(rank)
+      return "#{FACE_CARDS[rank].capitalize} of #{suit.capitalize}"
+    end
+    "#{rank} of #{suit.capitalize}"
+  end
+&lt;/pre&gt;
+
+&lt;p&gt;Finally, the last method is the spaceship? operator that compares the rank of card1 to another card.
+     If the card is greater than the other card, return 0, if equal, return 0, or else return -1&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+  def &lt;=&gt;(card2)
+    if self.rank &gt; card2.rank
+      return 1
+    elsif self.rank == card2.rank
+      return 0
+    else
+      -1
+    end
+  end
+&lt;/pre&gt;
+
+&lt;p&gt;and thats it! &lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Creating dojoCMS Part 7 - Creating a User with Devise</title>
+      <link>/ruhohblog/posts/dojocms-pt7</link>
+      <pubDate>2015-05-28</pubDate>
+      <description>&lt;p&gt;Now that we have Devise installed, we can use Devise to generate a User model for our application.
+In the command line we type:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rails generate devise user&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Devise will create several files for us including a database migration, some testing files, and the user.rb file.&lt;/p&gt;
+
+&lt;p&gt;In our migration file (db/migrate), we can observe the setup that Devise has created for us. Like all other migration files, it us used to generate tables in our database.
+This includes a table called &amp;quot;users&amp;quot;, which also contains attributes for the user containing
+email, encrypted&lt;em&gt;password, reset&lt;/em&gt;password&lt;em&gt;token, remember&lt;/em&gt;created&lt;em&gt;at, sign&lt;/em&gt;in_count and more.
+You can see that these attributes are provided depending on the attributes that you set on your user.rb file. &lt;/p&gt;
+
+&lt;p&gt;Another bonus to note is the encrypted_password attribute that is generated by Devise. When someone enters a password into the system, we don&amp;#39;t want to store the password in plain text. Instead, we encrypt the password and store that in the database. When they go to log into the website, the system will apply the same hashing &lt;a href="http://en.wikipedia.org/wiki/Secure_Hash_Algorithm"&gt;algorithm&lt;/a&gt; and compare it to the one that is stored in the database. The hashing algorithm and authentication of the encrypted is all provided by Devise so you don&amp;#39;t have to implement the system yourself. (I guess kind of the whole point of using Devise in the first place lol).&lt;/p&gt;
+
+&lt;p&gt;As you scroll down the migration file, you will observe more attributes that are derived from the other modules provided by Devise such as Rememberable, Trackable, etc. For more information related to these modules, please check out the Devise &lt;a href="https://github.com/plataformatec/devise"&gt;documentation page&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We want to add some more attributes to our migration file so that our user model can also have a first name, last name, and a profile name. In our migration file above the ## Database authenticatable section,
+we type:&lt;/p&gt;
+
+&lt;pre prettyprint linenums&gt;
+    t.string :first_name
+    t.string :last_name
+    t.string :profile_name
+&lt;/pre&gt;
+
+&lt;p&gt;and then run:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rake db:migrate&lt;/code&gt; &lt;/p&gt;
+
+&lt;p&gt;in our terminal. When we run this command, Rails will look at the different migration files and then run commands to bring our local databases up to speed with whats is in the code. &lt;/p&gt;
+
+&lt;p&gt;Devise also modifies the routes file so the application recognizes the routes generated by Devise. If you look at the routes file, you will see the code that is added by Devise:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;devise_for :users&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;If you type rake routes in the command line, you can see Devise has added a whole bunch of new routes to our system. For our new users that want to register for our site, the route is located at /users/sign_up.
+You can start up your rails server:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rails s&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;and then go to localhost:3000/users/sign_up, you will see your sign up page! &lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Creating dojoCMS Part 8 - Creating a User with Devise</title>
+      <link>/ruhohblog/posts/dojocms-pt8</link>
+      <pubDate>2015-05-28</pubDate>
+      <description>&lt;p&gt;In this post, we will use Devise to generate views for our User.
+First, type in the following command:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rails generate devise:views&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This will generate a bunch of files for us and will allow us to change our sign up page.
+The sign up page will be under app/views/devise/registrations/new.html.erb file.
+We proceed by creating some form inputs for a User&amp;#39;s first name, last name, and profile name.
+Within the form_for helper method, we add divs with labels and text fields for our first, last,
+and profile names.&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+    &lt;div&gt;
+        &lt;%= f.label :first_name %&gt;&lt;br /&gt;
+        &lt;%= f.text_field :first_name %&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+        &lt;%= f.label :last_name %&gt;&lt;br /&gt;
+        &lt;%= f.text_field :last_name %&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+        &lt;%= f.label :profile_name %&gt;&lt;br /&gt;
+        &lt;%= f.text_field :profile_name %&gt;
+    &lt;/div&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;In Rails 4, you cannot mass-assign attributes of any model without first whitelisting them. This feature, known as strong parameters, requires you whitelist attributes in the controller within the context that they will be used in. Because we are customizing our own views and adding new attributes to our form, we need to let Devise know of any parameters that will be pass down to the model. In order to permit additional parameters (the lazy way), we can do so using a simple before filter in our ApplicationController:&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+    class ApplicationController &lt; ActionController::Base
+      ..omitted code..
+
+      before_action :configure_permitted_parameters, if: devise_controller?
+
+      protected
+
+      def configure_permitted_parameters
+        devise_parameter_sanitizer.for(:sign_up) do |u|
+          u.permit(:first_name, :last_name, :profile_name, :email, :password, :password_confirmation, :remember_me)
+        end
+      end
+    end
+&lt;/pre&gt;
+
+&lt;p&gt;If you start your server and go to localhost:3000/users/sign_up, you will be able to see a functioning sign-up page. &lt;/p&gt;
+
+&lt;p&gt;Useful links:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://easyactiverecord.com/blog/2014/04/01/rails4-strong-parameters-and-the-attr-accessible-macro/"&gt;-http://easyactiverecord.com/blog/2014/04/01/rails4-strong-parameters-and-the-attr-accessible-macro/&lt;/a&gt;
+&lt;a href="http://guides.rubyonrails.org/action_controller_overview.html#strong-parameters"&gt;strong parameters&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Creating dojoCMS Part 6 - Adding Authentication with Devise</title>
+      <link>/ruhohblog/posts/dojocms-pt6</link>
+      <pubDate>2015-05-27</pubDate>
+      <description>&lt;p&gt;Adding &lt;a href="http://www.gotealeaf.com/blog/authentication-methods-in-rails"&gt;authentication&lt;/a&gt; is one of the most important steps to securing your application. For this project, we will be using the Devise gem to provide basic authentication. To install &lt;a href="https://github.com/plataformatec/devise"&gt;Devise&lt;/a&gt;, go your Gemfile and add:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;gem &amp;#39;devise&amp;#39;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Then go into your terminal and type &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;bundle install&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;After it is finished &lt;a href="http://bundler.io/deploying.html"&gt;bundling&lt;/a&gt;, we use the rails command to install Devise into our project:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rails generate devise:install&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;After Devise is installed, you will see a list of commands in the terminal.
+Followng the instructions, you would first add the following to 
+config/environments/development.rb:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;config.action_mailer.default_url_options = { host: &amp;#39;localhost&amp;#39;, port: 3000 }&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Then you need to add a root to your application in routes.rb:&lt;/p&gt;
+
+&lt;p&gt;`root to: &amp;#39;statuses#index&amp;#39;&lt;/p&gt;
+
+&lt;p&gt;(To understand what this means, please checkout the Rails Guides on Routing)&lt;/p&gt;
+
+&lt;p&gt;Next we need to the &lt;a href="http://guides.rubyonrails.org/action_controller_overview.html#the-flash"&gt;flash&lt;/a&gt; messages to our application laylot. They will be helpful for user feedback later on in the development of our application.&lt;/p&gt;
+
+&lt;p&gt;Since we are using a Rails 4.+ application, we won&amp;#39;t have to do the next step.
+The last step is related to setting up views for Devise, which we will not yet
+need. With that said, that is the last step to setting up Devise in our Rails
+application. If you are interested in knowing how to create a custom authentication
+system, the Ruby on Rails &lt;a href="https://www.railstutorial.org/"&gt;tutorial&lt;/a&gt; by Michael Hartl has a basic introduction to creating a authentication system so check it out. &lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Creating dojoCMS Part 5 - Adding Some Interactivity</title>
+      <link>/ruhohblog/posts/dojocms-pt5</link>
+      <pubDate>2015-05-26</pubDate>
+      <description>&lt;p&gt;In this post, we want to add some interactivity to our page by hiding our edit 
+and delete links when our mouse is hovered over our &amp;quot;status.&amp;quot; &lt;/p&gt;
+
+&lt;p&gt;So first we add some CSS rules to hide our edit and delete links:&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+    .status .admin {
+        display: none;
+    }
+
+    .status.hover .admin {
+        display: inline;
+    }
+&lt;/pre&gt;
+
+&lt;p&gt;Our first css rule sets display to none to any class that contains &amp;quot;status&amp;quot; followed by &amp;quot;admin.&amp;quot;
+The second rule sets and class with &amp;quot;status&amp;quot; AND &amp;quot;hover&amp;quot; followed by &amp;quot;admin&amp;quot; to display
+inline. We need to use Javascript to add the hover class whenever the house mouse
+hovers over any of our statuses. As soon as our status contains a hover class, the bottom
+rule containing the &amp;quot;hover&amp;quot; class will override the top rule without it.&lt;/p&gt;
+
+&lt;p&gt;So in order to add our &lt;a href="http://learn.jquery.com/using-jquery-core/document-ready/"&gt;Javascript&lt;/a&gt;, we open up app/assets/javascripts/statuses.js.coffee:&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+$(document).ready(function(){
+    $('.status').hover(function(){
+        $(this).toggleClass("hover");
+    });
+});
+&lt;/pre&gt;
+
+&lt;p&gt;So now everytime we hover over our status, the &lt;a href="http://api.jquery.com/toggleclass/"&gt;toggleClass&lt;/a&gt; (&amp;quot;hover&amp;quot;) method will
+toggle the class as we hover in and out of the class.&lt;/p&gt;
+
+&lt;p&gt;Next, we want to add some styling to the background of each status that we hover
+over:&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+    .status.hover {
+        display: inline;
+    }
+&lt;/pre&gt;
+
+&lt;p&gt;So now we are missing now is a link to posting a new status. &lt;/p&gt;
+
+&lt;p&gt;So above our statuses, we add:&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+    &lt;%= link_to "Post a New Status", new_status_path %&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;It looks okay for now, but since we have the Bootstrap framework installed,
+we can utilize the classes they give us for adding style on buttons.&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+    &lt;%= link_to "Post a New Status", new_status_path, class: "btn btn-success" %&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;So now, we have a nice button that will allow us to create new statuses as well
+as some interactivity to give our users some feedback when they hover under 
+statuses. &lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Creating dojoCMS Part 4 - More Styling to Layout with Bootstrap</title>
+      <link>/ruhohblog/posts/dojocms-pt4</link>
+      <pubDate>2015-05-20</pubDate>
+      <description>&lt;p&gt;In our previous post, we made some minor changes to the layout of the application.
+We will continue to make the layout better by adding more styling to the headers
+and centering our main content.&lt;/p&gt;
+
+&lt;p&gt;We first add a Twitter Bootstrap &amp;quot;page-header&amp;quot; class to our h1 tag to give it
+an underline so that it can make our heading stand out more.&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+&amp;lt;div class="page-header"&amp;gt;
+  &amp;lt;h1&amp;gt;All of the Statuses&amp;lt;/h1&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Now our users know what the header is referring to.&lt;/p&gt;
+
+&lt;p&gt;Next, we want to &lt;a href="http://ruby.bastardsbook.com/chapters/loops/"&gt;loop&lt;/a&gt; over all our statuses and display them to the page.&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+    &lt;% @statuses.each do |status| %&gt;
+        &amp;lt;div class="status"&amp;gt;
+            &amp;lt;strong&amp;gt;&lt;%= status.name %&gt;&amp;lt;/strong&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &lt;% end %&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;The @statuses is an instance &lt;a href="https://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/45-more-classes/lessons/110-instance-variables"&gt;variable&lt;/a&gt; that will contain all our stasues.
+The &lt;a href="http://www.tutorialspoint.com/ruby/ruby_iterators.htm"&gt;each&lt;/a&gt; method takes a block that will pass each status into the loop
+and each status in the @statuses instance variable will be printed to the page.&lt;/p&gt;
+
+&lt;p&gt;Next, we would like to add the content of the status right under the name of the
+person who wrote the status:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;p&amp;gt;&amp;lt;%= status.content %&amp;gt;&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Next we add some links to accompany our status which include showing, editing,
+and deleting our status. &lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+    &amp;lt;div class="meta"&amp;gt;
+        &lt;%= link_to time_ago_in_words(status.created_at) + " ago", status %&gt; | &amp;lt;span class="admin"&amp;gt;
+              &lt;%= link_to "Edit", edit_status_path(status) %&gt; | 
+              &lt;%= link_to "Delete", status, method: :delete, data: { confirm: "Are you sure you want to delete this Status?" } %&gt; &amp;lt;/span&gt;
+    &amp;lt;/div&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Our statuses is looking pretty good. We will close this part out with some margins
+so that our statuses aren&amp;#39;t so clumped up together. Go to your app/assets/stylesheets/statuses.scss
+file and include these stylings:&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+    .status {
+        border-bottom: solid 1px #CCC;
+        padding: 5px 0;
+    }
+
+    .status p {
+        margin: 4px 0;
+    }
+&lt;/pre&gt;
+
+&lt;p&gt;With this done, your statuses should be nice and centered with margins separating.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Creating dojoCMS Part 3 - Adding Basic Styling to Layout with Bootstrap</title>
+      <link>/ruhohblog/posts/dojocms-pt3</link>
+      <pubDate>2015-05-18</pubDate>
+      <description>&lt;p&gt;In this article, we are going to make some changes to the layouts of our web application.&lt;/p&gt;
+
+&lt;p&gt;We want to make a change towards the layout of every single page in our application. So in
+order to do that, we navigate to the views/application.html.erb file.&lt;/p&gt;
+
+&lt;p&gt;We want to add some margins where our content is stored, so we add the &lt;a href="http://getbootstrap.com/css/#grid"&gt;container&lt;/a&gt; (Twitter Bootstrap) class around the &amp;lt;%= yield %&amp;gt; &lt;a href="http://stackoverflow.com/questions/7996695/what-is-the-difference-between-and-in-erb-in-rails"&gt;ERB&lt;/a&gt; tags. This will made sure all the content in all our pages are centered with margins. &lt;/p&gt;
+
+&lt;p&gt;Ex:&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+&amp;lt;div class="container"&amp;gt;
+  &lt;%= yield %&gt;
+&amp;lt;/div&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Now this looks better, but now we would like a navigation bar. 
+You can go to the Twitter Bootstrap documentation page to determine the different
+configurations you can set, but for now we will just install a basic navbar.&lt;/p&gt;
+
+&lt;p&gt;Ex:&lt;/p&gt;
+
+&lt;p&gt;&lt;xmp class="prettyprint linenums" id="htmlXmp"&gt;
+    &lt;nav class="navbar navbar-default navbar-fixed-top"&gt;
+      &lt;div class="container-fluid"&gt;
+        &lt;div class="navbar-header"&gt;
+          &lt;a class="navbar-brand" href="#"&gt;
+            DojoCSM
+          &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="collapse navbar-collapse"&gt;
+            &lt;ul class="nav navbar-nav"&gt;
+                &lt;li class="active"&gt;
+                    ...link to all statuses here...
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+&lt;/xmp&gt;&lt;/p&gt;
+
+&lt;p&gt;The erb code that should be replaced above in the &amp;quot;link to all statuses here&amp;quot; should look like:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;%= link_to &amp;quot;All Statuses&amp;quot;, statuses_path %&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This is taken from the Twitter Bootstrap &lt;a href="http://getbootstrap.com/components/#navbar"&gt;documentation&lt;/a&gt;
+If you notice, we have also used the &amp;quot;navbar-fixed-top&amp;quot; class, which &amp;quot;sticks&amp;quot; the navbar to the top.
+Because we are using a sticky navigation, the Bootstrap documentation states that we should set 
+a padding-top of 70px to offset the navbar. So we will do this in our app/assets/stylesheets/applications.css file:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;body {  padding-top: 70px; }&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;After this, refresh the page and you will see that the nav bar will always stay on top no matter how far down
+you scroll.&lt;/p&gt;
+
+&lt;p&gt;Another thing to note is the code:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;%= link_to &amp;quot;All Statuses&amp;quot;, statuses_path %&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;&amp;lt;%= link_to %&amp;gt;&lt;/code&gt; method is a Rails helper method that allows for easy creation of links.
+Here we use a &lt;code&gt;url_helper&lt;/code&gt; method which is Statuses path. (More info on url helpers: &lt;a href="http://guides.rubyonrails.org/routing.html#path-and-url-helpers"&gt;url_helpers&lt;/a&gt;).
+To see all your url_helpers, type &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rake routes&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;in your terminal and it will list all the helper &lt;a href="http://guides.rubyonrails.org/routing.html#inspecting-and-testing-routes"&gt;methods&lt;/a&gt; that are available.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Creating dojoCMS Part 2 - Installing Twitter Bootstrap</title>
+      <link>/ruhohblog/posts/dojocms-pt2</link>
+      <pubDate>2015-05-15</pubDate>
+      <description>&lt;p&gt;&lt;a href="http://getbootstrap.com/"&gt;Twitter Bootstrap&lt;/a&gt; is a robust front-end &lt;a href="http://www.sitepoint.com/5-most-popular-frontend-frameworks-compared/"&gt;framework&lt;/a&gt; that makes front-end development fast and easy. It contains a mobile-friendly/responsive grid, a lot of nifty front-end
+components (navbars, tabs, styled buttons etc.), and useful Javascript plugins that make
+facillitates faster development of user interfaces.&lt;/p&gt;
+
+&lt;p&gt;We will be using Twitter Bootstrap in our dojoCMS application to give our application
+some basic styling. To install Twitter Bootstrap, we will be using the 
+&lt;a href="https://github.com/seyhunak/twitter-bootstrap-rails"&gt;twitter-bootstrap-rails&lt;/a&gt; gem.
+To get started, add the gem to your gemfile along with its dependencies:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;gem therubyracer&lt;/code&gt;
+&lt;code&gt;gem less-rails&lt;/code&gt;
+&lt;code&gt;gem twitter-bootstrap-rails&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Then run:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;bundle install&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;After the gems have been installed, go to the root of your directory and run&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rails g bootstrap:install&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This will install the necessary CSS and Javascript libaries to the application.&lt;/p&gt;
+
+&lt;p&gt;If you run your Rails server and go to localhost:3000/statuses, you should
+see a change in styles.&lt;/p&gt;
+
+&lt;p&gt;You can take a look at the page source (right on click on the page and click view source)
+and observe the bootstrap css and javascript libraries that have been loaded. We
+may not need all of these libraries for our application, but I will remove them
+in a future post.&lt;/p&gt;
+
+&lt;p&gt;At this point, I notice that the scaffolds.scss is adding styles that I don&amp;#39;t care for
+on top of the Bootstrap CSS, so now it would be a good time to delete the scaffolds.scss
+to avoid future conflicts.  &lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Creating dojoBook Pt. 1- Generating the Application</title>
+      <link>/ruhohblog/posts/dojocms-pt1</link>
+      <pubDate>2015-05-04</pubDate>
+      <description>&lt;p&gt;This is the first part of a long series of posts that will act simultaneously
+as a place to write and record the progress of creating a social networking site
+in Ruby on Rails and act as a tutorial to those who wish to learn how to create a 
+social networking site in Rails. This project is motivated by another Rails application that I recently
+took over that includes outdated ways of programming in Rails.
+This project will also serve as practice to upgrading the old Rails application and 
+I will eventually use this project as a boilerplate for other applications that
+require similar features. &lt;/p&gt;
+
+&lt;p&gt;The requires Ruby version 2.1.5, RVM, and Rails 4.1.5. Any other gems, packages,
+or ancillary parts will be stated as we move along during the course of the project.
+You will also need a text editor. I am currently using &lt;a href="http://www.sublimetext.com/"&gt;Sublime Text&lt;/a&gt;,
+which is my preferred text editor. If you don&amp;#39;t know how to install Ruby or Ruby Rails, please 
+see &lt;a href="http://rubyonrails.org/download/"&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We begin by creating a new project in the command line:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rails new dojoCMS&lt;/code&gt; &lt;/p&gt;
+
+&lt;p&gt;This will &lt;a href="http://guides.rubyonrails.org/getting_started.html#creating-the-blog-application"&gt;generate&lt;/a&gt; a project called &amp;quot;dojoCMS.&amp;quot; Once this is done, change directory into the 
+folder like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;cd dojoCMS&lt;/code&gt; &lt;/p&gt;
+
+&lt;p&gt;We will then generate our first scaffold:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rails generate scaffold status name:string content:text&lt;/code&gt; &lt;/p&gt;
+
+&lt;p&gt;This will create a model called Status along with its respective controller and 
+views. We will dive into what models, views, and controllers are when we get 
+more in depth to the application.&lt;/p&gt;
+
+&lt;p&gt;After the Status scaffold has been generated, we have to run a migration.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rake db:migrate&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;After you run the &lt;a href="http://guides.rubyonrails.org/active_record_migrations.html#migration-overview"&gt;migration&lt;/a&gt;, you can start the rails server and check to see
+if you can create, edit, update, and deleted statuses. Run &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rails s&lt;/code&gt; &lt;/p&gt;
+
+&lt;p&gt;(short for rails server)&lt;/p&gt;
+
+&lt;p&gt;After the Rails &lt;a href="http://guides.rubyonrails.org/command_line.html#rails-server"&gt;server&lt;/a&gt; starts, go to your browser and type localhost:3000. 
+You should see the default &amp;quot;Welcome&amp;quot; screen that is generated by Ruby On Rails.
+If you go to localhost:3000/statuses on your browser, you should be able to see
+a link that says &amp;quot;New Status.&amp;quot; Click on that link, fill in a new a status, and 
+create it.&lt;/p&gt;
+
+&lt;p&gt;Congratulations, you have created your first status!&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>What is Authentication and why do we need it in our Rails Apps?</title>
+      <link>/ruhohblog/posts/authentication</link>
+      <pubDate>2014-11-21</pubDate>
+      <description>&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Generally, authentication is confirming the truth of any entity or piece of data (thanks &lt;a href="http://en.wikipedia.org/wiki/Authentication"&gt;wikipedia!&lt;/a&gt; :D). This is the same
+for authentication with the different aspects of the web. Some common forms of authentication that you may have come
+across on the web include logging into Facebook with your password, using a captcha to confirm that you are not a robot,
+and even clicking a confirmation e-mail to verify ownership of an e-mail address. For web applications, a user signs into
+their account by inputting their user name or email and password. The authentication system checks that the password matches the one in the database (not entirely true but you will find out why in a second) and then confirms that
+the user of an account is in indeed who he/she says they are, which then grants authorization and certain privileges to
+perform actions on that account&amp;#39;s behalf. &lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Even after a user has been authenticated and logged into their account, web applications need a way to &#x201C;prove&#x201D;
+that the user is who they claim to be  when navigating from page to page on a web application. For example once you sign into Facebook, Facebook needs a way to prove that you are the user who logged in with the correct credentials with
+each subsequent web request. Because HTTP is &lt;a href="http://en.wikipedia.org/wiki/Stateless_protocol"&gt;stateless&lt;/a&gt;, there needs to be a system in place that &#x201C;remembers&#x201D;
+you are the authenticated user every time you make any kind of web request. If Facebook did not have an authentication
+system, it would not be able to confirm the identity of users who make web requests and therefore authorization to make
+commands (post pictures, create status updates, update profile) would be granted to everyone. With this knowledge in mind,
+any web application that is going to have users that do any kind of action must also have an authentication system in
+place. &lt;/p&gt;
+
+&lt;p&gt;So what does an authentication system look like in code and in Rails? &lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;In his book, the Ruby on Rails tutorial, Michael Hartl demonstrates a simple authentication from scratch and I will
+summarize it here:&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Hartl&#x2019;s authentication system begins with giving the user a secure password that can be used to
+authenticate users. Each user&#x2019;s password is encrypted and stored into the database (so therefore not the actual password itself). With
+each subsequent sign-in to the application, a method called &#x201C;authenticate&#x201D; will take the submitted password, encrypt it,
+and compare the result to the encrypted value stored in the database. If the submitted,  encrypted password matches the
+password(also encrypted) stored in the database, the application will authenticate the user. The reason for comparing encrypted passwords
+versus the original password themselves is that if the database is somehow hacked or compromised, the hackers would have a
+list of encrypted passwords instead of the originals, preventing the hacker from potentially accessing other web
+applications that the users may use.&lt;/p&gt;
+
+&lt;p&gt;The encryption process begins by adding the bcrypt Ruby gem and you can read more about it in Hartl&#x2019;s tutorial &lt;a href="https://www.railstutorial.org/book/modeling_users#sec-adding_a_secure_password"&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Hartl finishes the first part the authentication machinery by a method that retrieves a user by e-mail and passwords.&lt;/p&gt;
+
+&lt;p&gt;First, when a user signs into their account, an HTTP request is made to the SessionsController#create action of the Rails
+application.&lt;/p&gt;
+
+&lt;p&gt;It looks something like this:&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+class SessionsController &lt; ApplicationController
+    def new
+      # ..code..
+    end
+
+    def create
+      user = User.find_by_email(params[:session ][:email])
+      if user &amp;&amp; user.authenticate(params [:session][:password ])
+      # Sign the user in and redirect to the user's show page..
+      else
+        flash.now [:error] = 'Invalid email/password combination'
+        render 'new'
+      end
+    end
+
+    def destroy
+      # ..code..
+    end
+end
+&lt;/pre&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;You can see that a dynamic finder method find&lt;em&gt;by&lt;/em&gt;email is being called by the User class in the create action. If the user
+is found &lt;strong&gt;and&lt;/strong&gt; the user&#x2019;s password matches the password found in the database, the user will
+then be &#x201C;signed-in&#x201D; by the application, otherwise, the new template is rendered and they are essentially taken to the sign
+up page:&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt; 
+    flash.now [:error] = 'Invalid email/password combination'
+    render 'new'
+&lt;/pre&gt;
+
+&lt;p&gt;Next, the concept of &#x201C;sessions&#x201D; is introduced. According to Hartl, a &amp;quot;session is a semi-permanent connection between two
+ computers...&amp;quot; and it is used to implement the pattern of &amp;quot;signing in&amp;quot; to the application that is built in his tutorial. The
+ session can be implemented in different ways, but the way he chooses to implement is that when the user signs in, the
+ sign in status (just a term, not an actual attribute) will be remembered &amp;quot;forever&amp;quot; and will only be cleared when the user explicitly signs out. To implement a
+ session in Rails, it is &amp;quot;convenient to model sessions as RESTful resource&amp;quot;, meaning a session model will be created along
+ with an accompanying controller that will be used to create and destroy sessions.&lt;/p&gt;
+
+&lt;p&gt;Hartl completes the user sign in and authentication system by adding the necessary cookie-manipulation code. He uses a traditional Rails &amp;quot;session&amp;quot; &lt;strong&gt;method&lt;/strong&gt; to store a &amp;quot;remember token&amp;quot; equal to the user&amp;#39;s id.&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+  session[:remember_token] = user.id
+&lt;/pre&gt;
+
+&lt;p&gt;(*Note: This example belove is an example of a session, but is not what is actually implemented in the tutorial)
+This session object makes the user id available from page to page by storing it in a cookie that expires upon browser clos
+. 
+In his implementation, he uses a design called &amp;quot;persistent sessions&amp;quot;, that is, the signin status will last even after the browser is closed, so therefore we need to use a permanent identifier for the signed-in user. To accomplish this, we
+generate a unique, remember token for each user and store it as a permanent cookie rather than one that expires on browser
+close. The remember token needs to be associated with a user and stored for future use, so it has to be added to the User
+model as a column to the database. For how he generates the remember token, read that section [insert link to section for
+remember token]. &lt;/p&gt;
+
+&lt;p&gt;For more information on sessions, check out the Ruby on Rails &lt;a href="http://guides.rubyonrails.org/security.html#sessions"&gt;guides&lt;/a&gt;
+It starts with a simple example of sessions and then gets more in-depth for people are interested in Rails security. &lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;The last part of the authentication system ends with a working &#x201C;sign&lt;em&gt;in&#x201D; function. When the user successfully is
+authenticated after signing in to their account, the sign&lt;/em&gt;in helper method will set the cookies.permanent[:remember_token]
+to to the user&#x2019;s remember token like this.&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+module SessionsHelper  
+  def sign_in(user)    
+    cookies.permanent[:remember_token] = user.remember_token    
+    self.current_user = user
+  end 
+end 
+&lt;/pre&gt;
+
+&lt;p&gt;The cookies utility is used &lt;strong&gt;like&lt;/strong&gt; a hash and each cookie contains two elements as if it were a hash:  a value and an
+optional expiration date. After the cookie is set in the browser.&lt;/p&gt;
+
+&lt;p&gt;If you noticed from the code above, &lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+ self.current_user = user.
+&lt;/pre&gt;
+
+&lt;p&gt;This code is to set the current user to the signed in user, so that the current user method can be used on each page.&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+User.find_by_remember_token(cookies[:remember_token]
+&lt;/pre&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+def current_user=(user)    
+  @current_user = user
+end
+
+def current_user 
+  @current_user ||= User.find_by_remember_token(cookies[:remember_token])
+end
+&lt;/pre&gt;
+
+&lt;p&gt;The method current user now will create an instance variable that will either find the user by the remember token and set
+it or return the cached value of the instance variable @current_user so that on subsequent invocations it will not hit the
+database. &lt;/p&gt;
+
+&lt;p&gt;From here on out, you can use the current user method everywhere in your app and conveniently find the user that is
+authenticated and currently signed in.&lt;/p&gt;
+
+&lt;p&gt;If you have used the Devise gem, you will be familiar with the current user method as it the does the same in retrieving
+the current_user.&lt;/p&gt;
+
+&lt;p&gt;When a user &#x201C;signs out of their account&#x201D;, their session is essentially destroed and the remember token is reset.&lt;/p&gt;
+
+&lt;pre class="prettyprint linenums"&gt;
+def destroy
+  sign_out
+  redirect_to root_path
+end
+&lt;/pre&gt;
+
+&lt;pre &lt;pre class="prettyprint linenums"&gt;
+def sign_out    
+  self.current_user = nil    
+  cookies.delete(:remember_token)  
+end
+&lt;/pre&gt;
+
+&lt;p&gt;and voila! Thats how you create a basic authentication system for your app! &lt;/p&gt;
+
+&lt;p&gt;Up next: Authorization, Devise, and CanCan &lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Code Wars: Fizzbuzz Array!!!</title>
       <link>/ruhohblog/posts/code-wars-fizzbuzz-array</link>
@@ -286,78 +1127,6 @@ the entire numbers() function would return false (via the every method). &lt;/p&
 &lt;p&gt;This code challenge didn&amp;#39;t take very long and was one of the shorter ones I did.
 However, the most optimal solution was achieved with 3 lines compared to my 13 
 lines of code. I&amp;#39;ll go over this in part-2 of this blog post!&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Codewars: Color Ghost</title>
-      <link>/ruhohblog/posts/codewars-color-ghost</link>
-      <pubDate>2014-10-20</pubDate>
-      <description>Simple 8-kyu code challenge in Ruby</description>
-    </item>
-    <item>
-      <title>How MVC Works pt.1</title>
-      <link>/ruhohblog/posts/how-mvc-works-part-1</link>
-      <pubDate>2014-07-22</pubDate>
-      <description>&lt;p&gt;&amp;nbsp;&amp;nbsp;If you are using the Ruby on Rails framework,  it is necessary  to understand the basics of the Model-View-Controller MVC architectural  pattern since it is incorporated in Rails. Although it serves many different purposes, its main purpose in web applications is to help developers implement user-interfaces. The pattern separates the web application into three core components: the Model, View, and Controller. Each of these components has a separate responsibility to process what occurs after the Rails application has received a web request. 
-  &lt;p&gt;&amp;nbsp;&amp;nbsp;On a conceptual level, a browser sends a request to a web
-application, which is received by a web server and then passed on to the Rails router and subsequently to the controller.
-The controller will then interact with the model, which will then query the database for the data that the browser has
-requested for. After invoking the model, the controller will then renders the view accompanied with any data related to the
-corresponding model and returns a complete web page to the browser as HTML.&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&amp;nbsp;Before I talk about the main components of the MVC pattern in Rails, I would like to share a 
-conceptual picture of what occurs after a web application receives a HTTP request: &lt;br/&gt;
-&lt;img class="img-responsive" src="/ruhohblog/assets/media/mvc.jpg"&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>What is Authentication and hy do we need it in our Rails Apps?</title>
-      <link>/ruhohblog/posts/authentication</link>
-      <pubDate>2014-11-21</pubDate>
-      <description/>
-    </item>
-    <item>
-      <title>Why Rails noobs should use RVM</title>
-      <link>/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm</link>
-      <pubDate>2014-06-27</pubDate>
-      <description>&lt;p&gt;&amp;nbsp;&amp;nbsp;If you are just getting started with Ruby or Ruby on Rails, chances that you are likely have come across the Ruby Version Manager, or a.k.a RVM.
-As stated in the introduction of the home page, &amp;quot;RVM is a command-line tool which allows you to easily install, manage, and work with multiple environments from interpreters to sets of gems.&amp;quot; If you have not been acquainted with RVM, now is your chance to do so.&lt;/p&gt;
-
-&lt;p&gt;Why would this be important for someone who is just starting Ruby / Ruby on Rails?&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;RVM lets you keep your projects self-contained within their own environments, &amp;quot;from the specific version of ruby, all the way down to the precise set of required gems to run your application.&amp;quot; RVM allows you to switch between different versions of Ruby (its named Ruby Version Manager after all..) and organize your gems in a different sets depending on your application&amp;#39;s needs without different versions of the gems conflicting with one another. Having a different gem sets also avoids the issue of version conflicts between projects, which can cause HUGE, pain-in-the-neck for any newbie starting on a new project or tutorial. &lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;There are many more other benefits to using RVM, many that I haven&amp;#39;t even touched upon, but the main use for it for myself is creating different gem sets when I start a new project or work on a new tutorial. For example, I am a student at teamtreehouse.com and they have two courses that are related to Ruby on Rails. The first course (called &amp;quot;Build A Simple Application&amp;quot;) requires Ruby 1.9 and RoRails 3.2.7 and several gems. Their second course (titled &amp;quot;Build a Todo List Application&amp;quot;) requires Ruby 2.0 and Ruby on Rails 4. If I were to do course 1 but with installing Ruby 2.0 and RoRails 4 instead of their older versions, I would no doubt come across gem conflicts and/or gem incompatibility issues with the project and a massive headache would ensue. In fact, when following any online tutorial, I recommend installing the exact version numbers as you see them in the tutorial, and not just simple doing &amp;quot;gem install [insert gem name]&amp;quot; or simple adding &amp;quot; gem &amp;#39;[insert gem name]&amp;#39; &amp;quot; to your gemfile. Trust me, it&amp;#39;s better to be specific and explicit so you would avoid gem installation problems and/or errors when working on your tutorials/application.&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;A simple example would be that I install Ruby 1.9  and RoRails 3.2.7 or the first course. Then create a gemset called &amp;quot;course1gemset&amp;quot; and install the required gems for the tutorial application. Then install Ruby 2.0 and create a new gemset called &amp;quot;todogemset&amp;quot; and install RoRails 4 with required gems for the tutorial. You can switch back and forth depending on which tutorial / project you are working on without having to worry about gem conflicts. Example on the command line:&lt;/p&gt;
-
-&lt;pre class="prettyprint"&gt;
-    rvm install Ruby --version 2.0
-    /* installs version of Ruby 2.0 */
-
-    rvm gemset create "todogemset" 
-    /* creates gemset */
-
-    rvm install Rails --version 4.0.0
-    /* installs 4.0 version of Rails into gemset*/
-&lt;/pre&gt;
-
-&lt;p&gt;Another example would be lets say you wanted to start your own project that uses Ruby 1.9.3 and Rails 3.2.7 but it uses gems that you might or might have not yet installed and they might be a different version from the gems you have previously installed. You can simply create a new gemset without having to worry if the old gem and its dependencies will be compatible with the gem required in your new project since this gemset is self-contained in its own environment. Example on the command line:&lt;/p&gt;
-
-&lt;pre class="prettyprint"&gt;
-    rvm install Ruby --version 1.9.3 
-    /* installs older version of Ruby */
-
-    rvm gemset create "rorTutgemset"
-    /* creates gemset */
-
-    rvm install Rails --version 3.2.7 
-    /* installs older version of Rails into gemset*/
-&lt;/pre&gt;
-
-&lt;p&gt;Now these two gemsets will be encapsulated in their own environments.&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;For documentation on rvm and how to create gem sets, go to &lt;a href="https://rvm.io/"&gt;https://rvm.io/&lt;/a&gt; and &lt;a href="https://rvm.io/gemsets/basics"&gt;https://rvm.io/gemsets/basics&lt;/a&gt;. Good luck!  &lt;/p&gt;
 </description>
     </item>
   </channel>

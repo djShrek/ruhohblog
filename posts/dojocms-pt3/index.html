@@ -3,7 +3,7 @@
   <head>
 
       <meta charset="utf-8">
-      <title>Code Wars: Fizzbuzz Array!!!</title>
+      <title>Creating dojoCMS Part 3 - Adding Basic Styling to Layout with Bootstrap</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="author" content="the whipster">
 
@@ -73,147 +73,79 @@
 
         <div class="feat">
           <h5 class="page-date">
-            <time>2014-07-22</time>
+            <time>2015-05-18</time>
           </h5>
         </div>
 
-        <h1 class="page-title" itemprop="name headline">Code Wars: Fizzbuzz Array!!! </h1>
+        <h1 class="page-title" itemprop="name headline">Creating dojoCMS Part 3 - Adding Basic Styling to Layout with Bootstrap </h1>
 
 
             <div class="articleBody">
-              <p>One of the first lessons I had when I started learning Javascript was a demmonstration
-of the Fizzbuzz challenge. The lesson demonstrated several aspects of the Javascript language
-including the use of the for loop, arrays, coditional and logical statements nad much more.
-Coming across this challenge was pretty exciting because it would test whether I remembered
-what I had learn long ago. However, this code challenge came with twist:</p>
+              <p>In this article, we are going to make some changes to the layouts of our web application.</p>
 
-<blockquote>
-1. Create a method/function that returns an array of numbers from 1 to 100.
-<br/>
-2. If no arguments are passed the value at the index of the array for number should be 'Fizz' if it is divisible by 3, 'Buzz' if divisible by 5, 'FizzBuzz' if it divisible by both 3 and 5, or the number if it is not divisible by 3 or 5.
-<br/>
-3. The method should take up to 4 arguments:
-<br/>
-The first and second arguments are strings, which should be 'Fizz' and 'Buzz' by default.
-<br/>
-The third and fourth arguments are integers and and should be 3 and 5 by default.
-</blockquote>
+<p>We want to make a change towards the layout of every single page in our application. So in
+order to do that, we navigate to the views/application.html.erb file.</p>
 
-<p><br/></p>
+<p>We want to add some margins where our content is stored, so we add the <a href="http://getbootstrap.com/css/#grid">container</a> (Twitter Bootstrap) class around the &lt;%= yield %&gt; <a href="http://stackoverflow.com/questions/7996695/what-is-the-difference-between-and-in-erb-in-rails">ERB</a> tags. This will made sure all the content in all our pages are centered with margins. </p>
 
-<p>I&#39;ll go through each step with my solution as an example.</p>
-
-<p>First, we create function that will take 4 arguments:</p>
+<p>Ex:</p>
 
 <pre class="prettyprint linenums">
-    var fizzBuzzCustom = function(stringOne, stringTwo, numOne, numTwo){
-    // ..code here..
-  }
+&lt;div class="container"&gt;
+  <%= yield %>
+&lt;/div&gt;
 </pre>
 
-<p>Then set the defaults if no arguments are passed</p>
+<p>Now this looks better, but now we would like a navigation bar. 
+You can go to the Twitter Bootstrap documentation page to determine the different
+configurations you can set, but for now we will just install a basic navbar.</p>
 
-<pre class="prettyprint linenums">
-    var fizzBuzzCustom = function(stringOne, stringTwo, numOne, numTwo){
-        var stringOne = stringOne || "Fizz"; 
-        var stringTwo = stringTwo || "BUzz";
-        var numOne = numOne || 3;
-        var numTwo = numTwo || 5;
-    }
-</pre>
+<p>Ex:</p>
 
-<p>Then I create an empty array:</p>
+<p><xmp class="prettyprint linenums" id="htmlXmp">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            DojoCSM
+          </a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    ...link to all statuses here...
+                </li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+</xmp></p>
 
-<pre class="prettyprint">
-    var coolArray = [];
-</pre>
+<p>The erb code that should be replaced above in the &quot;link to all statuses here&quot; should look like:</p>
 
-<p>Then I set up the main logic:</p>
+<p><code>&lt;%= link_to &quot;All Statuses&quot;, statuses_path %&gt;</code></p>
 
-<pre class="prettyprint">
-    // 1. For loop beginning with 1 and ending with 100
-    for(var i = 1; i < 100; i++)
-      // 2. If i is divisible by the number passed in or 3 (by default)
-      if ( i % numOne === 0 ) { 
-      // 3. If i is divisble by the number passed in or 5 (by default)
-        if ( i % numTwo === 0) { 
-        // 4. Add the two strings together and push to coolArray
-            coolArray.push(stringOne + stringTwo) 
-        } else {
-        // 5. Push stringOne to our coolArray 
-        coolArray.push(stringOne) 
-        } 
-    // 6. else if the first if statement is false, check if i is divisble by numTwo ( or 5 by default).
-    } else if (i % numTwo === 0){
-    // 7. Push stringTwo to our coolArray
-        coolArray.push(stringTwo)
-    // else just push i to coolArray.
-    } else {
-        coolArray.push(i) 
-    }
-  }
-</pre>
+<p>This is taken from the Twitter Bootstrap <a href="http://getbootstrap.com/components/#navbar">documentation</a>
+If you notice, we have also used the &quot;navbar-fixed-top&quot; class, which &quot;sticks&quot; the navbar to the top.
+Because we are using a sticky navigation, the Bootstrap documentation states that we should set 
+a padding-top of 70px to offset the navbar. So we will do this in our app/assets/stylesheets/applications.css file:</p>
 
-<p>and thats it!</p>
+<p><code>body {  padding-top: 70px; }</code></p>
 
-<p>the final function looks something like this:</p>
+<p>After this, refresh the page and you will see that the nav bar will always stay on top no matter how far down
+you scroll.</p>
 
-<pre class="prettyprint">
-    var fizzBuzzCustom = function(stringOne, stringTwo, numOne, numTwo) {
-        var stringOne = stringOne || "Fizz";
-        var stringTwo = stringTwo || "Buzz";
-        var numOne = numOne || 3;
-        var numTwo = numTwo || 5;
-        var coolArray = [];
-          for(var i = 1; i < 100; i++){
-            if (i % numOne === 0){
-              if(i % numTwo === 0) {
-              coolArray.push(stringOne+stringTwo);
-              } else {
-              coolArray.push(stringOne);
-              }
-            }
-            else if (i % numTwo === 0){
-              coolArray.push(stringTwo);
-            }
-            else {
-              coolArray.push(i);
-            }
-          }
-    }
-</pre>
+<p>Another thing to note is the code:</p>
 
-<p>Notes: <br/>
-1. One of the first &quot;gotchas&quot; that I encountered with Fizzbuzz was the first line
-after the for-loop begins. The first if statement checks if the variable i is divisble
-by the value of numOne, which is either going to be the value of the argument passed into
-the function or the default value of 3. If this is true, then it moves on to the next line and
-checks the same for numTwo but instead with a default value of 5. If this is also true,
-then the two strings will be concatenated together and pushed into coolArray. However, if numTwo is false, only
-the first string will be pushed to the array. Similarly, if i is not divisible by numOne, the interpreter
-moves onto to next else if statement and checks if i is divisible by numTwo or the number 5 and push
-the second string to cool array. Finally, is this doesn&#39;t work, the value of I is pushd into the array.
-phew that was alot!
-<br/>
-<br/>
-2. I also want to note that instead of doing:</p>
+<p><code>&lt;%= link_to &quot;All Statuses&quot;, statuses_path %&gt;</code></p>
 
-<pre class="prettyprint">
-   if (i % numOne === 0){
-          if(i % numTwo === 0) {
-          
-          }
-</pre>
+<p>The <code>&lt;%= link_to %&gt;</code> method is a Rails helper method that allows for easy creation of links.
+Here we use a <code>url_helper</code> method which is Statuses path. (More info on url helpers: <a href="http://guides.rubyonrails.org/routing.html#path-and-url-helpers">url_helpers</a>).
+To see all your url_helpers, type </p>
 
-<p>You can do:</p>
+<p><code>rake routes</code></p>
 
-<pre class="prettyprint">
-   if (i % numOne === 0 && i % numTwo === 0) {
-          coolArray.push(stringOne+stringTwo);
-      } 
-</pre>
-
-<p>That was a long post! I hope you enjoyed it! </p>
+<p>in your terminal and it will list all the helper <a href="http://guides.rubyonrails.org/routing.html#inspecting-and-testing-routes">methods</a> that are available.</p>
 
             </div>
 
@@ -223,10 +155,10 @@ phew that was alot!
               </a>
             </div>
 
-                      <a id="prev" href="/ruhohblog/posts/code-wars-javascript-arguments-pt-2" class="prev"  title="Code Wars: Javascript Arguments Pt. 2" >&larr;</a>
+                      <a id="prev" href="/ruhohblog/posts/dojocms-pt2" class="prev"  title="Creating dojoCMS Part 2 - Installing Twitter Bootstrap" >&larr;</a>
 
 
-                      <a id="next" class="next" href="/ruhohblog/posts/authentication" title="What is Authentication and why do we need it in our Rails Apps?">&rarr;</a>
+                      <a id="next" class="next" href="/ruhohblog/posts/dojocms-pt4" title="Creating dojoCMS Part 4 - More Styling to Layout with Bootstrap">&rarr;</a>
            
       </article>
 

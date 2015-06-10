@@ -3,7 +3,7 @@
   <head>
 
       <meta charset="utf-8">
-      <title>How MVC Works pt.1</title>
+      <title>Creating dojoCMS Part 4 - More Styling to Layout with Bootstrap</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="author" content="the whipster">
 
@@ -73,24 +73,75 @@
 
         <div class="feat">
           <h5 class="page-date">
-            <time>2014-07-22</time>
+            <time>2015-05-20</time>
           </h5>
         </div>
 
-        <h1 class="page-title" itemprop="name headline">How MVC Works pt.1 </h1>
+        <h1 class="page-title" itemprop="name headline">Creating dojoCMS Part 4 - More Styling to Layout with Bootstrap </h1>
 
 
             <div class="articleBody">
-              <p>&nbsp;&nbsp;If you are using the Ruby on Rails framework,  it is necessary  to understand the basics of the Model-View-Controller MVC architectural  pattern since it is incorporated in Rails. Although it serves many different purposes, its main purpose in web applications is to help developers implement user-interfaces. The pattern separates the web application into three core components: the Model, View, and Controller. Each of these components has a separate responsibility to process what occurs after the Rails application has received a web request. 
-  <p>&nbsp;&nbsp;On a conceptual level, a browser sends a request to a web
-application, which is received by a web server and then passed on to the Rails router and subsequently to the controller.
-The controller will then interact with the model, which will then query the database for the data that the browser has
-requested for. After invoking the model, the controller will then renders the view accompanied with any data related to the
-corresponding model and returns a complete web page to the browser as HTML.</p></p>
+              <p>In our previous post, we made some minor changes to the layout of the application.
+We will continue to make the layout better by adding more styling to the headers
+and centering our main content.</p>
 
-<p>&nbsp;&nbsp;Before I talk about the main components of the MVC pattern in Rails, I would like to share a 
-conceptual picture of what occurs after a web application receives a HTTP request: <br/>
-<img class="img-responsive" src="/ruhohblog/assets/media/mvc.jpg"></p>
+<p>We first add a Twitter Bootstrap &quot;page-header&quot; class to our h1 tag to give it
+an underline so that it can make our heading stand out more.</p>
+
+<pre class="prettyprint linenums">
+&lt;div class="page-header"&gt;
+  &lt;h1&gt;All of the Statuses&lt;/h1&gt;
+&lt;/div&gt;
+</pre>
+
+<p>Now our users know what the header is referring to.</p>
+
+<p>Next, we want to <a href="http://ruby.bastardsbook.com/chapters/loops/">loop</a> over all our statuses and display them to the page.</p>
+
+<pre class="prettyprint linenums">
+    <% @statuses.each do |status| %>
+        &lt;div class="status"&gt;
+            &lt;strong&gt;<%= status.name %>&lt;/strong&gt;
+        &lt;/div&gt;
+    <% end %>
+</pre>
+
+<p>The @statuses is an instance <a href="https://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/45-more-classes/lessons/110-instance-variables">variable</a> that will contain all our stasues.
+The <a href="http://www.tutorialspoint.com/ruby/ruby_iterators.htm">each</a> method takes a block that will pass each status into the loop
+and each status in the @statuses instance variable will be printed to the page.</p>
+
+<p>Next, we would like to add the content of the status right under the name of the
+person who wrote the status:</p>
+
+<p><code>&lt;p&gt;&lt;%= status.content %&gt;&lt;/p&gt;</code></p>
+
+<p>Next we add some links to accompany our status which include showing, editing,
+and deleting our status. </p>
+
+<pre class="prettyprint linenums">
+    &lt;div class="meta"&gt;
+        <%= link_to time_ago_in_words(status.created_at) + " ago", status %> | &lt;span class="admin"&gt;
+              <%= link_to "Edit", edit_status_path(status) %> | 
+              <%= link_to "Delete", status, method: :delete, data: { confirm: "Are you sure you want to delete this Status?" } %> &lt;/span>
+    &lt;/div&gt;
+</pre>
+
+<p>Our statuses is looking pretty good. We will close this part out with some margins
+so that our statuses aren&#39;t so clumped up together. Go to your app/assets/stylesheets/statuses.scss
+file and include these stylings:</p>
+
+<pre class="prettyprint linenums">
+    .status {
+        border-bottom: solid 1px #CCC;
+        padding: 5px 0;
+    }
+
+    .status p {
+        margin: 4px 0;
+    }
+</pre>
+
+<p>With this done, your statuses should be nice and centered with margins separating.</p>
 
             </div>
 
@@ -100,10 +151,10 @@ conceptual picture of what occurs after a web application receives a HTTP reques
               </a>
             </div>
 
-                      <a id="prev" href="/ruhohblog/posts/authentication" class="prev"  title="What is Authentication and hy do we need it in our Rails Apps?" >&larr;</a>
+                      <a id="prev" href="/ruhohblog/posts/dojocms-pt3" class="prev"  title="Creating dojoCMS Part 3 - Adding Basic Styling to Layout with Bootstrap" >&larr;</a>
 
 
-                      <a id="next" class="next" href="/ruhohblog/posts/codewars-color-ghost" title="Codewars: Color Ghost">&rarr;</a>
+                      <a id="next" class="next" href="/ruhohblog/posts/dojocms-pt5" title="Creating dojoCMS Part 5 - Adding Some Interactivity">&rarr;</a>
            
       </article>
 

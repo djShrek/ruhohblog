@@ -3,7 +3,7 @@
   <head>
 
       <meta charset="utf-8">
-      <title>Code Wars: Fizzbuzz Array!!!</title>
+      <title>Creating dojoCMS Part 6 - Adding Authentication with Devise</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="author" content="the whipster">
 
@@ -73,147 +73,45 @@
 
         <div class="feat">
           <h5 class="page-date">
-            <time>2014-07-22</time>
+            <time>2015-05-27</time>
           </h5>
         </div>
 
-        <h1 class="page-title" itemprop="name headline">Code Wars: Fizzbuzz Array!!! </h1>
+        <h1 class="page-title" itemprop="name headline">Creating dojoCMS Part 6 - Adding Authentication with Devise </h1>
 
 
             <div class="articleBody">
-              <p>One of the first lessons I had when I started learning Javascript was a demmonstration
-of the Fizzbuzz challenge. The lesson demonstrated several aspects of the Javascript language
-including the use of the for loop, arrays, coditional and logical statements nad much more.
-Coming across this challenge was pretty exciting because it would test whether I remembered
-what I had learn long ago. However, this code challenge came with twist:</p>
+              <p>Adding <a href="http://www.gotealeaf.com/blog/authentication-methods-in-rails">authentication</a> is one of the most important steps to securing your application. For this project, we will be using the Devise gem to provide basic authentication. To install <a href="https://github.com/plataformatec/devise">Devise</a>, go your Gemfile and add:</p>
 
-<blockquote>
-1. Create a method/function that returns an array of numbers from 1 to 100.
-<br/>
-2. If no arguments are passed the value at the index of the array for number should be 'Fizz' if it is divisible by 3, 'Buzz' if divisible by 5, 'FizzBuzz' if it divisible by both 3 and 5, or the number if it is not divisible by 3 or 5.
-<br/>
-3. The method should take up to 4 arguments:
-<br/>
-The first and second arguments are strings, which should be 'Fizz' and 'Buzz' by default.
-<br/>
-The third and fourth arguments are integers and and should be 3 and 5 by default.
-</blockquote>
+<p><code>gem &#39;devise&#39;</code></p>
 
-<p><br/></p>
+<p>Then go into your terminal and type </p>
 
-<p>I&#39;ll go through each step with my solution as an example.</p>
+<p><code>bundle install</code></p>
 
-<p>First, we create function that will take 4 arguments:</p>
+<p>After it is finished <a href="http://bundler.io/deploying.html">bundling</a>, we use the rails command to install Devise into our project:</p>
 
-<pre class="prettyprint linenums">
-    var fizzBuzzCustom = function(stringOne, stringTwo, numOne, numTwo){
-    // ..code here..
-  }
-</pre>
+<p><code>rails generate devise:install</code></p>
 
-<p>Then set the defaults if no arguments are passed</p>
+<p>After Devise is installed, you will see a list of commands in the terminal.
+Followng the instructions, you would first add the following to 
+config/environments/development.rb:</p>
 
-<pre class="prettyprint linenums">
-    var fizzBuzzCustom = function(stringOne, stringTwo, numOne, numTwo){
-        var stringOne = stringOne || "Fizz"; 
-        var stringTwo = stringTwo || "BUzz";
-        var numOne = numOne || 3;
-        var numTwo = numTwo || 5;
-    }
-</pre>
+<p><code>config.action_mailer.default_url_options = { host: &#39;localhost&#39;, port: 3000 }</code></p>
 
-<p>Then I create an empty array:</p>
+<p>Then you need to add a root to your application in routes.rb:</p>
 
-<pre class="prettyprint">
-    var coolArray = [];
-</pre>
+<p>`root to: &#39;statuses#index&#39;</p>
 
-<p>Then I set up the main logic:</p>
+<p>(To understand what this means, please checkout the Rails Guides on Routing)</p>
 
-<pre class="prettyprint">
-    // 1. For loop beginning with 1 and ending with 100
-    for(var i = 1; i < 100; i++)
-      // 2. If i is divisible by the number passed in or 3 (by default)
-      if ( i % numOne === 0 ) { 
-      // 3. If i is divisble by the number passed in or 5 (by default)
-        if ( i % numTwo === 0) { 
-        // 4. Add the two strings together and push to coolArray
-            coolArray.push(stringOne + stringTwo) 
-        } else {
-        // 5. Push stringOne to our coolArray 
-        coolArray.push(stringOne) 
-        } 
-    // 6. else if the first if statement is false, check if i is divisble by numTwo ( or 5 by default).
-    } else if (i % numTwo === 0){
-    // 7. Push stringTwo to our coolArray
-        coolArray.push(stringTwo)
-    // else just push i to coolArray.
-    } else {
-        coolArray.push(i) 
-    }
-  }
-</pre>
+<p>Next we need to the <a href="http://guides.rubyonrails.org/action_controller_overview.html#the-flash">flash</a> messages to our application laylot. They will be helpful for user feedback later on in the development of our application.</p>
 
-<p>and thats it!</p>
-
-<p>the final function looks something like this:</p>
-
-<pre class="prettyprint">
-    var fizzBuzzCustom = function(stringOne, stringTwo, numOne, numTwo) {
-        var stringOne = stringOne || "Fizz";
-        var stringTwo = stringTwo || "Buzz";
-        var numOne = numOne || 3;
-        var numTwo = numTwo || 5;
-        var coolArray = [];
-          for(var i = 1; i < 100; i++){
-            if (i % numOne === 0){
-              if(i % numTwo === 0) {
-              coolArray.push(stringOne+stringTwo);
-              } else {
-              coolArray.push(stringOne);
-              }
-            }
-            else if (i % numTwo === 0){
-              coolArray.push(stringTwo);
-            }
-            else {
-              coolArray.push(i);
-            }
-          }
-    }
-</pre>
-
-<p>Notes: <br/>
-1. One of the first &quot;gotchas&quot; that I encountered with Fizzbuzz was the first line
-after the for-loop begins. The first if statement checks if the variable i is divisble
-by the value of numOne, which is either going to be the value of the argument passed into
-the function or the default value of 3. If this is true, then it moves on to the next line and
-checks the same for numTwo but instead with a default value of 5. If this is also true,
-then the two strings will be concatenated together and pushed into coolArray. However, if numTwo is false, only
-the first string will be pushed to the array. Similarly, if i is not divisible by numOne, the interpreter
-moves onto to next else if statement and checks if i is divisible by numTwo or the number 5 and push
-the second string to cool array. Finally, is this doesn&#39;t work, the value of I is pushd into the array.
-phew that was alot!
-<br/>
-<br/>
-2. I also want to note that instead of doing:</p>
-
-<pre class="prettyprint">
-   if (i % numOne === 0){
-          if(i % numTwo === 0) {
-          
-          }
-</pre>
-
-<p>You can do:</p>
-
-<pre class="prettyprint">
-   if (i % numOne === 0 && i % numTwo === 0) {
-          coolArray.push(stringOne+stringTwo);
-      } 
-</pre>
-
-<p>That was a long post! I hope you enjoyed it! </p>
+<p>Since we are using a Rails 4.+ application, we won&#39;t have to do the next step.
+The last step is related to setting up views for Devise, which we will not yet
+need. With that said, that is the last step to setting up Devise in our Rails
+application. If you are interested in knowing how to create a custom authentication
+system, the Ruby on Rails <a href="https://www.railstutorial.org/">tutorial</a> by Michael Hartl has a basic introduction to creating a authentication system so check it out. </p>
 
             </div>
 
@@ -223,10 +121,10 @@ phew that was alot!
               </a>
             </div>
 
-                      <a id="prev" href="/ruhohblog/posts/code-wars-javascript-arguments-pt-2" class="prev"  title="Code Wars: Javascript Arguments Pt. 2" >&larr;</a>
+                      <a id="prev" href="/ruhohblog/posts/dojocms-pt5" class="prev"  title="Creating dojoCMS Part 5 - Adding Some Interactivity" >&larr;</a>
 
 
-                      <a id="next" class="next" href="/ruhohblog/posts/authentication" title="What is Authentication and why do we need it in our Rails Apps?">&rarr;</a>
+                      <a id="next" class="next" href="/ruhohblog/posts/dojocms-pt8" title="Creating dojoCMS Part 8 - Creating a User with Devise">&rarr;</a>
            
       </article>
 

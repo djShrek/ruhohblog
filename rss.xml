@@ -4,7 +4,7 @@
     <title>the whipster code blog</title>
     <description>the whipster code blog</description>
     <link/>
-    <pubDate>2015-02-28</pubDate>
+    <pubDate>2015-06-09</pubDate>
     <item>
       <title>About</title>
       <link>/ruhohblog/about</link>
@@ -13,7 +13,30 @@
     <item>
       <title>Archive</title>
       <link>/ruhohblog/archive</link>
-      <description>  &lt;h2&gt;2014&lt;/h2&gt;
+      <description>  &lt;h2&gt;2015&lt;/h2&gt;
+    &lt;h3&gt;June&lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;span&gt;2015-06-02&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/dojocms-pt9"&gt;Creating dojoCMS Part 9 - Adding has_many / belongs_to relationship&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h3&gt;May&lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;span&gt;2015-05-31&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/code-wars-flexible-card-game-pt2"&gt;Codewars: Flexible Card Game - 6 KYU Part 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;2015-05-30&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/mysqldump_and_copy"&gt;Execution of a mysqldump and scp&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;2015-05-30&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/code-wars-flexible-card-game-pt1"&gt;Codewars: Flexible Card Game - 6 KYU Part 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;2015-05-28&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/dojocms-pt7"&gt;Creating dojoCMS Part 7 - Creating a User with Devise&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;2015-05-28&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/dojocms-pt8"&gt;Creating dojoCMS Part 8 - Creating a User with Devise&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;2015-05-27&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/dojocms-pt6"&gt;Creating dojoCMS Part 6 - Adding Authentication with Devise&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;2015-05-26&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/dojocms-pt5"&gt;Creating dojoCMS Part 5 - Adding Some Interactivity&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;2015-05-20&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/dojocms-pt4"&gt;Creating dojoCMS Part 4 - More Styling to Layout with Bootstrap&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;2015-05-18&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/dojocms-pt3"&gt;Creating dojoCMS Part 3 - Adding Basic Styling to Layout with Bootstrap&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;2015-05-15&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/dojocms-pt2"&gt;Creating dojoCMS Part 2 - Installing Twitter Bootstrap&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;2015-05-04&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/dojocms-pt1"&gt;Creating dojoBook Pt. 1- Generating the Application&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;h2&gt;2014&lt;/h2&gt;
+    &lt;h3&gt;November&lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;span&gt;2014-11-21&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/authentication"&gt;What is Authentication and why do we need it in our Rails Apps?&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
     &lt;h3&gt;July&lt;/h3&gt;
     &lt;ul&gt;
       &lt;li&gt;&lt;span&gt;2014-07-22&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/code-wars-fizzbuzz-array"&gt;Code Wars: Fizzbuzz Array!!!&lt;/a&gt;&lt;/li&gt;
@@ -23,37 +46,14 @@
     &lt;ul&gt;
       &lt;li&gt;&lt;span&gt;2014-06-28&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/code-wars-javascript-vs-arrays"&gt;Code Wars: Javascript Arguments Pt.1&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
-    &lt;h3&gt;October&lt;/h3&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;span&gt;2014-10-20&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/codewars-color-ghost"&gt;Codewars: Color Ghost&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;h3&gt;July&lt;/h3&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;span&gt;2014-07-22&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/how-mvc-works-part-1"&gt;How MVC Works pt.1&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;h3&gt;November&lt;/h3&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;span&gt;2014-11-21&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/authentication"&gt;What is Authentication and hy do we need it in our Rails Apps?&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;h3&gt;June&lt;/h3&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;span&gt;2014-06-27&lt;/span&gt; &amp;raquo; &lt;a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm"&gt;Why Rails noobs should use RVM&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
 </description>
     </item>
     <item>
       <title>Categories</title>
       <link>/ruhohblog/categories</link>
       <description>&lt;ul class="tag_box inline"&gt;
-  &lt;li&gt;
-    &lt;a href="/ruhohblog/categories#code, ruby-ref"&gt;code, ruby &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
-  &lt;/li&gt;
 &lt;/ul&gt;
 
-  &lt;h3&gt;code, ruby (1)&lt;/h3&gt;
-  &lt;ul&gt;
-      &lt;li&gt;&lt;a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm"&gt;Why Rails noobs should use RVM&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
 </description>
     </item>
     <item>
@@ -93,9 +93,6 @@
     &lt;a href="/ruhohblog/tags#authentication-ref"&gt;authentication &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;a href="/ruhohblog/tags#devise-ref"&gt;devise &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
     &lt;a href="/ruhohblog/tags#javascript-ref"&gt;javascript &lt;span&gt;3&lt;/span&gt;&lt;/a&gt;
   &lt;/li&gt;
   &lt;li&gt;
@@ -105,13 +102,31 @@
     &lt;a href="/ruhohblog/tags#fizzbuzz-ref"&gt;fizzbuzz &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;a href="/ruhohblog/tags#codewars-ref"&gt;codewars &lt;span&gt;3&lt;/span&gt;&lt;/a&gt;
+    &lt;a href="/ruhohblog/tags#codewars-ref"&gt;codewars &lt;span&gt;5&lt;/span&gt;&lt;/a&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;a href="/ruhohblog/tags#arrays-ref"&gt;arrays &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
   &lt;/li&gt;
   &lt;li&gt;
+    &lt;a href="/ruhohblog/tags#ruby-ref"&gt;ruby &lt;span&gt;13&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="/ruhohblog/tags#kata-ref"&gt;kata &lt;span&gt;3&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
     &lt;a href="/ruhohblog/tags#code-ref"&gt;code &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="/ruhohblog/tags#ruby on rails-ref"&gt;ruby on rails &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="/ruhohblog/tags#cms-ref"&gt;cms &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="/ruhohblog/tags#dojoCMS-ref"&gt;dojoCMS &lt;span&gt;8&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="/ruhohblog/tags#Ruby on Rails-ref"&gt;Ruby on Rails &lt;span&gt;8&lt;/span&gt;&lt;/a&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;a href="/ruhohblog/tags#Ruby-ref"&gt;Ruby &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
@@ -120,7 +135,7 @@
     &lt;a href="/ruhohblog/tags#CodeWars-ref"&gt;CodeWars &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;a href="/ruhohblog/tags#kata-ref"&gt;kata &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+    &lt;a href="/ruhohblog/tags#features-ref"&gt;features &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;a href="/ruhohblog/tags#MVC-ref"&gt;MVC &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
@@ -129,20 +144,24 @@
     &lt;a href="/ruhohblog/tags#design patterns-ref"&gt;design patterns &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;a href="/ruhohblog/tags#ruby-ref"&gt;ruby &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;
+    &lt;a href="/ruhohblog/tags#mysql-ref"&gt;mysql &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;a href="/ruhohblog/tags#rvm-ref"&gt;rvm &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+    &lt;a href="/ruhohblog/tags#sql-ref"&gt;sql &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="/ruhohblog/tags#servers-ref"&gt;servers &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="/ruhohblog/tags#scp-ref"&gt;scp &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
   &lt;h3 id="rails-ref"&gt;rails&lt;/h3&gt;
-    &lt;li&gt;&lt;a href="/ruhohblog/posts/authentication"&gt;What is Authentication and hy do we need it in our Rails Apps?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="/ruhohblog/posts/how-mvc-works-part-1"&gt;How MVC Works pt.1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/authentication"&gt;What is Authentication and why do we need it in our Rails Apps?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/drafts/how-mvc-works-part-1"&gt;How MVC Works pt.1&lt;/a&gt;&lt;/li&gt;
   &lt;h3 id="authentication-ref"&gt;authentication&lt;/h3&gt;
-    &lt;li&gt;&lt;a href="/ruhohblog/posts/authentication"&gt;What is Authentication and hy do we need it in our Rails Apps?&lt;/a&gt;&lt;/li&gt;
-  &lt;h3 id="devise-ref"&gt;devise&lt;/h3&gt;
-    &lt;li&gt;&lt;a href="/ruhohblog/posts/authentication"&gt;What is Authentication and hy do we need it in our Rails Apps?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/authentication"&gt;What is Authentication and why do we need it in our Rails Apps?&lt;/a&gt;&lt;/li&gt;
   &lt;h3 id="javascript-ref"&gt;javascript&lt;/h3&gt;
     &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-fizzbuzz-array"&gt;Code Wars: Fizzbuzz Array!!!&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-javascript-arguments-pt-2"&gt;Code Wars: Javascript Arguments Pt. 2&lt;/a&gt;&lt;/li&gt;
@@ -154,27 +173,77 @@
     &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-fizzbuzz-array"&gt;Code Wars: Fizzbuzz Array!!!&lt;/a&gt;&lt;/li&gt;
   &lt;h3 id="codewars-ref"&gt;codewars&lt;/h3&gt;
     &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-fizzbuzz-array"&gt;Code Wars: Fizzbuzz Array!!!&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-flexible-card-game-pt1"&gt;Codewars: Flexible Card Game - 6 KYU Part 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-flexible-card-game-pt2"&gt;Codewars: Flexible Card Game - 6 KYU Part 2&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-javascript-arguments-pt-2"&gt;Code Wars: Javascript Arguments Pt. 2&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-javascript-vs-arrays"&gt;Code Wars: Javascript Arguments Pt.1&lt;/a&gt;&lt;/li&gt;
   &lt;h3 id="arrays-ref"&gt;arrays&lt;/h3&gt;
     &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-fizzbuzz-array"&gt;Code Wars: Fizzbuzz Array!!!&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="ruby-ref"&gt;ruby&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-flexible-card-game-pt1"&gt;Codewars: Flexible Card Game - 6 KYU Part 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-flexible-card-game-pt2"&gt;Codewars: Flexible Card Game - 6 KYU Part 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt1"&gt;Creating dojoBook Pt. 1- Generating the Application&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt2"&gt;Creating dojoCMS Part 2 - Installing Twitter Bootstrap&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt3"&gt;Creating dojoCMS Part 3 - Adding Basic Styling to Layout with Bootstrap&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt4"&gt;Creating dojoCMS Part 4 - More Styling to Layout with Bootstrap&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt5"&gt;Creating dojoCMS Part 5 - Adding Some Interactivity&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt6"&gt;Creating dojoCMS Part 6 - Adding Authentication with Devise&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt7"&gt;Creating dojoCMS Part 7 - Creating a User with Devise&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt8"&gt;Creating dojoCMS Part 8 - Creating a User with Devise&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt9"&gt;Creating dojoCMS Part 9 - Adding has_many / belongs_to relationship&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/drafts/creating_blocking_feature"&gt;Creating a Simple User Blocking Feature Pt.1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/drafts/how-mvc-works-part-1"&gt;How MVC Works pt.1&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="kata-ref"&gt;kata&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-flexible-card-game-pt1"&gt;Codewars: Flexible Card Game - 6 KYU Part 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-flexible-card-game-pt2"&gt;Codewars: Flexible Card Game - 6 KYU Part 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/drafts/codewars-color-ghost"&gt;Codewars: Color Ghost&lt;/a&gt;&lt;/li&gt;
   &lt;h3 id="code-ref"&gt;code&lt;/h3&gt;
     &lt;li&gt;&lt;a href="/ruhohblog/posts/code-wars-javascript-vs-arrays"&gt;Code Wars: Javascript Arguments Pt.1&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="ruby on rails-ref"&gt;ruby on rails&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt1"&gt;Creating dojoBook Pt. 1- Generating the Application&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/drafts/creating_blocking_feature"&gt;Creating a Simple User Blocking Feature Pt.1&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="cms-ref"&gt;cms&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt1"&gt;Creating dojoBook Pt. 1- Generating the Application&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="dojoCMS-ref"&gt;dojoCMS&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt2"&gt;Creating dojoCMS Part 2 - Installing Twitter Bootstrap&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt3"&gt;Creating dojoCMS Part 3 - Adding Basic Styling to Layout with Bootstrap&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt4"&gt;Creating dojoCMS Part 4 - More Styling to Layout with Bootstrap&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt5"&gt;Creating dojoCMS Part 5 - Adding Some Interactivity&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt6"&gt;Creating dojoCMS Part 6 - Adding Authentication with Devise&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt7"&gt;Creating dojoCMS Part 7 - Creating a User with Devise&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt8"&gt;Creating dojoCMS Part 8 - Creating a User with Devise&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt9"&gt;Creating dojoCMS Part 9 - Adding has_many / belongs_to relationship&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="Ruby on Rails-ref"&gt;Ruby on Rails&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt2"&gt;Creating dojoCMS Part 2 - Installing Twitter Bootstrap&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt3"&gt;Creating dojoCMS Part 3 - Adding Basic Styling to Layout with Bootstrap&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt4"&gt;Creating dojoCMS Part 4 - More Styling to Layout with Bootstrap&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt5"&gt;Creating dojoCMS Part 5 - Adding Some Interactivity&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt6"&gt;Creating dojoCMS Part 6 - Adding Authentication with Devise&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt7"&gt;Creating dojoCMS Part 7 - Creating a User with Devise&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt8"&gt;Creating dojoCMS Part 8 - Creating a User with Devise&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/dojocms-pt9"&gt;Creating dojoCMS Part 9 - Adding has_many / belongs_to relationship&lt;/a&gt;&lt;/li&gt;
   &lt;h3 id="Ruby-ref"&gt;Ruby&lt;/h3&gt;
-    &lt;li&gt;&lt;a href="/ruhohblog/posts/codewars-color-ghost"&gt;Codewars: Color Ghost&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/drafts/codewars-color-ghost"&gt;Codewars: Color Ghost&lt;/a&gt;&lt;/li&gt;
   &lt;h3 id="CodeWars-ref"&gt;CodeWars&lt;/h3&gt;
-    &lt;li&gt;&lt;a href="/ruhohblog/posts/codewars-color-ghost"&gt;Codewars: Color Ghost&lt;/a&gt;&lt;/li&gt;
-  &lt;h3 id="kata-ref"&gt;kata&lt;/h3&gt;
-    &lt;li&gt;&lt;a href="/ruhohblog/posts/codewars-color-ghost"&gt;Codewars: Color Ghost&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/drafts/codewars-color-ghost"&gt;Codewars: Color Ghost&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="features-ref"&gt;features&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/drafts/creating_blocking_feature"&gt;Creating a Simple User Blocking Feature Pt.1&lt;/a&gt;&lt;/li&gt;
   &lt;h3 id="MVC-ref"&gt;MVC&lt;/h3&gt;
-    &lt;li&gt;&lt;a href="/ruhohblog/posts/how-mvc-works-part-1"&gt;How MVC Works pt.1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/drafts/how-mvc-works-part-1"&gt;How MVC Works pt.1&lt;/a&gt;&lt;/li&gt;
   &lt;h3 id="design patterns-ref"&gt;design patterns&lt;/h3&gt;
-    &lt;li&gt;&lt;a href="/ruhohblog/posts/how-mvc-works-part-1"&gt;How MVC Works pt.1&lt;/a&gt;&lt;/li&gt;
-  &lt;h3 id="ruby-ref"&gt;ruby&lt;/h3&gt;
-    &lt;li&gt;&lt;a href="/ruhohblog/posts/how-mvc-works-part-1"&gt;How MVC Works pt.1&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm"&gt;Why Rails noobs should use RVM&lt;/a&gt;&lt;/li&gt;
-  &lt;h3 id="rvm-ref"&gt;rvm&lt;/h3&gt;
-    &lt;li&gt;&lt;a href="/ruhohblog/posts/why-ruby/rails-noobs-should-use-rvm"&gt;Why Rails noobs should use RVM&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/drafts/how-mvc-works-part-1"&gt;How MVC Works pt.1&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="mysql-ref"&gt;mysql&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/drafts/mysqldump_and_copy"&gt;Execution of a mysqldump and scp&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/mysqldump_and_copy"&gt;Execution of a mysqldump and scp&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="sql-ref"&gt;sql&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/drafts/mysqldump_and_copy"&gt;Execution of a mysqldump and scp&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/mysqldump_and_copy"&gt;Execution of a mysqldump and scp&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="servers-ref"&gt;servers&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/drafts/mysqldump_and_copy"&gt;Execution of a mysqldump and scp&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/mysqldump_and_copy"&gt;Execution of a mysqldump and scp&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="scp-ref"&gt;scp&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/drafts/mysqldump_and_copy"&gt;Execution of a mysqldump and scp&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/ruhohblog/posts/mysqldump_and_copy"&gt;Execution of a mysqldump and scp&lt;/a&gt;&lt;/li&gt;
  
 </description>
     </item>

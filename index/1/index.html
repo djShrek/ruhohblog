@@ -71,165 +71,183 @@
     <article class="single-content">
         <div class="feat">
           <h5 class="page-date">
-            <time>2014-07-22</time>
+            <time>2015-06-02</time>
           </h5>
         </div>
-         <h1 class="page-title" itemprop="name headline"><a href="/ruhohblog/posts/code-wars-fizzbuzz-array">Code Wars: Fizzbuzz Array!!! </a></h1>
+         <h1 class="page-title" itemprop="name headline"><a href="/ruhohblog/posts/dojocms-pt9">Creating dojoCMS Part 9 - Adding has_many / belongs_to relationship </a></h1>
         
       <p class="index-description"></p>
       <p class="index-description text-none"><div class="summary ellipsis">
-<p>One of the first lessons I had when I started learning Javascript was a demmonstration
-of the Fizzbuzz challenge. The lesson demonstrated several aspects of the Javascript language
-including the use of the for loop, arrays, coditional and logical statements nad much more.
-Coming across this challenge was pretty exciting because it would test whether I remembered
-what I had learn long ago. However, this code challenge came with twist:</p>
+<p>In this post, we will associate our statuses with our users so that our users can generate statuses when logged into their account. We first generate a new migration:</p>
 
-<blockquote>
-1. Create a method/function that returns an array of numbers from 1 to 100.
-<br>
-2. If no arguments are passed the value at the index of the array for number should be 'Fizz' if it is divisible by 3, 'Buzz' if divisible by 5, 'FizzBuzz' if it divisible by both 3 and 5, or the number if it is not divisible by 3 or 5.
-<br>
-3. The method should take up to 4 arguments:
-<br>
-The first and second arguments are strings, which should be 'Fizz' and 'Buzz' by default.
-<br>
-The third and fourth arguments are integers and and should be 3 and 5 by default.
-</blockquote>
+<p><code>rails generate migration add_user_id_to_statuses</code></p>
 
-<p><br></p>
+<p>This will create a new migration file where we can add statuses column to our users table. Go to db/migrate and click on the most recently created migration file(the name of the files will be different depending on the time you create the file). Once inside, add this code to your file:</p>
 
-<p>I'll go through each step with my solution as an example.</p>
+<pre class="prettyprint linenums">
+    def change
+      add_column :statuses, :user_id, :integer
+    end
+</pre>
+
+<p>What this code does is that it will add a column "user_id" with a type "integer" to your statuses table. Since we will also want to find the user based on the status, we will also add an index as well:</p>
+
+<pre class="prettyprint linenums">
+    def change
+      add_column :statuses, :user_id, :integer
+      add_index :statuses, :user_id
+      remove_column :statuses, :name
+    end
+</pre>
+
 </div></p>
       
-       <a href="/ruhohblog/posts/code-wars-fizzbuzz-array" class="button">Continue reading..</a>
+       <a href="/ruhohblog/posts/dojocms-pt9" class="button">Continue reading..</a>
     </article>
     <article class="single-content">
         <div class="feat">
           <h5 class="page-date">
-            <time>2014-07-01</time>
+            <time>2015-05-31</time>
           </h5>
         </div>
-         <h1 class="page-title" itemprop="name headline"><a href="/ruhohblog/posts/code-wars-javascript-arguments-pt-2">Code Wars: Javascript Arguments Pt. 2 </a></h1>
+         <h1 class="page-title" itemprop="name headline"><a href="/ruhohblog/posts/code-wars-flexible-card-game-pt2">Codewars: Flexible Card Game - 6 KYU Part 2 </a></h1>
         
       <p class="index-description"></p>
       <p class="index-description text-none"><div class="summary ellipsis">
-<p>In my previous <a href="/posts/code-wars-javascript-vs-arrays">post</a>, I discussed
-my solution to a Javascript code challenge from Code Wars. I would like to now 
-talk about the optimal / "best solution" that was shown once I solved that challenge.
-Once again, the description for the challenge went like this:</p>
+<p>In the second part of this post, I go over how I created the “Deck” class that passed the kata.
+To see how created the “Card” class, check out my previous post “here.”</p>
 
-<pre class="prettyprint">
-    Write a function named numbers that returns true if all the parameters it is passed are are of the Number type. Otherwise, the function should return false. The function should accept any number of parameters.
+<p>I create the Desk class that contains a constant variable called suits which contains an 
+array of strings that each represent a type of suit. The class also has an accessor method
+called cards which is initialized in the initialize method and ends up being an array containing
+card objects representing each cards in a deck.</p>
+
+<pre class="prettyprint linenums">
+  def initialize
+    @cards = []
+    SUITS.each do |suit|
+      (1..13).each do |rank|
+        card = Card.new(suit, rank)
+        @cards &lt;&lt; card
+      end
+    end
+  end
 </pre>
 
-<p>The "top" solution that was given once I solved the code challenge was:</p>
-
-<pre class="prettyprint">
-var numbers = function() {
-    return Array.prototype.filter.call(arguments, function(n) { 
-        return typeof n !== 'number'; }
-        ).length === 0;
-    }
-</pre>
-
-<p>It looks pretty complicated but makes sense once we break it down: </p>
-
+<p>I kind of cheat with the shuffle method and use the ruby shuffle method. At first the kata tests were not 
+passing, but then I realized that the shuffle method was returning the cards array without it being shuffled.
+So I added a bang “!” to the method, which actually “shuffles” the @cards array.</p>
 </div></p>
       
-       <a href="/ruhohblog/posts/code-wars-javascript-arguments-pt-2" class="button">Continue reading..</a>
+       <a href="/ruhohblog/posts/code-wars-flexible-card-game-pt2" class="button">Continue reading..</a>
     </article>
     <article class="single-content">
         <div class="feat">
           <h5 class="page-date">
-            <time>2014-06-28</time>
+            <time>2015-05-30</time>
           </h5>
         </div>
-         <h1 class="page-title" itemprop="name headline"><a href="/ruhohblog/posts/code-wars-javascript-vs-arrays">Code Wars: Javascript Arguments Pt.1 </a></h1>
+         <h1 class="page-title" itemprop="name headline"><a href="/ruhohblog/posts/mysqldump_and_copy">Execution of a mysqldump and scp </a></h1>
         
       <p class="index-description"></p>
       <p class="index-description text-none"><div class="summary ellipsis">
-<p>     I recently decided that it would be a good idea to 
-do some simple code challenges so that I could review and refresh my knowledge
-in Javascript and Ruby. Codewars is a website that offers challenges in Javascript,
-Coffeescript, and Ruby. Certain challenges, called "kata", allow users to solve them with any of the
-aforementioned languages of their choice. Each code kata is written on specific
-level of difficulty called "kyu." </p>
+<p>I recently encountered a bug in an application that was very hard to debug
+due to the fact that the data in our respective databases were not in sync. Trying to debug the application in the linux environment was starting to become a pain, so I decided it would be easier to try to debug the issue in my local environment (MAC OSX).</p>
 
-<p>     The code challenge I did today had this description:</p>
+<p>So I had to do extract the data and execute a mysql dump and then copy that
+file back into my local system. Once I had the file, I would be able to accurately find the bug since the local and production databases would reflect the same data. 
+The first step was to use mysqldump to dump the data into a sql file. While in the production server, I type this command into the terminal:</p>
 
-<pre class="prettyprint">
-    Write a function named numbers that returns true if all the parameters it is passed are are of the Number type. Otherwise, the function should return false. The function should accept any number of parameters.
-</pre>
+<p><code>mysqldump -u [dbname] -p [nuc_production_db] &gt; name_of_sql_file.sql</code></p>
 
-<p>Breaking down this statement, I make these assertions:</p>
+<p>Once this command is input, the terminal asks me for the password of the production database and I provide the corresponding pw. The -u flag The file takes only less than a second to generate even though it is the size of about 124mb. Now that that file the is generated, I need to copy the file back down to my local machine. I open the terminal to my local machine and use the scp command to copy the sql file from my remote server to my local server:</p>
 
-<ol>
-<li>Write a function named numbers</li>
-<li>Return true if everything passed is of the Number type</li>
-<li>Return false if any of the paramaters passed is NOT of the Number type.</li>
-</ol>
-<p>One:</p>
+<p><code>scp name_of_user@ip_address:/file/to/send /where/to/put</code></p>
 
-<pre class="prettyprint">
-    function numbers(args){
-    
-}
-</pre>
+<p>Example: </p>
+
+<p><code>scp super_user@123.456.78.90:/home/app/superapp/5_27.sql home/Desktop</code></p>
+
+<p>After this command, the terminal will download the sql file to my local machine and I will be able
+to import the data back to own mysql database!</p>
+
+<p>For more information:</p>
 </div></p>
       
-       <a href="/ruhohblog/posts/code-wars-javascript-vs-arrays" class="button">Continue reading..</a>
+       <a href="/ruhohblog/posts/mysqldump_and_copy" class="button">Continue reading..</a>
     </article>
     <article class="single-content">
         <div class="feat">
           <h5 class="page-date">
-            <time>2014-10-20</time>
+            <time>2015-05-30</time>
           </h5>
         </div>
-         <h1 class="page-title" itemprop="name headline"><a href="/ruhohblog/posts/codewars-color-ghost">Codewars: Color Ghost </a></h1>
-        
-      <p class="index-description">Simple 8-kyu code challenge in Ruby</p>
-      <p class="index-description text-none"><div class="summary">
-<p>This is simple 8-kyu (easiest level on CodeWars) code challenge but is good
-review for creating a simple object with certain desired behaviors.</p>
-
-<p>Description:</p>
-
-<blockquote>
-Color Ghost
-
-Create a class Ghost
-
-Ghost objects are instantiated without any arguments.
-
-Ghost objects are given a random color attribute of white" or "yellow" or "purple" or "red" when instantiated
-</blockquote>
-</div></p>
-      
-       <a href="/ruhohblog/posts/codewars-color-ghost" class="button">Continue reading..</a>
-    </article>
-    <article class="single-content">
-        <div class="feat">
-          <h5 class="page-date">
-            <time>2014-07-22</time>
-          </h5>
-        </div>
-         <h1 class="page-title" itemprop="name headline"><a href="/ruhohblog/posts/how-mvc-works-part-1">How MVC Works pt.1 </a></h1>
+         <h1 class="page-title" itemprop="name headline"><a href="/ruhohblog/posts/code-wars-flexible-card-game-pt1">Codewars: Flexible Card Game - 6 KYU Part 1 </a></h1>
         
       <p class="index-description"></p>
-      <p class="index-description text-none"><div class="summary">
-<p>  If you are using the Ruby on Rails framework,  it is necessary  to understand the basics of the Model-View-Controller MVC architectural  pattern since it is incorporated in Rails. Although it serves many different purposes, its main purpose in web applications is to help developers implement user-interfaces. The pattern separates the web application into three core components: the Model, View, and Controller. Each of these components has a separate responsibility to process what occurs after the Rails application has received a web request. 
-  </p>
-<p>  On a conceptual level, a browser sends a request to a web
-application, which is received by a web server and then passed on to the Rails router and subsequently to the controller.
-The controller will then interact with the model, which will then query the database for the data that the browser has
-requested for. After invoking the model, the controller will then renders the view accompanied with any data related to the
-corresponding model and returns a complete web page to the browser as HTML.</p>
+      <p class="index-description text-none"><div class="summary ellipsis">
+<p>I really liked this simple kata because it tests one’s ability to properly create classes and 
+knowledge of object-oriented programming.</p>
 
-<p>  Before I talk about the main components of the MVC pattern in Rails, I would like to share a 
-conceptual picture of what occurs after a web application receives a HTTP request: <br><img class="img-responsive" src="/ruhohblog/assets/media/mvc.jpg"></p>
+<p>Description of kata found <a href="http://www.codewars.com/kata/5436fdf34e3d6cb156000350">here</a></p>
+
+<p>Essentially, you are creating a “Deck” class and a “Card” class that can be used and modified to create different types of card games.</p>
+
+<p>The Deck class has 1 public attribute “cards” 3 public methods: count(), shuffle(), and  draw(n). 
+The Card class has 2 public attributes including “suit” and “rank” with 2 public methods face<em>card? and a to</em>s method. The cards must also be comparable to other cards, so the Ruby Comparable module will be used to compare the ranks of the cards only.</p>
+
+<p>I first start with the card class and begin by including the Comparable module. Now the card class will be able to use operators such has &lt;=&gt; (spaceship?) operator to compare other cards.</p>
+
+<pre class="prettyprint linenums">
+class Card
+  include Comparable ## 1
+end
+</pre>
+
+<p>Then I create a constant variable that will hold a hash which maps numbers to their respective face card values. 
+Example: 11 =&gt; “jack”, 12 =&gt; “queen”, 13..etc etc.</p>
+
 </div></p>
       
-       <a href="/ruhohblog/posts/how-mvc-works-part-1" class="button">Continue reading..</a>
+       <a href="/ruhohblog/posts/code-wars-flexible-card-game-pt1" class="button">Continue reading..</a>
+    </article>
+    <article class="single-content">
+        <div class="feat">
+          <h5 class="page-date">
+            <time>2015-05-28</time>
+          </h5>
+        </div>
+         <h1 class="page-title" itemprop="name headline"><a href="/ruhohblog/posts/dojocms-pt7">Creating dojoCMS Part 7 - Creating a User with Devise </a></h1>
+        
+      <p class="index-description"></p>
+      <p class="index-description text-none"><div class="summary ellipsis">
+<p>Now that we have Devise installed, we can use Devise to generate a User model for our application.
+In the command line we type:</p>
+
+<p><code>rails generate devise user</code></p>
+
+<p>Devise will create several files for us including a database migration, some testing files, and the user.rb file.</p>
+
+<p>In our migration file (db/migrate), we can observe the setup that Devise has created for us. Like all other migration files, it us used to generate tables in our database.
+This includes a table called "users", which also contains attributes for the user containing
+email, encrypted<em>password, reset</em>password<em>token, remember</em>created<em>at, sign</em>in_count and more.
+You can see that these attributes are provided depending on the attributes that you set on your user.rb file. </p>
+
+<p>Another bonus to note is the encrypted_password attribute that is generated by Devise. When someone enters a password into the system, we don't want to store the password in plain text. Instead, we encrypt the password and store that in the database. When they go to log into the website, the system will apply the same hashing <a href="http://en.wikipedia.org/wiki/Secure_Hash_Algorithm">algorithm</a> and compare it to the one that is stored in the database. The hashing algorithm and authentication of the encrypted is all provided by Devise so you don't have to implement the system yourself. (I guess kind of the whole point of using Devise in the first place lol).</p>
+
+<p>As you scroll down the migration file, you will observe more attributes that are derived from the other modules provided by Devise such as Rememberable, Trackable, etc. For more information related to these modules, please check out the Devise <a href="https://github.com/plataformatec/devise">documentation page</a></p>
+
+<p>We want to add some more attributes to our migration file so that our user model can also have a first name, last name, and a profile name. In our migration file above the ## Database authenticatable section,
+we type:</p>
+
+<pre prettyprint linenums>
+    t.string :first_name
+    t.string :last_name
+    t.string :profile_name
+</pre>
+</div></p>
+      
+       <a href="/ruhohblog/posts/dojocms-pt7" class="button">Continue reading..</a>
     </article>
     <div class="pagination-wrap">
       <div class="pagination">
@@ -237,6 +255,8 @@ conceptual picture of what occurs after a web application receives a HTTP reques
           <li class="previous hidden"><a href="#">Previous</a></li>
             <li class="active"><a href="/ruhohblog/posts/index/1">1</a></li>
             <li><a href="/ruhohblog/posts/index/2">2</a></li>
+            <li><a href="/ruhohblog/posts/index/3">3</a></li>
+            <li><a href="/ruhohblog/posts/index/4">4</a></li>
         <li class="next hidden"><a href="#">Next</a></li>
         </ul>
       </div>

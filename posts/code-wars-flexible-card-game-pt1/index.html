@@ -3,7 +3,7 @@
   <head>
 
       <meta charset="utf-8">
-      <title>Code Wars: Fizzbuzz Array!!!</title>
+      <title>Codewars: Flexible Card Game - 6 KYU Part 1</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="author" content="the whipster">
 
@@ -73,147 +73,94 @@
 
         <div class="feat">
           <h5 class="page-date">
-            <time>2014-07-22</time>
+            <time>2015-05-30</time>
           </h5>
         </div>
 
-        <h1 class="page-title" itemprop="name headline">Code Wars: Fizzbuzz Array!!! </h1>
+        <h1 class="page-title" itemprop="name headline">Codewars: Flexible Card Game - 6 KYU Part 1 </h1>
 
 
             <div class="articleBody">
-              <p>One of the first lessons I had when I started learning Javascript was a demmonstration
-of the Fizzbuzz challenge. The lesson demonstrated several aspects of the Javascript language
-including the use of the for loop, arrays, coditional and logical statements nad much more.
-Coming across this challenge was pretty exciting because it would test whether I remembered
-what I had learn long ago. However, this code challenge came with twist:</p>
+              <p>I really liked this simple kata because it tests one’s ability to properly create classes and 
+knowledge of object-oriented programming.</p>
 
-<blockquote>
-1. Create a method/function that returns an array of numbers from 1 to 100.
-<br/>
-2. If no arguments are passed the value at the index of the array for number should be 'Fizz' if it is divisible by 3, 'Buzz' if divisible by 5, 'FizzBuzz' if it divisible by both 3 and 5, or the number if it is not divisible by 3 or 5.
-<br/>
-3. The method should take up to 4 arguments:
-<br/>
-The first and second arguments are strings, which should be 'Fizz' and 'Buzz' by default.
-<br/>
-The third and fourth arguments are integers and and should be 3 and 5 by default.
-</blockquote>
+<p>Description of kata found <a href="http://www.codewars.com/kata/5436fdf34e3d6cb156000350">here</a></p>
 
-<p><br/></p>
+<p>Essentially, you are creating a “Deck” class and a “Card” class that can be used and modified to create different types of card games.</p>
 
-<p>I&#39;ll go through each step with my solution as an example.</p>
+<p>The Deck class has 1 public attribute “cards” 3 public methods: count(), shuffle(), and  draw(n). 
+The Card class has 2 public attributes including “suit” and “rank” with 2 public methods face<em>card? and a to</em>s method. The cards must also be comparable to other cards, so the Ruby Comparable module will be used to compare the ranks of the cards only.</p>
 
-<p>First, we create function that will take 4 arguments:</p>
+<p>I first start with the card class and begin by including the Comparable module. Now the card class will be able to use operators such has &lt;=&gt; (spaceship?) operator to compare other cards.</p>
 
 <pre class="prettyprint linenums">
-    var fizzBuzzCustom = function(stringOne, stringTwo, numOne, numTwo){
-    // ..code here..
-  }
+class Card
+  include Comparable ## 1
+end
 </pre>
 
-<p>Then set the defaults if no arguments are passed</p>
+<p>Then I create a constant variable that will hold a hash which maps numbers to their respective face card values. 
+Example: 11 =&gt; “jack”, 12 =&gt; “queen”, 13..etc etc.</p>
 
 <pre class="prettyprint linenums">
-    var fizzBuzzCustom = function(stringOne, stringTwo, numOne, numTwo){
-        var stringOne = stringOne || "Fizz"; 
-        var stringTwo = stringTwo || "BUzz";
-        var numOne = numOne || 3;
-        var numTwo = numTwo || 5;
-    }
+FACE_CARDS = { 11 => "jack", 12 => "queen", 13 => "king", 1 => "ace" }
 </pre>
 
-<p>Then I create an empty array:</p>
+<p>I create the 2 public attributes using attr<em>accessor methods for both :suit and :rank. I could have just gone with attr</em>reader but I think I was more focused on finishing the class. Bad habits I know :(</p>
 
-<pre class="prettyprint">
-    var coolArray = [];
+<pre class="prettyprint linenums">
+  attr_accessor :suit
+  attr_accessor :rank
 </pre>
 
-<p>Then I set up the main logic:</p>
+<p>The initialize method simply sets up instance variables for @suit and @rank.</p>
 
-<pre class="prettyprint">
-    // 1. For loop beginning with 1 and ending with 100
-    for(var i = 1; i < 100; i++)
-      // 2. If i is divisible by the number passed in or 3 (by default)
-      if ( i % numOne === 0 ) { 
-      // 3. If i is divisble by the number passed in or 5 (by default)
-        if ( i % numTwo === 0) { 
-        // 4. Add the two strings together and push to coolArray
-            coolArray.push(stringOne + stringTwo) 
-        } else {
-        // 5. Push stringOne to our coolArray 
-        coolArray.push(stringOne) 
-        } 
-    // 6. else if the first if statement is false, check if i is divisble by numTwo ( or 5 by default).
-    } else if (i % numTwo === 0){
-    // 7. Push stringTwo to our coolArray
-        coolArray.push(stringTwo)
-    // else just push i to coolArray.
-    } else {
-        coolArray.push(i) 
-    }
-  }
+<pre class="prettyprint linenums">
+  def initialize(suit, rank)
+    @suit = suit
+    @rank = rank
+  end
 </pre>
 
-<p>and thats it!</p>
+<p>The face_card? method returns true if rank of the card is above 10, which suggests it will either be a Jack, Queen or King..Or else, return false.</p>
 
-<p>the final function looks something like this:</p>
-
-<pre class="prettyprint">
-    var fizzBuzzCustom = function(stringOne, stringTwo, numOne, numTwo) {
-        var stringOne = stringOne || "Fizz";
-        var stringTwo = stringTwo || "Buzz";
-        var numOne = numOne || 3;
-        var numTwo = numTwo || 5;
-        var coolArray = [];
-          for(var i = 1; i < 100; i++){
-            if (i % numOne === 0){
-              if(i % numTwo === 0) {
-              coolArray.push(stringOne+stringTwo);
-              } else {
-              coolArray.push(stringOne);
-              }
-            }
-            else if (i % numTwo === 0){
-              coolArray.push(stringTwo);
-            }
-            else {
-              coolArray.push(i);
-            }
-          }
-    }
+<pre class="prettyprint linenums">
+  def face_card?
+    return true if rank > 10
+    false
+  end
 </pre>
 
-<p>Notes: <br/>
-1. One of the first &quot;gotchas&quot; that I encountered with Fizzbuzz was the first line
-after the for-loop begins. The first if statement checks if the variable i is divisble
-by the value of numOne, which is either going to be the value of the argument passed into
-the function or the default value of 3. If this is true, then it moves on to the next line and
-checks the same for numTwo but instead with a default value of 5. If this is also true,
-then the two strings will be concatenated together and pushed into coolArray. However, if numTwo is false, only
-the first string will be pushed to the array. Similarly, if i is not divisible by numOne, the interpreter
-moves onto to next else if statement and checks if i is divisible by numTwo or the number 5 and push
-the second string to cool array. Finally, is this doesn&#39;t work, the value of I is pushd into the array.
-phew that was alot!
-<br/>
-<br/>
-2. I also want to note that instead of doing:</p>
+<p>The to<em>s method is a method that returns a string describing the card in a English sentence.
+     My strategy was to check the FACE</em>CARDS constant against the cards rank and if it had the rank
+     return the corresponding string with the name of the face card and suit,  or else just return 
+     the rank and suit of the card.</p>
 
-<pre class="prettyprint">
-   if (i % numOne === 0){
-          if(i % numTwo === 0) {
-          
-          }
+<pre class="prettyprint linenums">
+  def to_s
+    if FACE_CARDS.has_key?(rank)
+      return "#{FACE_CARDS[rank].capitalize} of #{suit.capitalize}"
+    end
+    "#{rank} of #{suit.capitalize}"
+  end
 </pre>
 
-<p>You can do:</p>
+<p>Finally, the last method is the spaceship? operator that compares the rank of card1 to another card.
+     If the card is greater than the other card, return 0, if equal, return 0, or else return -1</p>
 
-<pre class="prettyprint">
-   if (i % numOne === 0 && i % numTwo === 0) {
-          coolArray.push(stringOne+stringTwo);
-      } 
+<pre class="prettyprint linenums">
+  def <=>(card2)
+    if self.rank > card2.rank
+      return 1
+    elsif self.rank == card2.rank
+      return 0
+    else
+      -1
+    end
+  end
 </pre>
 
-<p>That was a long post! I hope you enjoyed it! </p>
+<p>and thats it! </p>
 
             </div>
 
@@ -223,10 +170,10 @@ phew that was alot!
               </a>
             </div>
 
-                      <a id="prev" href="/ruhohblog/posts/code-wars-javascript-arguments-pt-2" class="prev"  title="Code Wars: Javascript Arguments Pt. 2" >&larr;</a>
+                      <a id="prev" href="/ruhohblog/posts/dojocms-pt7" class="prev"  title="Creating dojoCMS Part 7 - Creating a User with Devise" >&larr;</a>
 
 
-                      <a id="next" class="next" href="/ruhohblog/posts/authentication" title="What is Authentication and why do we need it in our Rails Apps?">&rarr;</a>
+                      <a id="next" class="next" href="/ruhohblog/posts/mysqldump_and_copy" title="Execution of a mysqldump and scp">&rarr;</a>
            
       </article>
 

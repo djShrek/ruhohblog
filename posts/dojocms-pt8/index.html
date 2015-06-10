@@ -3,7 +3,7 @@
   <head>
 
       <meta charset="utf-8">
-      <title>Code Wars: Fizzbuzz Array!!!</title>
+      <title>Creating dojoCMS Part 8 - Creating a User with Devise</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="author" content="the whipster">
 
@@ -73,147 +73,66 @@
 
         <div class="feat">
           <h5 class="page-date">
-            <time>2014-07-22</time>
+            <time>2015-05-28</time>
           </h5>
         </div>
 
-        <h1 class="page-title" itemprop="name headline">Code Wars: Fizzbuzz Array!!! </h1>
+        <h1 class="page-title" itemprop="name headline">Creating dojoCMS Part 8 - Creating a User with Devise </h1>
 
 
             <div class="articleBody">
-              <p>One of the first lessons I had when I started learning Javascript was a demmonstration
-of the Fizzbuzz challenge. The lesson demonstrated several aspects of the Javascript language
-including the use of the for loop, arrays, coditional and logical statements nad much more.
-Coming across this challenge was pretty exciting because it would test whether I remembered
-what I had learn long ago. However, this code challenge came with twist:</p>
+              <p>In this post, we will use Devise to generate views for our User.
+First, type in the following command:</p>
 
-<blockquote>
-1. Create a method/function that returns an array of numbers from 1 to 100.
-<br/>
-2. If no arguments are passed the value at the index of the array for number should be 'Fizz' if it is divisible by 3, 'Buzz' if divisible by 5, 'FizzBuzz' if it divisible by both 3 and 5, or the number if it is not divisible by 3 or 5.
-<br/>
-3. The method should take up to 4 arguments:
-<br/>
-The first and second arguments are strings, which should be 'Fizz' and 'Buzz' by default.
-<br/>
-The third and fourth arguments are integers and and should be 3 and 5 by default.
-</blockquote>
+<p><code>rails generate devise:views</code></p>
 
-<p><br/></p>
-
-<p>I&#39;ll go through each step with my solution as an example.</p>
-
-<p>First, we create function that will take 4 arguments:</p>
+<p>This will generate a bunch of files for us and will allow us to change our sign up page.
+The sign up page will be under app/views/devise/registrations/new.html.erb file.
+We proceed by creating some form inputs for a User&#39;s first name, last name, and profile name.
+Within the form_for helper method, we add divs with labels and text fields for our first, last,
+and profile names.</p>
 
 <pre class="prettyprint linenums">
-    var fizzBuzzCustom = function(stringOne, stringTwo, numOne, numTwo){
-    // ..code here..
-  }
+    <div>
+        <%= f.label :first_name %><br />
+        <%= f.text_field :first_name %>
+    </div>
+
+    <div>
+        <%= f.label :last_name %><br />
+        <%= f.text_field :last_name %>
+    </div>
+
+    <div>
+        <%= f.label :profile_name %><br />
+        <%= f.text_field :profile_name %>
+    </div>
 </pre>
 
-<p>Then set the defaults if no arguments are passed</p>
+<p>In Rails 4, you cannot mass-assign attributes of any model without first whitelisting them. This feature, known as strong parameters, requires you whitelist attributes in the controller within the context that they will be used in. Because we are customizing our own views and adding new attributes to our form, we need to let Devise know of any parameters that will be pass down to the model. In order to permit additional parameters (the lazy way), we can do so using a simple before filter in our ApplicationController:</p>
 
 <pre class="prettyprint linenums">
-    var fizzBuzzCustom = function(stringOne, stringTwo, numOne, numTwo){
-        var stringOne = stringOne || "Fizz"; 
-        var stringTwo = stringTwo || "BUzz";
-        var numOne = numOne || 3;
-        var numTwo = numTwo || 5;
-    }
+    class ApplicationController < ActionController::Base
+      ..omitted code..
+
+      before_action :configure_permitted_parameters, if: devise_controller?
+
+      protected
+
+      def configure_permitted_parameters
+        devise_parameter_sanitizer.for(:sign_up) do |u|
+          u.permit(:first_name, :last_name, :profile_name, :email, :password, :password_confirmation, :remember_me)
+        end
+      end
+    end
 </pre>
 
-<p>Then I create an empty array:</p>
+<p>If you start your server and go to localhost:3000/users/sign_up, you will be able to see a functioning sign-up page. </p>
 
-<pre class="prettyprint">
-    var coolArray = [];
-</pre>
+<p>Useful links:</p>
 
-<p>Then I set up the main logic:</p>
-
-<pre class="prettyprint">
-    // 1. For loop beginning with 1 and ending with 100
-    for(var i = 1; i < 100; i++)
-      // 2. If i is divisible by the number passed in or 3 (by default)
-      if ( i % numOne === 0 ) { 
-      // 3. If i is divisble by the number passed in or 5 (by default)
-        if ( i % numTwo === 0) { 
-        // 4. Add the two strings together and push to coolArray
-            coolArray.push(stringOne + stringTwo) 
-        } else {
-        // 5. Push stringOne to our coolArray 
-        coolArray.push(stringOne) 
-        } 
-    // 6. else if the first if statement is false, check if i is divisble by numTwo ( or 5 by default).
-    } else if (i % numTwo === 0){
-    // 7. Push stringTwo to our coolArray
-        coolArray.push(stringTwo)
-    // else just push i to coolArray.
-    } else {
-        coolArray.push(i) 
-    }
-  }
-</pre>
-
-<p>and thats it!</p>
-
-<p>the final function looks something like this:</p>
-
-<pre class="prettyprint">
-    var fizzBuzzCustom = function(stringOne, stringTwo, numOne, numTwo) {
-        var stringOne = stringOne || "Fizz";
-        var stringTwo = stringTwo || "Buzz";
-        var numOne = numOne || 3;
-        var numTwo = numTwo || 5;
-        var coolArray = [];
-          for(var i = 1; i < 100; i++){
-            if (i % numOne === 0){
-              if(i % numTwo === 0) {
-              coolArray.push(stringOne+stringTwo);
-              } else {
-              coolArray.push(stringOne);
-              }
-            }
-            else if (i % numTwo === 0){
-              coolArray.push(stringTwo);
-            }
-            else {
-              coolArray.push(i);
-            }
-          }
-    }
-</pre>
-
-<p>Notes: <br/>
-1. One of the first &quot;gotchas&quot; that I encountered with Fizzbuzz was the first line
-after the for-loop begins. The first if statement checks if the variable i is divisble
-by the value of numOne, which is either going to be the value of the argument passed into
-the function or the default value of 3. If this is true, then it moves on to the next line and
-checks the same for numTwo but instead with a default value of 5. If this is also true,
-then the two strings will be concatenated together and pushed into coolArray. However, if numTwo is false, only
-the first string will be pushed to the array. Similarly, if i is not divisible by numOne, the interpreter
-moves onto to next else if statement and checks if i is divisible by numTwo or the number 5 and push
-the second string to cool array. Finally, is this doesn&#39;t work, the value of I is pushd into the array.
-phew that was alot!
-<br/>
-<br/>
-2. I also want to note that instead of doing:</p>
-
-<pre class="prettyprint">
-   if (i % numOne === 0){
-          if(i % numTwo === 0) {
-          
-          }
-</pre>
-
-<p>You can do:</p>
-
-<pre class="prettyprint">
-   if (i % numOne === 0 && i % numTwo === 0) {
-          coolArray.push(stringOne+stringTwo);
-      } 
-</pre>
-
-<p>That was a long post! I hope you enjoyed it! </p>
+<p><a href="http://easyactiverecord.com/blog/2014/04/01/rails4-strong-parameters-and-the-attr-accessible-macro/">-http://easyactiverecord.com/blog/2014/04/01/rails4-strong-parameters-and-the-attr-accessible-macro/</a>
+<a href="http://guides.rubyonrails.org/action_controller_overview.html#strong-parameters">strong parameters</a></p>
 
             </div>
 
@@ -223,10 +142,10 @@ phew that was alot!
               </a>
             </div>
 
-                      <a id="prev" href="/ruhohblog/posts/code-wars-javascript-arguments-pt-2" class="prev"  title="Code Wars: Javascript Arguments Pt. 2" >&larr;</a>
+                      <a id="prev" href="/ruhohblog/posts/dojocms-pt6" class="prev"  title="Creating dojoCMS Part 6 - Adding Authentication with Devise" >&larr;</a>
 
 
-                      <a id="next" class="next" href="/ruhohblog/posts/authentication" title="What is Authentication and why do we need it in our Rails Apps?">&rarr;</a>
+                      <a id="next" class="next" href="/ruhohblog/posts/dojocms-pt7" title="Creating dojoCMS Part 7 - Creating a User with Devise">&rarr;</a>
            
       </article>
 
