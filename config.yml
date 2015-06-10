@@ -1,2 +1,5 @@
 "theme-bootstrap-3" :
   "use" : "theme"
+
+"posts" :
+  "sort" : ["date", "desc"]
